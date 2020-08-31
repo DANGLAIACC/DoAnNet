@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Database.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,10 +56,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="uc\ucTreoTuong.cs">
+    <Compile Include="Views\ucTreoTuong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uc\ucTreoTuong.Designer.cs">
+    <Compile Include="Views\ucTreoTuong.Designer.cs">
       <DependentUpon>ucTreoTuong.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmMain.resx">
@@ -74,7 +75,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="uc\ucTreoTuong.resx">
+    <EmbeddedResource Include="Views\ucTreoTuong.resx">
       <DependentUpon>ucTreoTuong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -89,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
