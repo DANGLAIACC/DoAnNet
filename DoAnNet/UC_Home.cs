@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAnNet.uc
+namespace DoAnNet
 {
-    public partial class ucTreoTuong : UserControl
+    public partial class UC_Home : UserControl
     {
-        public ucTreoTuong()
+        public UC_Home()
         {
             InitializeComponent();
         }

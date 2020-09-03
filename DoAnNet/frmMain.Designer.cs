@@ -28,253 +28,229 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ucTreoTuong1 = new DoAnNet.uc.ucTreoTuong();
+            this.pnMenu = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
+            this.imgSlide = new System.Windows.Forms.PictureBox();
+            this.pnMain = new System.Windows.Forms.Panel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
+            this.pnMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 500);
+            this.panel1.Size = new System.Drawing.Size(100, 570);
             this.panel1.TabIndex = 0;
             // 
-            // panel9
+            // pnMenu
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel9.Location = new System.Drawing.Point(0, 328);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(8, 40);
-            this.panel9.TabIndex = 14;
+            this.pnMenu.BorderRadius = 18;
+            this.pnMenu.Controls.Add(this.pictureBox2);
+            this.pnMenu.Controls.Add(this.btnHome);
+            this.pnMenu.Controls.Add(this.guna2Button2);
+            this.pnMenu.Controls.Add(this.guna2Button3);
+            this.pnMenu.Controls.Add(this.guna2Button4);
+            this.pnMenu.Controls.Add(this.guna2Button5);
+            this.pnMenu.Controls.Add(this.imgSlide);
+            this.pnMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.pnMenu.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.pnMenu.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.pnMenu.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.pnMenu.Location = new System.Drawing.Point(13, 10);
+            this.pnMenu.Name = "pnMenu";
+            this.pnMenu.ShadowDecoration.Parent = this.pnMenu;
+            this.pnMenu.Size = new System.Drawing.Size(86, 551);
+            this.pnMenu.TabIndex = 0;
             // 
-            // button7
+            // pictureBox2
             // 
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(3, 328);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(197, 40);
-            this.button7.TabIndex = 13;
-            this.button7.Text = "      Thông tin";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.pictureBox2.Image = global::DoAnNet.Properties.Resources.mac_os;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
-            // panel8
+            // guna2Button5
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel8.Location = new System.Drawing.Point(0, 282);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(8, 40);
-            this.panel8.TabIndex = 12;
+            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Button5.BorderRadius = 24;
+            this.guna2Button5.BorderThickness = 1;
+            this.guna2Button5.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.guna2Button5.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button5.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.CheckedState.Image")));
+            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
+            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.HoverState.Parent = this.guna2Button5;
+            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
+            this.guna2Button5.Location = new System.Drawing.Point(16, 477);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
+            this.guna2Button5.Size = new System.Drawing.Size(60, 50);
+            this.guna2Button5.TabIndex = 0;
+            this.guna2Button5.UseTransparentBackground = true;
             // 
-            // button6
+            // guna2Button4
             // 
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.Location = new System.Drawing.Point(3, 282);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(197, 40);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "       Hóa đơn";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
+            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Button4.BorderRadius = 24;
+            this.guna2Button4.BorderThickness = 1;
+            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button4.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button4.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.CheckedState.Image")));
+            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.HoverState.Parent = this.guna2Button4;
+            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
+            this.guna2Button4.Location = new System.Drawing.Point(23, 340);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
+            this.guna2Button4.Size = new System.Drawing.Size(60, 50);
+            this.guna2Button4.TabIndex = 0;
+            this.guna2Button4.UseTransparentBackground = true;
+            this.guna2Button4.CheckedChanged += new System.EventHandler(this.guna2Button1_CheckedChanged);
             // 
-            // panel7
+            // guna2Button3
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel7.Location = new System.Drawing.Point(0, 236);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(8, 40);
-            this.panel7.TabIndex = 10;
+            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Button3.BorderRadius = 24;
+            this.guna2Button3.BorderThickness = 1;
+            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button3.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.CheckedState.Image")));
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
+            this.guna2Button3.Location = new System.Drawing.Point(23, 266);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(60, 50);
+            this.guna2Button3.TabIndex = 0;
+            this.guna2Button3.UseTransparentBackground = true;
+            this.guna2Button3.CheckedChanged += new System.EventHandler(this.guna2Button1_CheckedChanged);
             // 
-            // button5
+            // guna2Button2
             // 
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(3, 236);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(197, 40);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "   Khách hàng";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Button2.BorderRadius = 24;
+            this.guna2Button2.BorderThickness = 1;
+            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button2.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.CheckedState.Image")));
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
+            this.guna2Button2.Location = new System.Drawing.Point(23, 192);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(60, 50);
+            this.guna2Button2.TabIndex = 0;
+            this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.CheckedChanged += new System.EventHandler(this.guna2Button1_CheckedChanged);
             // 
-            // panel6
+            // btnHome
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel6.Location = new System.Drawing.Point(0, 190);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(8, 40);
-            this.panel6.TabIndex = 8;
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnHome.BorderRadius = 24;
+            this.btnHome.BorderThickness = 1;
+            this.btnHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnHome.Checked = true;
+            this.btnHome.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnHome.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnHome.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.CheckedState.Image")));
+            this.btnHome.CheckedState.Parent = this.btnHome;
+            this.btnHome.CustomImages.Parent = this.btnHome;
+            this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.HoverState.Parent = this.btnHome;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(23, 122);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.ShadowDecoration.Parent = this.btnHome;
+            this.btnHome.Size = new System.Drawing.Size(60, 50);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.UseTransparentBackground = true;
+            this.btnHome.CheckedChanged += new System.EventHandler(this.guna2Button1_CheckedChanged);
+            this.btnHome.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // button4
+            // imgSlide
             // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(3, 190);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(197, 40);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "         Quản lý";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.imgSlide.Image = ((System.Drawing.Image)(resources.GetObject("imgSlide.Image")));
+            this.imgSlide.Location = new System.Drawing.Point(48, 97);
+            this.imgSlide.Name = "imgSlide";
+            this.imgSlide.Size = new System.Drawing.Size(39, 101);
+            this.imgSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgSlide.TabIndex = 0;
+            this.imgSlide.TabStop = false;
             // 
-            // panel5
+            // pnMain
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel5.Location = new System.Drawing.Point(0, 144);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 40);
-            this.panel5.TabIndex = 6;
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(100, 0);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(796, 570);
+            this.pnMain.TabIndex = 1;
             // 
-            // button3
+            // guna2Elipse1
             // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(0, 144);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 40);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "    In hóa đơn";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel4.Location = new System.Drawing.Point(0, 98);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(8, 40);
-            this.panel4.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(0, 98);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 40);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "         Đeo tay";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel3.Location = new System.Drawing.Point(0, 52);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(8, 40);
-            this.panel3.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(0, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "    Treo tường";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(688, 30);
-            this.panel2.TabIndex = 1;
-            // 
-            // ucTreoTuong1
-            // 
-            this.ucTreoTuong1.Location = new System.Drawing.Point(200, 30);
-            this.ucTreoTuong1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ucTreoTuong1.Name = "ucTreoTuong1";
-            this.ucTreoTuong1.Size = new System.Drawing.Size(688, 470);
-            this.ucTreoTuong1.TabIndex = 2;
-            this.ucTreoTuong1.Load += new System.EventHandler(this.ucTreoTuong1_Load);
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 500);
-            this.Controls.Add(this.ucTreoTuong1);
-            this.Controls.Add(this.panel2);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(896, 570);
+            this.Controls.Add(this.pnMain);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đồ án Chuyên đề NET";
+            this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            this.pnMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,22 +258,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button7;
-        private uc.ucTreoTuong ucTreoTuong1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel pnMenu;
+        private Guna.UI2.WinForms.Guna2Button btnHome;
+        private System.Windows.Forms.PictureBox imgSlide;
+        private System.Windows.Forms.Panel pnMain;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
 

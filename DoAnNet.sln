@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnNet", "DoAnNet\DoAnNet.csproj", "{8FCB52F5-20ED-40F4-A622-A999532D9E3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnNet", "DoAnNet\DoAnNet.csproj", "{B7C747E3-8285-463D-9368-7B2EF27B2BC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8FCB52F5-20ED-40F4-A622-A999532D9E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8FCB52F5-20ED-40F4-A622-A999532D9E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8FCB52F5-20ED-40F4-A622-A999532D9E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8FCB52F5-20ED-40F4-A622-A999532D9E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C747E3-8285-463D-9368-7B2EF27B2BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C747E3-8285-463D-9368-7B2EF27B2BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C747E3-8285-463D-9368-7B2EF27B2BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C747E3-8285-463D-9368-7B2EF27B2BC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {272862C6-61F2-4F65-8480-E6324A1142CE}
 	EndGlobalSection
 EndGlobal
