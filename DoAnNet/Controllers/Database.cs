@@ -46,7 +46,7 @@ namespace DoAnNet.Controllers
                 return null;
             }
         }
-        public bool ExecuteNonQuery(string query)
+        public static bool ExecuteNonQuery(string query)
         {
             try
             {
