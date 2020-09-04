@@ -1,13 +1,108 @@
 ﻿/*
 use master 
+drop database store
 
 drop database QL_DONG_HO
 
+
 */
-create database QL_DONG_HO 
+create database store
 go
-use QL_DONG_HO
+use store
 go
+create table agencys(
+	ag_id char(3) primary key,
+	ag_address nvarchar(100),
+	ag_phone char(10)
+)
+go
+create table brands(
+	br_id char(2) primary key,
+	br_name nvarchar(32) not null,
+	br_country nvarchar(30)
+)
+go
+create table products(
+	pd_id char(8) primary key,
+	pd_name char(80),
+	pd_purchase money,
+	pd_retail money,
+	pd_remain int,
+	pd_unit nvarchar(10),
+	pd_img nvarchar(100),
+	br_id char(2) foreign key references categories(br_id)
+)
+go
+create table watchs(
+	pd_id char(8) primary key,
+	foreign key (pd_id) references products(pd_id),
+	w_shape nvarchar(30),
+	w_size nvarchar(30),
+	w_energy nvarchar(30),
+	w_color nvarchar(30),
+	w_guarantee int,
+)
+go
+create table company(
+	cp_tin varchar(13) primary key,
+	cp_name nvarchar(100),
+	cp_address nvarchar(100),
+	cp_phone char(10),
+	cp_email varchar(30),
+)
+go
+create table customers(
+	ct_id char(7) primary key,
+	ct_firstName nvarchar(30),
+	ct_lastName nvarchar(30),
+	ct_phone char(10),
+	ct_email varchar(30),
+	ct_gender bit,
+	cp_tin varchar(13) foreign key references company(cp_tin),
+)
+go
+create table staffs(
+	st_id char(10) primary key,
+	st_firstName nvarchar(30),
+	st_lastName nvarchar(30),
+	st_phone char(10),
+	st_email varchar(30),
+	st_gender bit,
+	st_workdays int,
+	st_birthday date,
+	st_salary money,
+	st_role int,
+)
+go
+create table orders(
+	od_id char(12) primary key,
+	od_date date,
+	od_status int,
+	od_address nvarchar(100),
+	od_payment nvarchar(30),
+	ct_id char(7) foreign key references customers(ct_id),
+	br_id char(3) foreign key references branchs(br_id),
+)
+go
+create table order_detail(
+	od_id char(12) foreign key references orders(od_id),
+	pd_id char(8) foreign key references products(pd_id),
+	od_quantity int,
+	od_price money,
+	primary key (od_id,pd_id)
+)
+go
+insert into branchs values
+('000',N'123 Nguyễn Hữu Cảnh, Q. Bình Thạnh, TP. Hồ Chí Minh','0903989027'),
+('001',N'123 Nguyễn Hữu Thọ, Q. 7, TP. Hồ Chí Minh','0905555112'),
+('002',N'1200 Lê Hồng Phong, P. Phước Long, TP. Nha Trang, T. Khánh Hòa','0908339338')
+go
+insert into categories values
+('dh',N'Đồng hồ',
+
+select * from categories
+
+
 create table nhasx(
 	Ma_nsx int identity(10,2) primary key,
 	Ten_nsx nvarchar(80) not null,
