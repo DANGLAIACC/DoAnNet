@@ -9,58 +9,58 @@ go
 use QL_DONG_HO
 go
 create table nhasx(
-	ma_nsx int identity(10,2) primary key,
-	ten_nsx nvarchar(80) not null,
-	nuoc_sx nvarchar(20)
+	Ma_nsx int identity(10,2) primary key,
+	Ten_nsx nvarchar(80) not null,
+	Nuoc_sx nvarchar(20)
 )
 go
 create table sanpham(
 /*ảnh sản phẩm = ma_sp.jpg*/
-	ma_sp int identity(1000,2) primary key,
-	ten_sp nvarchar(80), 
-	gia_nhap money,
-	don_gia money,
-	hinh_dang_mat nvarchar(28),
-	kich_thuoc varchar(28),
-	chat_lieu nvarchar(28),
-	nang_luong nvarchar(28),
-	mau_sac nvarchar(28),
-	bao_hanh int,
-	so_luong int,
-	ma_nsx int foreign key references nhasx(ma_nsx),
+	Ma_sp int identity(1000,2) primary key,
+	Ten_sp nvarchar(80), 
+	Gia_nhap money,
+	Don_gia money,
+	Hinh_dang_mat nvarchar(28),
+	Kich_thuoc varchar(28),
+	Chat_lieu nvarchar(28),
+	Nang_luong nvarchar(28),
+	Mau_sac nvarchar(28),
+	Bao_hanh int,
+	So_luong int,
+	Ma_nsx int foreign key references nhasx(ma_nsx),
 )
 go
 create table khachhang(
-	ma_kh int identity(100000,2) primary key,
-	ten_kh nvarchar(80),
-	dien_thoai char(10),
-	email varchar(48),
-	dia_chi nvarchar(80)
+	Ma_kh int identity(100000,2) primary key,
+	Ten_kh nvarchar(80),
+	Dien_thoai char(10),
+	Email varchar(48),
+	Dia_chi nvarchar(80)
 )
 go
 create table nhanvien(
-	ma_nv int identity(800000,2) primary key,
-	ten_nv nvarchar(80),
-	dien_thoai char(10),
-	email varchar(48),
-	dia_chi nvarchar(80),
-	so_ngay_cong float,
-	luong_cb money,
+	Ma_nv int identity(800000,2) primary key,
+	Ten_nv nvarchar(80),
+	Dien_thoai char(10),
+	Email varchar(48),
+	Dia_chi nvarchar(80),
+	So_ngay_cong float,
+	Luong_cb money,
 )
 go
 create table hoadon(
-	ma_hd int identity(10000000,1) primary key,
-	ngay_lap_hd datetime,
-	ngay_giao datetime,
-	ma_nv int foreign key references nhanvien(ma_nv),
-	ma_kh int foreign key references khachhang(ma_kh)
+	Ma_hd int identity(10000000,1) primary key,
+	Ngay_lap_hd date,
+	Ngay_giao date,
+	Ma_nv int foreign key references nhanvien(ma_nv),
+	Ma_kh int foreign key references khachhang(ma_kh)
 )
 go
 create table cthoadon(
-	ma_hd int foreign key references hoadon(ma_hd),
-	ma_sp int foreign key references sanpham(ma_sp),
-	so_luong int,
-	gia_ban money,
+	Ma_hd int foreign key references hoadon(ma_hd),
+	Ma_sp int foreign key references sanpham(ma_sp),
+	So_luong int,
+	Gia_ban money,
 	primary key (ma_hd,ma_sp),
 )
 go
@@ -178,3 +178,71 @@ insert into cthoadon values
 (10000012,1020,1,2800000),
 (10000013,1052,1,600000)
 
+/* convert database table to class
+CREATE PROCEDURE CREATEMODEL  
+(  
+     @TableName SYSNAME ,  
+     @CLASSNAME VARCHAR(500)   
+)  
+AS  
+BEGIN  
+    DECLARE @Result VARCHAR(MAX)  
+    SET @Result = @CLASSNAME + @TableName + '  
+{'  
+SELECT @Result = @Result + '  
+    public ' + ColumnType + NullableSign + ' ' + ColumnName + ' { get; set; }'  
+FROM  
+(  
+    SELECT   
+        REPLACE(col.NAME, ' ', '_') ColumnName,  
+        column_id ColumnId,  
+        CASE typ.NAME   
+            WHEN 'bigint' THEN 'long'  
+            WHEN 'binary' THEN 'byte[]'  
+            WHEN 'bit' THEN 'bool'  
+            WHEN 'char' THEN 'string'  
+            WHEN 'date' THEN 'DateTime'  
+            WHEN 'datetime' THEN 'DateTime'  
+            WHEN 'datetime2' then 'DateTime'  
+            WHEN 'datetimeoffset' THEN 'DateTimeOffset'  
+            WHEN 'decimal' THEN 'decimal'  
+            WHEN 'float' THEN 'float'  
+            WHEN 'image' THEN 'byte[]'  
+            WHEN 'int' THEN 'int'  
+            WHEN 'money' THEN 'decimal'  
+            WHEN 'nchar' THEN 'char'  
+            WHEN 'ntext' THEN 'string'  
+            WHEN 'numeric' THEN 'decimal'  
+            WHEN 'nvarchar' THEN 'string'  
+            WHEN 'real' THEN 'double'  
+            WHEN 'smalldatetime' THEN 'DateTime'  
+            WHEN 'smallint' THEN 'short'  
+            WHEN 'smallmoney' THEN 'decimal'  
+            WHEN 'text' THEN 'string'  
+            WHEN 'time' THEN 'TimeSpan'  
+            WHEN 'timestamp' THEN 'DateTime'  
+            WHEN 'tinyint' THEN 'byte'  
+            WHEN 'uniqueidentifier' THEN 'Guid'  
+            WHEN 'varbinary' THEN 'byte[]'  
+            WHEN 'varchar' THEN 'string'  
+            ELSE 'UNKNOWN_' + typ.NAME  
+        END ColumnType,  
+        CASE   
+            WHEN col.is_nullable = 1 and typ.NAME in ('bigint', 'bit', 'date', 'datetime', 'datetime2', 'datetimeoffset', 'decimal', 'float', 'int', 'money', 'numeric', 'real', 'smalldatetime', 'smallint', 'smallmoney', 'time', 'tinyint', 'uniqueidentifier')   
+            THEN '?'   
+            ELSE ''   
+        END NullableSign  
+    FROM SYS.COLUMNS col join sys.types typ on col.system_type_id = typ.system_type_id AND col.user_type_id = typ.user_type_id  
+    where object_id = object_id(@TableName)  
+) t  
+ORDER BY ColumnId  
+SET @Result = @Result  + '  
+}'  
+print @Result  
+END
+
+exec CREATEMODEL 'cthoadon', 'public class '
+
+select * from INFORMATION_SCHEMA.tables
+
+*/

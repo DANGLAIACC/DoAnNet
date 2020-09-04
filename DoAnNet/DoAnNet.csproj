@@ -69,6 +69,7 @@
     </Compile>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +83,7 @@
     </Compile>
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,10 +143,16 @@
   <ItemGroup>
     <None Include="Resources\tb.JPG" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Controls\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\" />
+    <ProjectReference Include="..\BUL\BLL.csproj">
+      <Project>{0247b02d-17ad-47f4-bf94-35370a42da88}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{f87f0696-76b4-4173-8e76-330c69371ef7}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

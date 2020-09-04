@@ -44,19 +44,19 @@ namespace DoAnNet
             this.imgSlide = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnTop = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.ptbUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnInHoaDon = new Guna.UI2.WinForms.Guna2Button();
-            this.btnGioHang = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.pnMain = new System.Windows.Forms.Panel();
+            this.btnGioHang = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pnMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -290,6 +290,17 @@ namespace DoAnNet
             this.pnTop.Size = new System.Drawing.Size(796, 64);
             this.pnTop.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(66, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(456, 52);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Danh sách sản phẩm";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ptbUser
             // 
             this.ptbUser.BackColor = System.Drawing.Color.Transparent;
@@ -377,32 +388,6 @@ namespace DoAnNet
             this.btnInHoaDon.UseTransparentBackground = true;
             this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
-            // btnGioHang
-            // 
-            this.btnGioHang.AutoRoundedCorners = true;
-            this.btnGioHang.BackColor = System.Drawing.Color.Transparent;
-            this.btnGioHang.BorderColor = System.Drawing.Color.Empty;
-            this.btnGioHang.BorderRadius = 24;
-            this.btnGioHang.BorderThickness = 1;
-            this.btnGioHang.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btnGioHang.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnGioHang.CheckedState.Parent = this.btnGioHang;
-            this.btnGioHang.CustomImages.Parent = this.btnGioHang;
-            this.btnGioHang.FillColor = System.Drawing.Color.Empty;
-            this.btnGioHang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnGioHang.ForeColor = System.Drawing.Color.White;
-            this.btnGioHang.HoverState.Parent = this.btnGioHang;
-            this.btnGioHang.Image = ((System.Drawing.Image)(resources.GetObject("btnGioHang.Image")));
-            this.btnGioHang.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnGioHang.Location = new System.Drawing.Point(-2, 2);
-            this.btnGioHang.Name = "btnGioHang";
-            this.btnGioHang.ShadowDecoration.BorderRadius = 24;
-            this.btnGioHang.ShadowDecoration.Parent = this.btnGioHang;
-            this.btnGioHang.Size = new System.Drawing.Size(60, 50);
-            this.btnGioHang.TabIndex = 1;
-            this.btnGioHang.UseTransparentBackground = true;
-            this.btnGioHang.Click += new System.EventHandler(this.btnGioHang_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.guna2CircleButton1);
@@ -430,14 +415,31 @@ namespace DoAnNet
             this.guna2CircleButton1.Text = "2";
             this.guna2CircleButton1.UseTransparentBackground = true;
             // 
-            // pnMain
+            // btnGioHang
             // 
-            this.pnMain.BackColor = System.Drawing.Color.Transparent;
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(100, 64);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(796, 506);
-            this.pnMain.TabIndex = 2;
+            this.btnGioHang.AutoRoundedCorners = true;
+            this.btnGioHang.BackColor = System.Drawing.Color.Transparent;
+            this.btnGioHang.BorderColor = System.Drawing.Color.Empty;
+            this.btnGioHang.BorderRadius = 24;
+            this.btnGioHang.BorderThickness = 1;
+            this.btnGioHang.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnGioHang.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnGioHang.CheckedState.Parent = this.btnGioHang;
+            this.btnGioHang.CustomImages.Parent = this.btnGioHang;
+            this.btnGioHang.FillColor = System.Drawing.Color.Empty;
+            this.btnGioHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGioHang.ForeColor = System.Drawing.Color.White;
+            this.btnGioHang.HoverState.Parent = this.btnGioHang;
+            this.btnGioHang.Image = ((System.Drawing.Image)(resources.GetObject("btnGioHang.Image")));
+            this.btnGioHang.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnGioHang.Location = new System.Drawing.Point(-2, 2);
+            this.btnGioHang.Name = "btnGioHang";
+            this.btnGioHang.ShadowDecoration.BorderRadius = 24;
+            this.btnGioHang.ShadowDecoration.Parent = this.btnGioHang;
+            this.btnGioHang.Size = new System.Drawing.Size(60, 50);
+            this.btnGioHang.TabIndex = 1;
+            this.btnGioHang.UseTransparentBackground = true;
+            this.btnGioHang.Click += new System.EventHandler(this.btnGioHang_Click);
             // 
             // panel3
             // 
@@ -490,16 +492,14 @@ namespace DoAnNet
             this.btnThongBao.TabIndex = 1;
             this.btnThongBao.UseTransparentBackground = true;
             // 
-            // label1
+            // pnMain
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(66, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(456, 52);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Danh sách sản phẩm";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pnMain.BackColor = System.Drawing.Color.Transparent;
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(100, 64);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(796, 506);
+            this.pnMain.TabIndex = 2;
             // 
             // frmMain
             // 
@@ -514,6 +514,7 @@ namespace DoAnNet
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

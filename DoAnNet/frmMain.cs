@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BLL;
 
 namespace DoAnNet
 {
@@ -56,6 +58,11 @@ namespace DoAnNet
          
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
         {
 
         }
