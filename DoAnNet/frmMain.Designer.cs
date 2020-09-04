@@ -1,4 +1,6 @@
-﻿namespace DoAnNet
+﻿using System.Drawing;
+
+namespace DoAnNet
 {
     partial class frmMain
     {
@@ -30,9 +32,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            Guna.UI2.WinForms.Guna2CircleButton btnSoLuong;
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnMenu = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btnHoaDon = new Guna.UI2.WinForms.Guna2Button();
@@ -42,17 +44,19 @@
             this.imgSlide = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnTop = new System.Windows.Forms.Panel();
-            this.pnMain = new System.Windows.Forms.Panel();
-            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.ptbUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnGioHang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnInHoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnInHoaDon = new Guna.UI2.WinForms.Guna2Button();
+            this.btnGioHang = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.pnMain = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblTenKH = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            btnSoLuong = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbUser)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,6 +98,31 @@
             this.pnMenu.Size = new System.Drawing.Size(86, 551);
             this.pnMenu.TabIndex = 0;
             // 
+            // btnThongKe
+            // 
+            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongKe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnThongKe.BorderRadius = 24;
+            this.btnThongKe.BorderThickness = 1;
+            this.btnThongKe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnThongKe.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnThongKe.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnThongKe.CheckedState.Parent = this.btnThongKe;
+            this.btnThongKe.CustomImages.Parent = this.btnThongKe;
+            this.btnThongKe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.HoverState.Parent = this.btnThongKe;
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnThongKe.Location = new System.Drawing.Point(23, 407);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.ShadowDecoration.Parent = this.btnThongKe;
+            this.btnThongKe.Size = new System.Drawing.Size(60, 50);
+            this.btnThongKe.TabIndex = 1;
+            this.btnThongKe.UseTransparentBackground = true;
+            this.btnThongKe.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -114,7 +144,7 @@
             this.btnSanPham.Checked = true;
             this.btnSanPham.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnSanPham.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnSanPham.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.CheckedState.Image")));
+            this.btnSanPham.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.CheckedState.Image")));
             this.btnSanPham.CheckedState.Parent = this.btnSanPham;
             this.btnSanPham.CustomImages.Parent = this.btnSanPham;
             this.btnSanPham.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -141,7 +171,7 @@
             this.btnHoaDon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnHoaDon.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnHoaDon.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnHoaDon.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.CheckedState.Image")));
+            this.btnHoaDon.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.CheckedState.Image")));
             this.btnHoaDon.CheckedState.Parent = this.btnHoaDon;
             this.btnHoaDon.CustomImages.Parent = this.btnHoaDon;
             this.btnHoaDon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -167,7 +197,7 @@
             this.btnKhachHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnKhachHang.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnKhachHang.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnKhachHang.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.CheckedState.Image")));
+            this.btnKhachHang.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.CheckedState.Image")));
             this.btnKhachHang.CheckedState.Parent = this.btnKhachHang;
             this.btnKhachHang.CustomImages.Parent = this.btnKhachHang;
             this.btnKhachHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -217,7 +247,7 @@
             this.btnGioiThieu.BorderThickness = 1;
             this.btnGioiThieu.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnGioiThieu.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnGioiThieu.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.CheckedState.Image")));
+            this.btnGioiThieu.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnGioiThieu.CheckedState.Image")));
             this.btnGioiThieu.CheckedState.Parent = this.btnGioiThieu;
             this.btnGioiThieu.CustomImages.Parent = this.btnGioiThieu;
             this.btnGioiThieu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -250,10 +280,9 @@
             // 
             // pnTop
             // 
-            this.pnTop.Controls.Add(this.lblTenKH);
             this.pnTop.Controls.Add(this.label1);
-            this.pnTop.Controls.Add(this.flowLayoutPanel1);
             this.pnTop.Controls.Add(this.ptbUser);
+            this.pnTop.Controls.Add(this.flowLayoutPanel1);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(100, 0);
             this.pnTop.Name = "pnTop";
@@ -261,46 +290,12 @@
             this.pnTop.Size = new System.Drawing.Size(796, 64);
             this.pnTop.TabIndex = 1;
             // 
-            // pnMain
-            // 
-            this.pnMain.BackColor = System.Drawing.Color.Transparent;
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(100, 64);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(796, 506);
-            this.pnMain.TabIndex = 2;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.btnThongKe.BorderRadius = 24;
-            this.btnThongKe.BorderThickness = 1;
-            this.btnThongKe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnThongKe.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btnThongKe.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnThongKe.CheckedState.Parent = this.btnThongKe;
-            this.btnThongKe.CustomImages.Parent = this.btnThongKe;
-            this.btnThongKe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.HoverState.Parent = this.btnThongKe;
-            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
-            this.btnThongKe.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnThongKe.Location = new System.Drawing.Point(23, 407);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.ShadowDecoration.Parent = this.btnThongKe;
-            this.btnThongKe.Size = new System.Drawing.Size(60, 50);
-            this.btnThongKe.TabIndex = 1;
-            this.btnThongKe.UseTransparentBackground = true;
-            this.btnThongKe.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
-            // 
             // ptbUser
             // 
             this.ptbUser.BackColor = System.Drawing.Color.Transparent;
-            this.ptbUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ptbUser.Dock = System.Windows.Forms.DockStyle.Left;
             this.ptbUser.Image = ((System.Drawing.Image)(resources.GetObject("ptbUser.Image")));
-            this.ptbUser.Location = new System.Drawing.Point(737, 5);
+            this.ptbUser.Location = new System.Drawing.Point(5, 5);
             this.ptbUser.Name = "ptbUser";
             this.ptbUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.ptbUser.ShadowDecoration.Parent = this.ptbUser;
@@ -309,32 +304,54 @@
             this.ptbUser.TabIndex = 0;
             this.ptbUser.TabStop = false;
             // 
-            // btnGioHang
+            // flowLayoutPanel1
             // 
-            this.btnGioHang.AutoRoundedCorners = true;
-            this.btnGioHang.BackColor = System.Drawing.Color.Transparent;
-            this.btnGioHang.BorderColor = System.Drawing.Color.Empty;
-            this.btnGioHang.BorderRadius = 24;
-            this.btnGioHang.BorderThickness = 1;
-            this.btnGioHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnGioHang.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btnGioHang.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnGioHang.CheckedState.Parent = this.btnGioHang;
-            this.btnGioHang.CustomImages.Parent = this.btnGioHang;
-            this.btnGioHang.FillColor = System.Drawing.Color.Empty;
-            this.btnGioHang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnGioHang.ForeColor = System.Drawing.Color.White;
-            this.btnGioHang.HoverState.Parent = this.btnGioHang;
-            this.btnGioHang.Image = ((System.Drawing.Image)(resources.GetObject("btnGioHang.Image")));
-            this.btnGioHang.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnGioHang.Location = new System.Drawing.Point(116, 3);
-            this.btnGioHang.Name = "btnGioHang";
-            this.btnGioHang.ShadowDecoration.BorderRadius = 24;
-            this.btnGioHang.ShadowDecoration.Parent = this.btnGioHang;
-            this.btnGioHang.Size = new System.Drawing.Size(60, 50);
-            this.btnGioHang.TabIndex = 1;
-            this.btnGioHang.UseTransparentBackground = true;
-            this.btnGioHang.Click += new System.EventHandler(this.btnGioHang_Click);
+            this.flowLayoutPanel1.Controls.Add(this.btnClose);
+            this.flowLayoutPanel1.Controls.Add(this.btnMinimize);
+            this.flowLayoutPanel1.Controls.Add(this.btnInHoaDon);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.panel3);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(528, 5);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(263, 54);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.CheckedState.Parent = this.btnClose;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.CustomImages.Parent = this.btnClose;
+            this.btnClose.FillColor = System.Drawing.Color.Red;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.HoverState.Parent = this.btnClose;
+            this.btnClose.Location = new System.Drawing.Point(241, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnClose.ShadowDecoration.Parent = this.btnClose;
+            this.btnClose.Size = new System.Drawing.Size(14, 14);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.CheckedState.Parent = this.btnMinimize;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.CustomImages.Parent = this.btnMinimize;
+            this.btnMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(184)))), ((int)(((byte)(52)))));
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.HoverState.Parent = this.btnMinimize;
+            this.btnMinimize.Location = new System.Drawing.Point(221, 3);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(14, 14);
+            this.btnMinimize.TabIndex = 4;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnInHoaDon
             // 
@@ -342,7 +359,6 @@
             this.btnInHoaDon.BorderColor = System.Drawing.Color.Empty;
             this.btnInHoaDon.BorderRadius = 24;
             this.btnInHoaDon.BorderThickness = 1;
-            this.btnInHoaDon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnInHoaDon.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnInHoaDon.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnInHoaDon.CheckedState.Parent = this.btnInHoaDon;
@@ -353,25 +369,102 @@
             this.btnInHoaDon.HoverState.Parent = this.btnInHoaDon;
             this.btnInHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.Image")));
             this.btnInHoaDon.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnInHoaDon.Location = new System.Drawing.Point(182, 3);
+            this.btnInHoaDon.Location = new System.Drawing.Point(155, 3);
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.ShadowDecoration.Parent = this.btnInHoaDon;
             this.btnInHoaDon.Size = new System.Drawing.Size(60, 50);
             this.btnInHoaDon.TabIndex = 2;
             this.btnInHoaDon.UseTransparentBackground = true;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
-            // flowLayoutPanel1
+            // btnGioHang
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnInHoaDon);
-            this.flowLayoutPanel1.Controls.Add(this.btnGioHang);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(487, 5);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 54);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.btnGioHang.AutoRoundedCorners = true;
+            this.btnGioHang.BackColor = System.Drawing.Color.Transparent;
+            this.btnGioHang.BorderColor = System.Drawing.Color.Empty;
+            this.btnGioHang.BorderRadius = 24;
+            this.btnGioHang.BorderThickness = 1;
+            this.btnGioHang.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnGioHang.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnGioHang.CheckedState.Parent = this.btnGioHang;
+            this.btnGioHang.CustomImages.Parent = this.btnGioHang;
+            this.btnGioHang.FillColor = System.Drawing.Color.Empty;
+            this.btnGioHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGioHang.ForeColor = System.Drawing.Color.White;
+            this.btnGioHang.HoverState.Parent = this.btnGioHang;
+            this.btnGioHang.Image = ((System.Drawing.Image)(resources.GetObject("btnGioHang.Image")));
+            this.btnGioHang.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnGioHang.Location = new System.Drawing.Point(-2, 2);
+            this.btnGioHang.Name = "btnGioHang";
+            this.btnGioHang.ShadowDecoration.BorderRadius = 24;
+            this.btnGioHang.ShadowDecoration.Parent = this.btnGioHang;
+            this.btnGioHang.Size = new System.Drawing.Size(60, 50);
+            this.btnGioHang.TabIndex = 1;
+            this.btnGioHang.UseTransparentBackground = true;
+            this.btnGioHang.Click += new System.EventHandler(this.btnGioHang_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.guna2CircleButton1);
+            this.panel2.Controls.Add(this.btnGioHang);
+            this.panel2.Location = new System.Drawing.Point(84, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(65, 49);
+            this.panel2.TabIndex = 3;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(37, 1);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(20, 20);
+            this.guna2CircleButton1.TabIndex = 2;
+            this.guna2CircleButton1.Text = "2";
+            this.guna2CircleButton1.UseTransparentBackground = true;
+            // 
+            // pnMain
+            // 
+            this.pnMain.BackColor = System.Drawing.Color.Transparent;
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(100, 64);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(796, 506);
+            this.pnMain.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.guna2CircleButton2);
+            this.panel3.Controls.Add(this.btnThongBao);
+            this.panel3.Location = new System.Drawing.Point(13, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(65, 49);
+            this.panel3.TabIndex = 5;
+            // 
+            // guna2CircleButton2
+            // 
+            this.guna2CircleButton2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton2.CheckedState.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.CustomImages.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton2.HoverState.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.Location = new System.Drawing.Point(37, 1);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(20, 20);
+            this.guna2CircleButton2.TabIndex = 2;
+            this.guna2CircleButton2.Text = "2";
+            this.guna2CircleButton2.UseTransparentBackground = true;
             // 
             // btnThongBao
             // 
@@ -379,7 +472,6 @@
             this.btnThongBao.BorderColor = System.Drawing.Color.Empty;
             this.btnThongBao.BorderRadius = 24;
             this.btnThongBao.BorderThickness = 1;
-            this.btnThongBao.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnThongBao.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnThongBao.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnThongBao.CheckedState.Parent = this.btnThongBao;
@@ -397,62 +489,17 @@
             this.btnThongBao.Size = new System.Drawing.Size(60, 50);
             this.btnThongBao.TabIndex = 1;
             this.btnThongBao.UseTransparentBackground = true;
-            this.btnThongBao.Click += new System.EventHandler(this.btnGioHang_Click);
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 5);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(66, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 54);
+            this.label1.Size = new System.Drawing.Size(456, 52);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Khách hàng";
+            this.label1.Text = "Danh sách sản phẩm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblTenKH
-            // 
-            this.lblTenKH.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTenKH.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTenKH.Location = new System.Drawing.Point(120, 5);
-            this.lblTenKH.Name = "lblTenKH";
-            this.lblTenKH.Size = new System.Drawing.Size(177, 54);
-            this.lblTenKH.TabIndex = 3;
-            this.lblTenKH.Text = "Tên gì đó";
-            this.lblTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(btnSoLuong);
-            this.panel2.Controls.Add(this.btnThongBao);
-            this.panel2.Location = new System.Drawing.Point(45, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(65, 49);
-            this.panel2.TabIndex = 3;
-            // 
-            // btnSoLuong
-            // 
-            btnSoLuong.BackColor = System.Drawing.Color.DarkRed;
-            btnSoLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            btnSoLuong.BorderColor = System.Drawing.Color.Transparent;
-            btnSoLuong.BorderRadius = 11;
-            btnSoLuong.BorderThickness = 8;
-            btnSoLuong.CheckedState.Parent = btnSoLuong;
-            btnSoLuong.CustomBorderColor = System.Drawing.Color.White;
-            btnSoLuong.CustomImages.Parent = btnSoLuong;
-            btnSoLuong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            btnSoLuong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnSoLuong.ForeColor = System.Drawing.Color.White;
-            btnSoLuong.HoverState.Parent = btnSoLuong;
-            btnSoLuong.Location = new System.Drawing.Point(34, 2);
-            btnSoLuong.Name = "btnSoLuong";
-            btnSoLuong.Padding = new System.Windows.Forms.Padding(10);
-            btnSoLuong.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnSoLuong.ShadowDecoration.Parent = btnSoLuong;
-            btnSoLuong.Size = new System.Drawing.Size(24, 24);
-            btnSoLuong.TabIndex = 2;
-            btnSoLuong.Text = "2";
             // 
             // frmMain
             // 
@@ -475,6 +522,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbUser)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -498,10 +546,14 @@
         private Guna.UI2.WinForms.Guna2Button btnGioHang;
         private Guna.UI2.WinForms.Guna2Button btnInHoaDon;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
+        private Guna.UI2.WinForms.Guna2CircleButton btnMinimize;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2Button btnThongBao;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblTenKH;
-        private System.Windows.Forms.Panel panel2;
     }
 }
 
