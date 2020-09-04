@@ -1,46 +1,70 @@
 ﻿/*
 use master 
-drop database store
+go
+drop database watch_store
 
 drop database QL_DONG_HO
 
 
 */
-create database store
+create database watch_store
 go
-use store
+use watch_store
 go
-create table agencys(
+create table agencys( /*chi nhánh*/
 	ag_id char(3) primary key,
 	ag_address nvarchar(100),
 	ag_phone char(10)
 )
-go
-create table brands(
-	br_id char(2) primary key,
-	br_name nvarchar(32) not null,
+go 
+create table brands( /*thương hiệu*/
+	br_id varchar(10) primary key, 
 	br_country nvarchar(30)
 )
 go
 create table products(
 	pd_id char(8) primary key,
 	pd_name char(80),
-	pd_purchase money,
 	pd_retail money,
 	pd_remain int,
 	pd_unit nvarchar(10),
 	pd_img nvarchar(100),
-	br_id char(2) foreign key references categories(br_id)
+	br_id varchar(10) foreign key references brands(br_id)
+)
+go
+
+create table suppliers( /*nhà cung cấp sản phẩm*/
+	sp_id char(3) primary key,
+	sp_name nvarchar(100),
+	sp_tin varchar(13),
+	sp_address nvarchar(100),
+	sp_phone char(10),
+)
+
+go
+create table provide(
+	pr_id char(12) primary key,
+	sp_id char(3) foreign key references suppliers(sp_id),
+	ag_id char(3) foreign key references agencys(ag_id), /*chi nhánh*/
+	pr_date date, /*ngày giao*/
+	pr_deliveryCost money
+)
+go
+create table provide_detail(
+	pr_id char(12) foreign key references provide(pr_id),
+	pd_id char(8) foreign key references products(pd_id),
+	prd_quantity int,
+	prd_purchase money,
 )
 go
 create table watchs(
 	pd_id char(8) primary key,
-	foreign key (pd_id) references products(pd_id),
 	w_shape nvarchar(30),
 	w_size nvarchar(30),
 	w_energy nvarchar(30),
 	w_color nvarchar(30),
 	w_guarantee int,
+	foreign key (pd_id) references products(pd_id),
 )
 go
 create table company(
@@ -81,7 +105,7 @@ create table orders(
 	od_address nvarchar(100),
 	od_payment nvarchar(30),
 	ct_id char(7) foreign key references customers(ct_id),
-	br_id char(3) foreign key references branchs(br_id),
+	ag_id char(3) foreign key references agencys(ag_id),
 )
 go
 create table order_detail(
@@ -92,11 +116,31 @@ create table order_detail(
 	primary key (od_id,pd_id)
 )
 go
-insert into branchs values
+
+insert into brands values
+('Rhythm',N'Nhật Bản'),
+('Seiko',N'Nhật Bản'),
+('Casio',N'Nhật Bản'),
+('7Gift',N'Việt Nam'), 
+('Kashi ',N'Việt Nam')
+go
+insert into agencys values
 ('000',N'123 Nguyễn Hữu Cảnh, Q. Bình Thạnh, TP. Hồ Chí Minh','0903989027'),
 ('001',N'123 Nguyễn Hữu Thọ, Q. 7, TP. Hồ Chí Minh','0905555112'),
 ('002',N'1200 Lê Hồng Phong, P. Phước Long, TP. Nha Trang, T. Khánh Hòa','0908339338')
 go
+insert into company values
+('1602129732',N'CÔNG TY TNHH MTV CORE VIỆT NAM',N'24P3, đường Trần Phú, Phường Mỹ Phước, Thành phố Long Xuyên, An Giang','0916426450','admin@core.vn'),
+('0109333216',N'CÔNG TY TNHH TƯ VẤN ĐẦU TƯ VÀ CÔNG NGHỆ MIC VIỆT NAM',N'Số LP20, ngõ 219 Trung Kính, Phường Yên Hoà, Quận Cầu Giấy, Thành phố Hà Nội','0868353368','phamthanhtung@mic.vn'),
+('0316471647',N'CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ T&P',N'151/53/17 Đường Liên Khu 4-5, Phường Bình Hưng Hòa B, Quận Bình Tân, Thành phố Hồ Chí Minh','0908772896','admin@tap.vn'),
+('0316466580',N'CÔNG TY TNHH CÔNG NGHỆ IDA',N'84/1 Bà Triệu, Thị trấn Hóc Môn, Huyện Hóc Môn, Thành phố Hồ Chí Minh','0923498652','admin@ida.vn'),
+('0316470795',N'CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG GO MEDIA VIỆT NAM',N'Tầng 5, Tòa nhà WMC số 102A-B-C đường Cống Quỳnh, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh','0909820302','hotro@gomedia.vn')
+
+select column_name,data_type
+from INFORMATION_SCHEMA.COLUMNS
+where TABLE_NAME = 'company'
+select * from company
+
 insert into categories values
 ('dh',N'Đồng hồ',
 
@@ -274,22 +318,21 @@ insert into cthoadon values
 (10000013,1052,1,600000)
 
 /* convert database table to class
-CREATE PROCEDURE CREATEMODEL  
+CREATE alter PROCEDURE CREATEMODEL  
 (  
-     @TableName SYSNAME ,  
-     @CLASSNAME VARCHAR(500)   
+     @TableName SYSNAME 
 )  
 AS  
 BEGIN  
     DECLARE @Result VARCHAR(MAX)  
-    SET @Result = @CLASSNAME + @TableName + '  
+    SET @Result = 'public class ' + upper(left(@TableName,1)) + substring(@TableName,2,len(@TableName))+ '_DTO
 {'  
 SELECT @Result = @Result + '  
     public ' + ColumnType + NullableSign + ' ' + ColumnName + ' { get; set; }'  
 FROM  
 (  
-    SELECT   
-        REPLACE(col.NAME, ' ', '_') ColumnName,  
+    SELECT
+		upper(left(col.NAME,1)) + substring(col.NAME,2,len(col.NAME)) ColumnName,  
         column_id ColumnId,  
         CASE typ.NAME   
             WHEN 'bigint' THEN 'long'  
@@ -336,7 +379,7 @@ SET @Result = @Result  + '
 print @Result  
 END
 
-exec CREATEMODEL 'cthoadon', 'public class '
+exec CREATEMODEL 'orders'
 
 select * from INFORMATION_SCHEMA.tables
 
