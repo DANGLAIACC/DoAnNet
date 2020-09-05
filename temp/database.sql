@@ -7,11 +7,11 @@ drop database QL_DONG_HO
 
 
 */
-create database watch_store
+create database WATCH_STORE
 go
-use watch_store
+use WATCH_STORE
 go
-create table agencys( /*chi nhánh*/
+create table agencies( /*chi nhánh*/
 	ag_id char(3) primary key,
 	ag_address nvarchar(100),
 	ag_phone char(10)
@@ -22,14 +22,19 @@ create table brands( /*thương hiệu*/
 	br_country nvarchar(30)
 )
 go
+ 
 create table products(
 	pd_id char(8) primary key,
-	pd_name char(80),
-	pd_retail money,
-	pd_remain int,
-	pd_unit nvarchar(10),
-	pd_img nvarchar(100),
+	pd_name nvarchar(80),
+	pd_retail money, 
+	pd_unit nvarchar(10), 
 	br_id varchar(10) foreign key references brands(br_id)
+)
+GO
+create table agency_product(
+	ag_id char(3) foreign key references agencies(ag_id),
+	pd_id char(8) foreign key references products(pd_id),
+	pd_remain int,
 )
 go
 
@@ -45,7 +50,7 @@ go
 create table provide(
 	pr_id char(12) primary key,
 	sp_id char(3) foreign key references suppliers(sp_id),
-	ag_id char(3) foreign key references agencys(ag_id), /*chi nhánh*/
+	ag_id char(3) foreign key references agencies(ag_id), /*chi nhánh*/
 	pr_date date, /*ngày giao*/
 	pr_deliveryCost money
 )
@@ -82,6 +87,7 @@ create table customers(
 	ct_phone char(10),
 	ct_email varchar(30),
 	ct_gender bit,
+	ct_address nvarchar(100),
 	cp_tin varchar(13) foreign key references company(cp_tin),
 )
 go
@@ -96,6 +102,7 @@ create table staffs(
 	st_birthday date,
 	st_salary money,
 	st_role int,
+	ag_id char(3) foreign key references agencies(ag_id)
 )
 go
 create table orders(
@@ -105,7 +112,7 @@ create table orders(
 	od_address nvarchar(100),
 	od_payment nvarchar(30),
 	ct_id char(7) foreign key references customers(ct_id),
-	ag_id char(3) foreign key references agencys(ag_id),
+	ag_id char(3) foreign key references agencies(ag_id),
 )
 go
 create table order_detail(
@@ -124,7 +131,7 @@ insert into brands values
 ('7Gift',N'Việt Nam'), 
 ('Kashi ',N'Việt Nam')
 go
-insert into agencys values
+insert into agencies values
 ('000',N'123 Nguyễn Hữu Cảnh, Q. Bình Thạnh, TP. Hồ Chí Minh','0903989027'),
 ('001',N'123 Nguyễn Hữu Thọ, Q. 7, TP. Hồ Chí Minh','0905555112'),
 ('002',N'1200 Lê Hồng Phong, P. Phước Long, TP. Nha Trang, T. Khánh Hòa','0908339338')
@@ -135,11 +142,108 @@ insert into company values
 ('0316471647',N'CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ T&P',N'151/53/17 Đường Liên Khu 4-5, Phường Bình Hưng Hòa B, Quận Bình Tân, Thành phố Hồ Chí Minh','0908772896','admin@tap.vn'),
 ('0316466580',N'CÔNG TY TNHH CÔNG NGHỆ IDA',N'84/1 Bà Triệu, Thị trấn Hóc Môn, Huyện Hóc Môn, Thành phố Hồ Chí Minh','0923498652','admin@ida.vn'),
 ('0316470795',N'CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG GO MEDIA VIỆT NAM',N'Tầng 5, Tòa nhà WMC số 102A-B-C đường Cống Quỳnh, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh','0909820302','hotro@gomedia.vn')
+ go
+insert into customers values
+('0000000',N'Huỳnh Thị Thúy',N'Kiều','0896804466','huynhkieu1606@gmail.com',0,N'Bình Định','1602129732'),
+('0000001',N'Nguyễn Thị',N'Tiên','0813788390','nguyenthitien1202@gmail.com',0,N'TP. Hồ Chí Minh','1602129732'),
+('0000002',N'La Hoàng',N'Long','0523769577','hoanglonghumus@gmail.com',1,N'TP. Nha Trang','0316471647'),
+('0000003',N'La Quán',N'Trung','0307906979','trungla1242@gmail.com',0,N'Bình Định','0316471647'),
+('0000004',N'Lưu Huyền',N'Đức','896713483','huyenduc.thuchan@gmail.com',1,N'TP. Hồ Chí Minh','0316470795'),
+('0000005',N'Tào Mạnh',N'Đức','0559224778','manhduc123@gmail.com',1,N'TP. Hồ Chí Minh','0316470795'),
+('0000006',N'Ngô Nhật',N'Huy','0596447968','ngonhathuy@gmail.com',1,N'TP. Nha Trang','0316466580'),
+('0000007',N'Nguyễn Trọng',N'Khánh','0898863448','trongkhanh456@gmail.com',1,N'Bình Định','0316466580'),
+('0000008',N'Hà Tiểu',N'Mai','0896228105','hatieumai@gmail.com',0,N'Phú Yên','0109333216'),
+('0000009',N'Văn Tiến',N'Luận','0898863448','vantienluan@gmail.com',1,N'Bình Định','0109333216')
+
+go
+
+insert into products values
+('00000000',N'Đồng hồ treo tường CMH759NR06',4500000,N'cái','Rhythm'),
+('00000001',N'Đồng hồ treo tường CMG544NR02',1800000,N'cái','Rhythm'),
+('00000002',N'Đồng hồ treo tường CMG527NR03',2000000,N'cái','Rhythm'),
+('00000003',N'Đồng hồ treo tường CMG778NR06',2800000,N'cái','Rhythm'),
+('00000004',N'Đồng hồ treo tường 4MJ403WD23',4500000,N'cái','Rhythm'),
+('00000005',N'Đồng hồ treo tường CMG292NR06',4850000,N'cái','Rhythm'),
+
+('00000006',N'Đồng hồ treo tường QXM383B',3800000,N'cái','Seiko'),
+('00000007',N'Đồng hồ treo tường QXM377B',2500000,N'cái','Seiko'),
+('00000008',N'Đồng hồ treo tường QXA757B',4500000,N'cái','Seiko'),
+('00000009',N'Đồng hồ treo tường QXA757Z',4000000,N'cái','Seiko'),
+('00000010',N'Đồng hồ treo tường QXA752Z',3000000,N'cái','Seiko'),
+('00000011',N'Đồng hồ treo tường QXA932B',2000000,N'cái','Seiko'),
+('00000012',N'Đồng hồ treo tường QXA732W',3700000,N'cái','Seiko'),
+('00000013',N'Đồng hồ treo tường QXA675Z',2800000,N'cái','Seiko'),
+('00000014',N'Đồng hồ treo tường QXA521K',1200000,N'cái','Seiko'),
+('00000015',N'Đồng hồ treo tường QXA577L',3600000,N'cái','Seiko'),
+
+('00000016',N'Đồng hồ treo tường IC-02-7DF',2600000,N'cái','Casio'),
+('00000017',N'Đồng hồ treo tường IC-01-7DF',2800000,N'cái','Casio'),
+('00000018',N'Đồng hồ treo tường IC-02-9DF',3000000,N'cái','Casio'),
+('00000019',N'Đồng hồ treo tường IC-02-5DF',3200000,N'cái','Casio'),
+
+('00000020',N'Đồng hồ treo tường khung viền kiểu Hàn 522',350000,N'cái','7Gift'),
+('00000021',N'Đồng hồ treo tường khung viền kiểu Hàn 517',300000,N'cái','7Gift'),
+('00000022',N'Đồng hồ treo tường khung viền kiểu Hàn 10',350000,N'cái','7Gift'),
+('00000023',N'Đồng hồ treo tường khung viền kiểu Hàn 04',350000,N'cái','7Gift'),
+('00000024',N'Đồng hồ treo tường khung viền kiểu Hàn 08',350000,N'cái','7Gift'),
+
+('00000025',N'Đồng hồ treo tường HM220',4200000,N'cái','Kashi'),
+('00000026',N'Đồng hồ treo tường HM253',2500000,N'cái','Kashi'),
+('00000027',N'Đồng hồ treo tường HM222',3200000,N'cái','Kashi'),
+('00000028',N'Đồng hồ treo tường HM346',3800000,N'cái','Kashi'),
+('00000029',N'Đồng hồ treo tường HM223',4000000,N'cái','Kashi')
+
+go
+delete from watchs
+
+
+insert into watchs values
+('00000000',N'Hình tròn','r = 27.5',N'Quartz (chạy pin)',N'Nâu',36),
+('00000001',N'Hình tròn','r = 31',N'Quartz (chạy pin)',N'Bạc',36),
+('00000002',N'Hình tròn','r = 34',N'Quartz (chạy pin)',N'Trắng',36),
+('00000003',N'Hình tròn','r = 30.2',N'Quartz (chạy pin)',N'Nâu',36),
+('00000004',N'Hình oval','30.3 x 40.3 x 8.1',N'Quartz (chạy pin)',N'Nâu',36),
+('00000005',N'Hình tròn','r = 59',N'Quartz (chạy pin)',N'Nâu',36),
+
+('00000006',N'Hình oval','48 x 44 x 12',N'Quartz (chạy pin)',N'Nâu',36),
+('00000007',N'Hình oval','44.3 x 40.5 x 9.7',N'Quartz (chạy pin)',N'Nâu',36),
+('00000008',N'Hình tròn','r = 35',N'Quartz (chạy pin)',N'Nâu',36),
+('00000009',N'Hình tròn','r = 35',N'Quartz (chạy pin)',N'Vàng',36),
+
+('00000010',N'Hình tròn','r = 39.5',N'Quartz (chạy pin)',N'Nâu',12),
+('00000011',N'Hình tròn','r = 21',N'Quartz (chạy pin)',N'Nâu',12),
+('00000012',N'Hình tròn','r = 35',N'Quartz (chạy pin)',N'Trắng',12),
+('00000013',N'Hình vuông','26.5 x 26.5',N'Quartz (chạy pin)',N'Nâu',12),
+('00000014',N'Hình tròn','r = 29.5',N'Quartz (chạy pin)',N'Đen',12),
+('00000015',N'Hình tròn','r = 28',N'Quartz (chạy pin)',N'Xanh dương',12),
+
+('00000016',N'Hình tròn','r = 26',N'Quartz (chạy pin)',N'Nâu',12),
+('00000017',N'Hình tròn','r = 26',N'Quartz (chạy pin)',N'Trắng',12),
+('00000018',N'Hình tròn','r = 26',N'Quartz (chạy pin)',N'Vàng',12),
+('00000019',N'Hình tròn','r = 26',N'Quartz (chạy pin)',N'Nâu',12),
+
+select pd_id,br_id from products where pd_name like '%10%'
+
+select * from products where pd_id='00000023'
+
+select * from products where pd_id='00000023'
+
+('00000020',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
+('00000021',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
+('00000022',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
+
+('00000023',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
+('00000024',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
+('00000025',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
+('00000021',N'Hình tròn','',N'Quartz (chạy pin)',N'Nâu',12),
+
+
+select * from products
 
 select column_name,data_type
 from INFORMATION_SCHEMA.COLUMNS
-where TABLE_NAME = 'company'
-select * from company
+where TABLE_NAME = 'customers'
+select * from customers
 
 insert into categories values
 ('dh',N'Đồng hồ',
@@ -220,8 +324,6 @@ insert into sanpham values
 ('CMG778NR06',1800000,2376000,N'Tròn','30.2',N'Gỗ',N'Quartz (chạy pin)',N'Nâu',36,12,10), 
 ('4MJ403WD23',4630081,5720000,N'Oval','30.3 x 40.3 x 8.1',N'Nhựa',N'Quartz (chạy pin)',N'Nâu',36,20,10),
 ('CMG292NR06',3850000,4730000,N'Tròn','59',N'Gỗ',N'Quartz (chạy pin)',N'Nâu',36,7,10),
-
-
 ('QXM383B',17640000,19640000,N'Oval','48 x 44 x 12',N'Gỗ',N'Quartz (chạy pin)',N'Nâu',36,0,12),
 ('QXM377B',7500000,9460000,N'Oval','44.3 x 40.5 x 9.7',N'Nhựa',N'Quartz (chạy pin)',N'Nâu',36,10,12),
 ('QXA757B',1320000,1530000,N'Tròn','35',N'Nhựa',N'Quartz (chạy pin)',N'Nâu',36,20,12),
