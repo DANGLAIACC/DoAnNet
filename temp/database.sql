@@ -35,6 +35,7 @@ create table agency_product(
 	ag_id char(3) foreign key references agencies(ag_id),
 	pd_id char(8) foreign key references products(pd_id),
 	pd_remain int,
+	primary key (ag_id,pd_id)
 )
 go
 
@@ -60,9 +61,10 @@ create table provide_detail(
 	pd_id char(8) foreign key references products(pd_id),
 	prd_quantity int,
 	prd_purchase money,
+	primary key (pr_id,pd_id)
 )
 go
-create table watchs(
+create table watches(
 	pd_id char(8) primary key,
 	w_shape nvarchar(30),
 	w_size nvarchar(30),
@@ -92,7 +94,8 @@ create table customers(
 )
 go
 create table staffs(
-	st_id char(10) primary key,
+	st_id varchar(10) primary key,
+	st_password varchar(20),
 	st_firstName nvarchar(30),
 	st_lastName nvarchar(30),
 	st_phone char(10),
@@ -111,6 +114,7 @@ create table orders(
 	od_status int,
 	od_address nvarchar(100),
 	od_payment nvarchar(30),
+	st_id varchar(10) foreign key references staffs(st_id),
 	ct_id char(7) foreign key references customers(ct_id),
 	ag_id char(3) foreign key references agencies(ag_id),
 )
@@ -195,7 +199,7 @@ insert into products values
 
 go 
 
-insert into watchs values
+insert into watches values
 ('00000000',N'Hình tròn','r = 27.5',N'Quartz (chạy pin)',N'Nâu',36),
 ('00000001',N'Hình tròn','r = 31',N'Quartz (chạy pin)',N'Bạc',36),
 ('00000002',N'Hình tròn','r = 34',N'Quartz (chạy pin)',N'Trắng',36),
@@ -231,11 +235,82 @@ insert into watchs values
 ('00000027',N'Hình vuông','34.3 x 4.5 x 34.3 (D-R-C)',N'Quartz (chạy pin)',N'Trắng',12),
 ('00000028',N'Hình chữ nhật','40 x 56.5 x 4.5 (D-R-C)',N'Quartz (chạy pin)',N'Nâu - Trắng',12),
 ('00000029',N'Hình tròn','30 x 4,7',N'Quartz (chạy pin)',N'Đen',12)
+go 
+
+insert into staffs values
+('admin','admin',N'Đặng Quốc',N'Lai','0772470922','danglai.mail@gmail.com',1,10,'12/22/2000',100000,0,'000'), /*admin*/
+
+('lhkhang','lhkhang',N'Lê Hoàng',N'Khang','0908465894','lhkhang@gmail.com',1,10,'6/16/2000',150000,0,'000'),
+('thphuong','thphuong',N'Triệu Hà',N'Phương','0902568425','thphuong@gmail.com',0,4,'2/19/2000',100000,0,'000'),
+('ngmy','ngmy',N'Ngô Hoàng',N'My','0908055364','ngmy@gmail.com',1,5,'7/17/2000',170000,0,'000'),
+
+('ntdung','ntdung',N'Nguyễn Thành',N'Dũng','0906980736','ntdung@gmail.com',1,4,'5/13/1999',120000,0,'001'),
+('dttram','dttram',N'Đặng Thùy',N'Trâm','0906343749','dttram@gmail.com',0,23,'9/13/1999',200000,0,'001'),
+('hqhuy','hqhuy',N'Hu?nh Quang',N'Huy','0907100763','hqhuy@gmail.com',1,8,'3/13/1999',120000,0,'001'),
+
+('dtminh','dtminh',N'Đặng Thành',N'Minh','0903951811','dtminh@gmail.com',1,10,'1/7/2000',120000,0,'002'),
+('tbngoc','tbngoc',N'Trịnh Bảo',N'Ngọc','0905151706','tbngoc@gmail.com',0,12,'12/14/2000',170000,0,'002'),
+('nqtrung','nqtrung',N'Nguyễn Quang',N'Trung','0903951811','dtminh@gmail.com',1,10,'8/7/2000',120000,0,'002')
+
+go
+
+insert into suppliers values 
+('111',N'CÔNG TY CỔ PHẦN TRỰC TUYẾN ĐĂNG QUANG','0104938104',N'Tổ 13, Phường Thượng Thanh, Quận Long Biên, Thành phố Hà Nội','0436557330'),
+('112',N'CÔNG TY TNHH ĐỒNG HỒ HẢI TRIỀU','0315667679',N'281/11 Khuông Việt, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh','0436557332'),
+('113',N'CÔNG TY CỔ PHẦN THẾ GIỚI DI ĐỘNG','0312358714',N'130 Trần Quang Khải, Phường Tân Định, Quận 1, Thành phố Hồ Chí Minh','0436557338')
+go
+
+insert into provide values
+('000000000000','111','000','09/01/2020',0),
+('000000000001','112','000','09/03/2020',0),
+('000000000002','113','000','09/06/2020',100000),
+('000000000003','113','001','09/06/2020',200000),
+('000000000004','112','002','09/06/2020',300000),
+('000000000005','111','002','09/06/2020',0)
+ 
+go
+
+insert into provide_detail values
+('000000000000','00000000',10,4000000),
+('000000000000','00000001',7,1000000),
+('000000000000','00000002',8,1000000),
+('000000000000','00000003',9,2000000),
+('000000000000','00000004',6,3800000),
+
+('000000000001','00000010',5,2500000),
+('000000000001','00000011',2,1500000),
+('000000000001','00000012',1,3000000),
+('000000000001','00000013',3,2000000),
+('000000000001','00000014',12,800000),
+('000000000001','00000015',14,3000000),
+
+('000000000002','00000015',18,3200000),
+('000000000002','00000016',2,2000000),
+('000000000002','00000017',3,2000000),
+('000000000002','00000018',20,2200000), 
+
+('000000000003','00000026',8,2000000), 
+('000000000003','00000027',6,2500000), 
+('000000000003','00000028',4,3000000), 
+('000000000003','00000029',12,3200000), 
+
+('000000000004','00000005',22,4000000), 
+('000000000004','00000006',23,3200000), 
+('000000000004','00000007',14,2000000), 
+('000000000004','00000008',16,3500000), 
+('000000000004','00000009',18,3200000), 
+
+('000000000005','00000021',22,250000), 
+('000000000005','00000022',13,300000), 
+('000000000005','00000023',47,300000), 
+('000000000005','00000024',23,300000), 
+('000000000005','00000025',19,320000),
+('000000000005','00000026',20,2000000)
+
+insert into agency_product
 
 
-
-select * from watchs
-
+select * from products
 
 select * from products
 
@@ -419,7 +494,7 @@ insert into cthoadon values
 (10000013,1052,1,600000)
 
 /* convert database table to class
-CREATE alter PROCEDURE CREATEMODEL  
+CREATE PROCEDURE CREATEMODEL  
 (  
      @TableName SYSNAME 
 )  
@@ -480,7 +555,7 @@ SET @Result = @Result  + '
 print @Result  
 END
 
-exec CREATEMODEL 'orders'
+exec CREATEMODEL 'staffs'
 
 select * from INFORMATION_SCHEMA.tables
 
