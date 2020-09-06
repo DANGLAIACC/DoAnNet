@@ -52,7 +52,7 @@ create table provide(
 	pr_id char(12) primary key,
 	sp_id char(3) foreign key references suppliers(sp_id),
 	ag_id char(3) foreign key references agencies(ag_id), /*chi nhánh*/
-	pr_date date, /*ngày giao*/
+	pr_date datetime, /*ngày giao*/
 	pr_deliveryCost money
 )
 go
@@ -107,10 +107,12 @@ create table staffs(
 	st_role int,
 	ag_id char(3) foreign key references agencies(ag_id)
 )
-go
+go 
+
 create table orders(
 	od_id char(12) primary key,
-	od_date date,
+	od_dateOrder datetime,
+	od_dateDelivery datetime,
 	od_status int,
 	od_address nvarchar(100),
 	od_payment nvarchar(30),
@@ -307,6 +309,36 @@ insert into provide_detail values
 ('000000000005','00000025',19,320000),
 ('000000000005','00000026',20,2000000)
 
+/* thêm data cho bảng angency_product kiểm tra số lượng còn lại của mỗi cửa hàng với 
+từng sản phẩm. Giả sử trường hợp đầu tiên là cửa hàng chỉ nhập và chưa bán bất kỳ mặt hàng nào.
+Lưu ý ag_id =000, mặt hàng số 00000015 có 2 lần nhập vào 2 ngày khác nhau, nên số lượng có thay
+đổi, kiểm tra bằng câu lệnh bên dưới comment này, dòng 11, 12
+ 
+	select a.ag_id,b.pd_id,b.prd_quantity,a.pr_date
+	from provide a inner join provide_detail b on a.pr_id = b.pr_id 
+
+*/
+
+insert into agency_product (ag_id,pd_id,pd_remain)
+	select a.ag_id,b.pd_id,sum(b.prd_quantity) pd_remain
+	from provide a inner join provide_detail b on a.pr_id = b.pr_id 
+	group by a.ag_id,b.pd_id
+
+go
+/* Thêm 1 đơn hàng -> số lượng trong bảng agency_product giảm đi nên cần viết hàm*/
+create proc addOrders (
+	@od_id char(12), 
+	@od_dateDelivery datetime,
+	@od_status int,
+	@od_address nvarchar(100),
+	@od_payment nvarchar(30),
+	@st_id varchar(10),
+	@ct_id char(7),
+	@ag_id char(3),
+) as
+
+select * from agency_product
+
 insert into agency_product
 
 
@@ -367,8 +399,8 @@ create table nhanvien(
 go
 create table hoadon(
 	Ma_hd int identity(10000000,1) primary key,
-	Ngay_lap_hd date,
-	Ngay_giao date,
+	Ngay_lap_hd datetime,
+	Ngay_giao datetime,
 	Ma_nv int foreign key references nhanvien(ma_nv),
 	Ma_kh int foreign key references khachhang(ma_kh)
 )
