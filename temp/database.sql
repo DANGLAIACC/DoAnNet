@@ -193,9 +193,7 @@ insert into products values
 ('00000028',N'Đồng hồ treo tường HM346',3800000,N'cái','Kashi'),
 ('00000029',N'Đồng hồ treo tường HM223',4000000,N'cái','Kashi')
 
-go
-delete from watchs
-
+go 
 
 insert into watchs values
 ('00000000',N'Hình tròn','r = 27.5',N'Quartz (chạy pin)',N'Nâu',36),
@@ -222,20 +220,21 @@ insert into watchs values
 ('00000018',N'Hình tròn','r = 26',N'Quartz (chạy pin)',N'Vàng',12),
 ('00000019',N'Hình tròn','r = 26',N'Quartz (chạy pin)',N'Nâu',12),
 
-select pd_id,br_id from products where pd_name like '%10%'
-
-select * from products where pd_id='00000023'
-
-select * from products where pd_id='00000023'
-
 ('00000020',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
 ('00000021',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
 ('00000022',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
-
 ('00000023',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
 ('00000024',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
-('00000025',N'Hình tròn','r=26',N'Quartz (chạy pin)',N'Nhiều màu sắc',12),
-('00000021',N'Hình tròn','',N'Quartz (chạy pin)',N'Nâu',12),
+
+('00000025',N'Hình đa giác đều','33.5 x 4.5 x 33.5 (D-R-C)',N'Quartz (chạy pin)',N'Nâu - Trắng',12),
+('00000026',N'Hình đa giác đều','52 x 4 x 52 (D-R-C)',N'Quartz (chạy pin)',N'Nâu - Trắng',12),
+('00000027',N'Hình vuông','34.3 x 4.5 x 34.3 (D-R-C)',N'Quartz (chạy pin)',N'Trắng',12),
+('00000028',N'Hình chữ nhật','40 x 56.5 x 4.5 (D-R-C)',N'Quartz (chạy pin)',N'Nâu - Trắng',12),
+('00000029',N'Hình tròn','30 x 4,7',N'Quartz (chạy pin)',N'Đen',12)
+
+
+
+select * from watchs
 
 
 select * from products
