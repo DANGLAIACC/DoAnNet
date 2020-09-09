@@ -370,7 +370,32 @@ begin
 	set pd_remain = pd_remain-1
 	where ag_id=@ag_id and pd_id = @pd_id
 end
- 
+
+go
+
+create proc addProducts (
+	@pr_id char(12),
+	@sp_id char(3),
+	@ag_id char(3), 
+	@pr_deliveryCost money,
+	@pd_id char(8),
+	@prd_quantity int,
+	@prd_purchase money
+) as
+begin
+	declare @id char(12) = (select pr_id from provide where @pr_id = pr_id)
+	if(@id is null)
+		insert into provide values (@pr_id,@sp_id,@ag_id,GETDATE(),@pr_deliveryCost)
+	insert into provide_detail values (@pr_id,@pd_id,@prd_quantity,@prd_purchase)
+
+	declare @quantity int = (select pd_remain from agency_product where ag_id=@ag_id and pd_id=@pd_id)
+	if(@quantity is null)
+		insert into agency_product values (@ag_id,@pd_id,@quantity)
+	else
+		update agency_product set pd_remain = (@quantity+@prd_quantity) where (ag_id=@ag_id and pd_id=@pd_id)
+
+end
+
 /*
 select * from agencies
 select * from brands

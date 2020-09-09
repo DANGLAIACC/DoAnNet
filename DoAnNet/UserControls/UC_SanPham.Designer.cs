@@ -29,36 +29,25 @@
         private void InitializeComponent()
         {
             this.flpSanPham = new System.Windows.Forms.FlowLayoutPanel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.flpSanPham.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpSanPham
             // 
-            this.flpSanPham.Controls.Add(this.listView1);
             this.flpSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpSanPham.Location = new System.Drawing.Point(0, 0);
+            this.flpSanPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flpSanPham.Name = "flpSanPham";
-            this.flpSanPham.Size = new System.Drawing.Size(748, 484);
+            this.flpSanPham.Size = new System.Drawing.Size(997, 596);
             this.flpSanPham.TabIndex = 0;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 97);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // UC_SanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flpSanPham);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_SanPham";
-            this.Size = new System.Drawing.Size(748, 484);
-            this.flpSanPham.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(997, 596);
             this.ResumeLayout(false);
 
         }
@@ -66,6 +55,5 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flpSanPham;
-        private System.Windows.Forms.ListView listView1;
     }
 }
