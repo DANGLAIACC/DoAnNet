@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
 using DTO;
-namespace BLL
+using DAL;
+
+namespace BUL
 {
-    public class BLL_NhaSX
+    public class Company_BLL
     {
-        public static List<DTO_NhaSX> LoadNhaSX()
+        public static List<Company_DTO> LoadCompany()
         {
-            return DAL_NhaSX.LoadNhaSX();
+            return Company_DAL.LoadCompany();
         }
     }
 }

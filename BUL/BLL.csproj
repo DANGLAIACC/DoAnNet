@@ -41,12 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL_CTHoaDon.cs" />
-    <Compile Include="BLL_HoaDon.cs" />
-    <Compile Include="BLL_NhanVien.cs" />
-    <Compile Include="BLL_KhachHang.cs" />
-    <Compile Include="BLL_NhaSX.cs" />
-    <Compile Include="BLL_SanPham.cs" />
+    <Compile Include="Agencies_BLL.cs" />
+    <Compile Include="Agency_product_BLL.cs" />
+    <Compile Include="Brands_BLL.cs" />
+    <Compile Include="Company_BLL.cs" />
+    <Compile Include="Customers_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

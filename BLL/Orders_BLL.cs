@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using DTO;
 using DAL;
 
-namespace BUL
+namespace BLL
 {
-    public class BLL_HoaDon
+    public class Orders_BLL
     {
-        public static List<DTO_HoaDon> LoadHoaDon()
+        public static List<Orders_DTO> LoadOrders()
         {
-            return DAL_HoaDon.LoadHoaDon();
+            return Orders_DAL.LoadOrders();
         }
     }
 }

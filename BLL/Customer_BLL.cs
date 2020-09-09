@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
+
 namespace BLL
 {
-    public class BLL_SanPham
+    public class Customer_BLL
     {
-        public static List<DTO_SanPham> LoadSanPham()
+        public static List<Customers_DTO> LoadCustomers()
         {
-            return DAL_SanPham.LoadSanPham();
+            return Customers_DAL.LoadCustomers();
         }
     }
 }

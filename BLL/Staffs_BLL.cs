@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using DTO;
 using DAL;
 
-namespace BUL
+namespace BLL
 {
-    public class BLL_KhachHang
+    public class Staffs_BLL
     {
-        public static List<DTO_KhachHang> LoadKhachHang()
+        public static List<Staffs_DTO> LoadStaffs()
         {
-            return DAL_KhachHang.LoadKhachHang();
+            return Staffs_DAL.LoadStaffs();
         }
     }
 }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using DTO;
 using DAL;
 
-namespace BUL
+namespace BLL
 {
-    public class BLL_NhanVien
+    public class Watches_BLL
     {
-        public static List<DTO_NhanVien> LoadNhanVien()
+        public static List<Watches_DTO> LoadWatches()
         {
-            return DAL_NhanVien.LoadNhanVien();
+            return Watches_DAL.LoadWatches();
         }
     }
 }

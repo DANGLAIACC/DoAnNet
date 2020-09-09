@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
 using DTO;
+using DAL;
 
 namespace BUL
 {
-    public class BLL_CTHoaDon
+    public class Brands_BLL
     {
-        public static List<DTO_CTHoaDon> LoadCTHoaDon()
+        public static List<Brands_DTO> LoadBrands()
         {
-            return DAL_CTHoaDon.LoadCTHoaDon();
+            return Brands_DAL.LoadBrands();
         }
     }
 }
