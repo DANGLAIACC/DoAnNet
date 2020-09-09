@@ -46,12 +46,6 @@
     <Compile Include="Brands_DTO.cs" />
     <Compile Include="Company_DTO.cs" />
     <Compile Include="Customers_DTO.cs" />
-    <Compile Include="DTO_CTHoaDon.cs" />
-    <Compile Include="DTO_HoaDon.cs" />
-    <Compile Include="DTO_KhachHang.cs" />
-    <Compile Include="DTO_NhanVien.cs" />
-    <Compile Include="DTO_NhaSX.cs" />
-    <Compile Include="DTO_SanPham.cs" />
     <Compile Include="Orders_DTO.cs" />
     <Compile Include="Order_detail_DTO.cs" />
     <Compile Include="Products_DTO.cs" />
