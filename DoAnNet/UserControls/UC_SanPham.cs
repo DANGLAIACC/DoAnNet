@@ -24,6 +24,7 @@ namespace DoAnNet.UserControls
             List<Products_DTO> lstProduct = Products_BLL
                 .LoadProducts();
             int count = lstProduct.Count;
+            Console.WriteLine("count: " + count);
             if (count > 0)
             {
 

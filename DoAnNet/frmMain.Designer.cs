@@ -57,6 +57,7 @@ namespace DoAnNet
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.uC_SanPham1 = new DoAnNet.UserControls.UC_SanPham();
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,6 +67,7 @@ namespace DoAnNet
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.pnMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -495,11 +497,21 @@ namespace DoAnNet
             // pnMain
             // 
             this.pnMain.BackColor = System.Drawing.Color.Transparent;
+            this.pnMain.Controls.Add(this.uC_SanPham1);
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(100, 64);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(796, 506);
             this.pnMain.TabIndex = 2;
+            // 
+            // uC_SanPham1
+            // 
+            this.uC_SanPham1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_SanPham1.Location = new System.Drawing.Point(0, 0);
+            this.uC_SanPham1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.uC_SanPham1.Name = "uC_SanPham1";
+            this.uC_SanPham1.Size = new System.Drawing.Size(796, 506);
+            this.uC_SanPham1.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -524,6 +536,7 @@ namespace DoAnNet
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.pnMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -555,6 +568,7 @@ namespace DoAnNet
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2Button btnThongBao;
         private System.Windows.Forms.Label label1;
+        private UserControls.UC_SanPham uC_SanPham1;
     }
 }
 

@@ -19,7 +19,8 @@ namespace DoAnNet
         {
             InitializeComponent();
             UC_Home uC_ = new UC_Home();
-            addUserControl(uC_); 
+            //addUserControl(uC_); 
+            //label1.Text = System.IO.Directory.GetCurrentDirectory();
         } 
         private void addUserControl(UserControl uc)
         {

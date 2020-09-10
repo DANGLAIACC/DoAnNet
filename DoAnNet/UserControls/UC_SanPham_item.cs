@@ -34,15 +34,17 @@ namespace DoAnNet.UserControls
             set
             {
                 _price = value;
-                lblGia.Text = _price.ToString("#,##0.00");
+                lblGia.Text = _price.ToString("#,##0")+"đ";
             }
         }
         [Category("Custom Props")]
         public string Img
         {
             get { return _img; }
-            set { _img = value;
-                ptb.Image = Image.FromFile(string.Format(@"~/img/{0}.jpg", _img));
+            set {
+                _img = value;
+
+                ptb.Image = Image.FromFile(@"DoAnNet\img\"+_img+ ".jpg");
             }
         }
 

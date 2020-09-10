@@ -33,11 +33,13 @@
             // 
             // flpSanPham
             // 
+            this.flpSanPham.AutoScroll = true;
+            this.flpSanPham.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flpSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpSanPham.Location = new System.Drawing.Point(0, 0);
             this.flpSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.flpSanPham.Name = "flpSanPham";
-            this.flpSanPham.Size = new System.Drawing.Size(997, 596);
+            this.flpSanPham.Size = new System.Drawing.Size(796, 570);
             this.flpSanPham.TabIndex = 0;
             // 
             // UC_SanPham
@@ -47,7 +49,7 @@
             this.Controls.Add(this.flpSanPham);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_SanPham";
-            this.Size = new System.Drawing.Size(997, 596);
+            this.Size = new System.Drawing.Size(796, 570);
             this.Load += new System.EventHandler(this.UC_SanPham_Load);
             this.ResumeLayout(false);
 
