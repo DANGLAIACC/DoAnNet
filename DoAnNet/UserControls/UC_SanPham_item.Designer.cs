@@ -45,7 +45,7 @@
             this.ptb.Location = new System.Drawing.Point(46, 49);
             this.ptb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ptb.Name = "ptb";
-            this.ptb.Size = new System.Drawing.Size(205, 216);
+            this.ptb.Size = new System.Drawing.Size(157, 164);
             this.ptb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptb.TabIndex = 0;
             this.ptb.TabStop = false;
@@ -56,7 +56,7 @@
             this.lbl.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.Location = new System.Drawing.Point(0, 0);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(298, 45);
+            this.lbl.Size = new System.Drawing.Size(250, 45);
             this.lbl.TabIndex = 1;
             this.lbl.Text = "lbl";
             // 
@@ -68,7 +68,7 @@
             this.btn.ForeColor = System.Drawing.Color.White;
             this.btn.HoverState.Parent = this.btn;
             this.btn.Image = ((System.Drawing.Image)(resources.GetObject("btn.Image")));
-            this.btn.Location = new System.Drawing.Point(194, 276);
+            this.btn.Location = new System.Drawing.Point(142, 221);
             this.btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn.Name = "btn";
             this.btn.ShadowDecoration.Parent = this.btn;
@@ -79,15 +79,15 @@
             // lblGia
             // 
             this.lblGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGia.Location = new System.Drawing.Point(3, 276);
+            this.lblGia.Location = new System.Drawing.Point(3, 221);
             this.lblGia.Name = "lblGia";
-            this.lblGia.Size = new System.Drawing.Size(147, 43);
+            this.lblGia.Size = new System.Drawing.Size(133, 43);
             this.lblGia.TabIndex = 3;
             this.lblGia.Text = "lblGia";
             // 
             // UC_SanPham_item
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblGia);
             this.Controls.Add(this.btn);
@@ -96,7 +96,7 @@
             this.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UC_SanPham_item";
-            this.Size = new System.Drawing.Size(298, 332);
+            this.Size = new System.Drawing.Size(250, 280);
             ((System.ComponentModel.ISupportInitialize)(this.ptb)).EndInit();
             this.ResumeLayout(false);
 
