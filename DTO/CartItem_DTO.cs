@@ -42,5 +42,9 @@ namespace DTO
             this.gia = gia;
             this.soLuong = 1;
         }
+        public override string ToString()
+        {
+            return maSP + " - " + tenSP + " - " + gia.ToString("#,##0");
+        }
     }
 }

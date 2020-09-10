@@ -59,18 +59,24 @@ namespace DoAnNet.UserControls
         #endregion
 
         private void btn_Click(object sender, EventArgs e)
-        {
-
+        { 
+            CartItem_DTO item = new CartItem_DTO(_img, _name, _price);
+            Console.WriteLine("Thêm sản phẩm: "+item);
+            int tongSanPham = 0;
+            bool isExists = true;
             for (int i = 0; i < Cart.cart.Count; i++)
             {
+                tongSanPham += Cart.cart[i].SoLuong;
                 if (Cart.cart[i].MaSP == _img)
                 {
                     Cart.cart[i].SoLuong++;
-                    
-                    return;
+                    isExists = false;
                 }
             }
-            Cart.cart.Add(new CartItem_DTO(_img, _name, _price));
+            if(isExists) Cart.cart.Add(item);
+            tongSanPham++;
+            frmMain.count = tongSanPham;
+            Console.WriteLine(frmMain.count);
         }
     }
 }
