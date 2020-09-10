@@ -17,17 +17,7 @@ namespace DoAnNet.UserControls
         public UC_SanPham()
         {
             InitializeComponent();
-        }
-        public int TongSoLuong
-        {
-            get
-            {
-                int t = 0;
-                for (int i = 0; i < Cart.cart.Count; i++)
-                    t += Cart.cart[i].SoLuong;
-                return t;
-            }
-        }
+        } 
         private void UC_SanPham_Load(object sender, EventArgs e)
         {
             List<Products_DTO> lstProduct = Products_BLL

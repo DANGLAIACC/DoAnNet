@@ -58,6 +58,8 @@ namespace DoAnNet.UserControls
 
         #endregion
 
+        public Delegate TongSanPham;
+
         private void btn_Click(object sender, EventArgs e)
         { 
             CartItem_DTO item = new CartItem_DTO(_img, _name, _price);
@@ -77,6 +79,9 @@ namespace DoAnNet.UserControls
             tongSanPham++;
             frmMain.count = tongSanPham;
             Console.WriteLine(frmMain.count);
+
+            TongSanPham.DynamicInvoke(tongSanPham);
+
         }
     }
 }

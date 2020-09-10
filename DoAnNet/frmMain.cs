@@ -15,18 +15,29 @@ namespace DoAnNet
 {
     public partial class frmMain : Form
     {
+        public delegate void x(int i);
+        private event x y;
+        private void loadBtnCartCount(int i)
+        {
+            btnCartCount.Text = i.ToString();
+        }
+
         public static int count = 0;
 
         private UserControls.UC_SanPham ucSanPham = new UserControls.UC_SanPham();
-
         public frmMain()
         {
             InitializeComponent();
             //UC_Home uC_ = new UC_Home();
             addUserControl(ucSanPham);
-            btnCartCount.Text = ucSanPham.TongSoLuong.ToString();
+            //btnCartCount.Text = ucSanPham.TongSoLuong.ToString();
+
             //label1.Text = System.IO.Directory.GetCurrentDirectory();
-        } 
+            y += new x(loadBtnCartCount);
+            .tongsan
+
+        }
+
         private void addUserControl(UserControl uc)
         {
             pnMain.Controls.Clear();
