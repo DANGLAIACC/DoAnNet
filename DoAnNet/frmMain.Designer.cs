@@ -51,13 +51,12 @@ namespace DoAnNet
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnInHoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnCartCount = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnGioHang = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnNotificationCount = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.uC_SanPham1 = new DoAnNet.UserControls.UC_SanPham();
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -67,7 +66,6 @@ namespace DoAnNet
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.pnMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -392,30 +390,30 @@ namespace DoAnNet
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.guna2CircleButton1);
+            this.panel2.Controls.Add(this.btnCartCount);
             this.panel2.Controls.Add(this.btnGioHang);
             this.panel2.Location = new System.Drawing.Point(84, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(65, 49);
             this.panel2.TabIndex = 3;
             // 
-            // guna2CircleButton1
+            // btnCartCount
             // 
-            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(37, 1);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(20, 20);
-            this.guna2CircleButton1.TabIndex = 2;
-            this.guna2CircleButton1.Text = "2";
-            this.guna2CircleButton1.UseTransparentBackground = true;
+            this.btnCartCount.BackColor = System.Drawing.Color.Transparent;
+            this.btnCartCount.CheckedState.Parent = this.btnCartCount;
+            this.btnCartCount.CustomImages.Parent = this.btnCartCount;
+            this.btnCartCount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnCartCount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCartCount.ForeColor = System.Drawing.Color.White;
+            this.btnCartCount.HoverState.Parent = this.btnCartCount;
+            this.btnCartCount.Location = new System.Drawing.Point(37, 1);
+            this.btnCartCount.Name = "btnCartCount";
+            this.btnCartCount.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnCartCount.ShadowDecoration.Parent = this.btnCartCount;
+            this.btnCartCount.Size = new System.Drawing.Size(20, 20);
+            this.btnCartCount.TabIndex = 2;
+            this.btnCartCount.Text = "2";
+            this.btnCartCount.UseTransparentBackground = true;
             // 
             // btnGioHang
             // 
@@ -445,30 +443,30 @@ namespace DoAnNet
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.guna2CircleButton2);
+            this.panel3.Controls.Add(this.btnNotificationCount);
             this.panel3.Controls.Add(this.btnThongBao);
             this.panel3.Location = new System.Drawing.Point(13, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(65, 49);
             this.panel3.TabIndex = 5;
             // 
-            // guna2CircleButton2
+            // btnNotificationCount
             // 
-            this.guna2CircleButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton2.CheckedState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.CustomImages.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.HoverState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(37, 1);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(20, 20);
-            this.guna2CircleButton2.TabIndex = 2;
-            this.guna2CircleButton2.Text = "2";
-            this.guna2CircleButton2.UseTransparentBackground = true;
+            this.btnNotificationCount.BackColor = System.Drawing.Color.Transparent;
+            this.btnNotificationCount.CheckedState.Parent = this.btnNotificationCount;
+            this.btnNotificationCount.CustomImages.Parent = this.btnNotificationCount;
+            this.btnNotificationCount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnNotificationCount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNotificationCount.ForeColor = System.Drawing.Color.White;
+            this.btnNotificationCount.HoverState.Parent = this.btnNotificationCount;
+            this.btnNotificationCount.Location = new System.Drawing.Point(37, 1);
+            this.btnNotificationCount.Name = "btnNotificationCount";
+            this.btnNotificationCount.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnNotificationCount.ShadowDecoration.Parent = this.btnNotificationCount;
+            this.btnNotificationCount.Size = new System.Drawing.Size(20, 20);
+            this.btnNotificationCount.TabIndex = 2;
+            this.btnNotificationCount.Text = "2";
+            this.btnNotificationCount.UseTransparentBackground = true;
             // 
             // btnThongBao
             // 
@@ -497,21 +495,11 @@ namespace DoAnNet
             // pnMain
             // 
             this.pnMain.BackColor = System.Drawing.Color.Transparent;
-            this.pnMain.Controls.Add(this.uC_SanPham1);
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(100, 64);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(796, 506);
             this.pnMain.TabIndex = 2;
-            // 
-            // uC_SanPham1
-            // 
-            this.uC_SanPham1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_SanPham1.Location = new System.Drawing.Point(0, 0);
-            this.uC_SanPham1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.uC_SanPham1.Name = "uC_SanPham1";
-            this.uC_SanPham1.Size = new System.Drawing.Size(796, 506);
-            this.uC_SanPham1.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -536,7 +524,6 @@ namespace DoAnNet
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.pnMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -563,12 +550,11 @@ namespace DoAnNet
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2CircleButton btnMinimize;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnCartCount;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
+        private Guna.UI2.WinForms.Guna2CircleButton btnNotificationCount;
         private Guna.UI2.WinForms.Guna2Button btnThongBao;
         private System.Windows.Forms.Label label1;
-        private UserControls.UC_SanPham uC_SanPham1;
     }
 }
 

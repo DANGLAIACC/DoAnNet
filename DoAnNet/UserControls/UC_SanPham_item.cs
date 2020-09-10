@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace DoAnNet.UserControls
 {
@@ -44,14 +45,32 @@ namespace DoAnNet.UserControls
             set {
                 _img = value;
                 //Console.WriteLine(System.IO.Directory.GetCurrentDirectory());
-                
-                //string path = @"/image/" + _img + ".jpg";
-                //Console.WriteLine("path: "+path);
+                //Console.WriteLine("path: "+path); 
 
-                ptb.Image = Image.FromFile(@"image/" + _img + ".jpg");
+                string path = @"/image/" + _img + ".jpg";
+                //if(System.IO.File.Exists(path))
+                //    ptb.Image = Image.FromFile(@"image/" + _img + ".jpg");
+                //else
+                    ptb.Image = Image.FromFile(@"image/" + _img + ".jpg");
+
             }
         }
 
         #endregion
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i < Cart.cart.Count; i++)
+            {
+                if (Cart.cart[i].MaSP == _img)
+                {
+                    Cart.cart[i].SoLuong++;
+                    
+                    return;
+                }
+            }
+            Cart.cart.Add(new CartItem_DTO(_img, _name, _price));
+        }
     }
 }

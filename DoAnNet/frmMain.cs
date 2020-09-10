@@ -15,11 +15,14 @@ namespace DoAnNet
 {
     public partial class frmMain : Form
     {
+
         public frmMain()
         {
             InitializeComponent();
-            UC_Home uC_ = new UC_Home();
-            //addUserControl(uC_); 
+            //UC_Home uC_ = new UC_Home();
+            UserControls.UC_SanPham _uc = new UserControls.UC_SanPham();
+            addUserControl(_uc); 
+            loadBtnCartCount();
             //label1.Text = System.IO.Directory.GetCurrentDirectory();
         } 
         private void addUserControl(UserControl uc)
@@ -47,6 +50,11 @@ namespace DoAnNet
 
         }
 
+        private void loadBtnCartCount()
+        {
+            Console.WriteLine("cart.count: " + Cart.cart.Count.ToString());
+            btnCartCount.Text = Cart.cart.Count.ToString();
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             Dispose();

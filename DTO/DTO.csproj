@@ -44,6 +44,8 @@
     <Compile Include="Agencies_DTO.cs" />
     <Compile Include="Agency_product_DTO.cs" />
     <Compile Include="Brands_DTO.cs" />
+    <Compile Include="Cart.cs" />
+    <Compile Include="CartItem_DTO.cs" />
     <Compile Include="Company_DTO.cs" />
     <Compile Include="Customers_DTO.cs" />
     <Compile Include="Orders_DTO.cs" />

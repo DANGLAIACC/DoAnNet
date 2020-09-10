@@ -74,6 +74,7 @@
             this.btn.Size = new System.Drawing.Size(90, 43);
             this.btn.TabIndex = 2;
             this.btn.Text = "Thêm";
+            this.btn.Click += new System.EventHandler(this.btn_Click);
             // 
             // lblGia
             // 
