@@ -21,7 +21,7 @@ namespace DoAnNet.UserControls
         private decimal _price;
 
         [Category("Custom Props")]
-        public string Name
+        public string Pname
         {
             get { return _name; }
             set { _name = value; lbl.Text = value; }
@@ -43,8 +43,12 @@ namespace DoAnNet.UserControls
             get { return _img; }
             set {
                 _img = value;
+                //Console.WriteLine(System.IO.Directory.GetCurrentDirectory());
+                
+                //string path = @"/image/" + _img + ".jpg";
+                //Console.WriteLine("path: "+path);
 
-                ptb.Image = Image.FromFile(@"DoAnNet\img\"+_img+ ".jpg");
+                ptb.Image = Image.FromFile(@"image/" + _img + ".jpg");
             }
         }
 

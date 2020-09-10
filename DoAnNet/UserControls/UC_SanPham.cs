@@ -24,7 +24,7 @@ namespace DoAnNet.UserControls
             List<Products_DTO> lstProduct = Products_BLL
                 .LoadProducts();
             int count = lstProduct.Count;
-            Console.WriteLine("count: " + count);
+            //Console.WriteLine("count: " + count);
             if (count > 0)
             {
 
@@ -32,7 +32,7 @@ namespace DoAnNet.UserControls
                 for (int i = 0; i < count; i++)
                 {
                     lstItem[i] = new UC_SanPham_item();
-                    lstItem[i].Name = lstProduct[i].Pd_name;
+                    lstItem[i].Pname = lstProduct[i].Pd_name;
                     lstItem[i].Price = lstProduct[i].Pd_retail;
                     lstItem[i].Img = lstProduct[i].Pd_id;
 

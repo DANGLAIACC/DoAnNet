@@ -15,8 +15,7 @@ namespace DoAnNet.Controllers
         private static string strConnection = string.Format("server={0};database={1};Integrated Security = true", "DANGLAI_PC\\DANGLAI_PC", "QL_DONG_HO");
 
         //private static string strConnection = string.Format("server={0};uid={1};pwd='';database={2}", "DANGLAI_PC\\DANGLAI_PC","sa", "QL_DONG_HO");
-
-        SqlDataAdapter adapter;
+         
         public Database(string server, string database, bool inter, string user, string pass)
         {
             string strConnection;
