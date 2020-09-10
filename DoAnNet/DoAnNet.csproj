@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DoAnNet">
+      <HintPath>obj\Debug\DoAnNet.exe</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\..\Desktop\Guna.UI2.dll</HintPath>
     </Reference>
@@ -162,6 +165,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{b9c63bdb-de45-4dde-b4aa-57d9da68330f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{f87f0696-76b4-4173-8e76-330c69371ef7}</Project>
       <Name>DTO</Name>

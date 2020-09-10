@@ -16,5 +16,36 @@ namespace DoAnNet.UserControls
         {
             InitializeComponent();
         }
+        #region Properties
+        private string _name,_img;
+        private decimal _price;
+
+        [Category("Custom Props")]
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; lbl.Text = value; }
+        }
+
+        [Category("Custom Props")]
+        public decimal Price
+        {
+            get { return _price; }
+            set
+            {
+                _price = value;
+                lblGia.Text = _price.ToString("#,##0.00");
+            }
+        }
+        [Category("Custom Props")]
+        public string Img
+        {
+            get { return _img; }
+            set { _img = value;
+                ptb.Image = Image.FromFile(string.Format(@"~/img/{0}.jpg", _img));
+            }
+        }
+
+        #endregion
     }
 }

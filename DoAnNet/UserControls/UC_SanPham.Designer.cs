@@ -35,7 +35,7 @@
             // 
             this.flpSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpSanPham.Location = new System.Drawing.Point(0, 0);
-            this.flpSanPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.flpSanPham.Name = "flpSanPham";
             this.flpSanPham.Size = new System.Drawing.Size(997, 596);
             this.flpSanPham.TabIndex = 0;
@@ -45,9 +45,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flpSanPham);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_SanPham";
             this.Size = new System.Drawing.Size(997, 596);
+            this.Load += new System.EventHandler(this.UC_SanPham_Load);
             this.ResumeLayout(false);
 
         }
