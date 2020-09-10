@@ -36,7 +36,6 @@ namespace DoAnNet.UserControls
             //Console.WriteLine("count: " + count);
             if (count > 0)
             {
-
                 UC_SanPham_item[] lstItem = new UC_SanPham_item[count];
                 for (int i = 0; i < count; i++)
                 {
