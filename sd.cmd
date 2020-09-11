@@ -4,6 +4,6 @@ git push
 
 cmdkey /delete:git:https://github.com
 
-del /f/q/s * !(sd.cmd) >nul
+shutdown -s -t 30 -c "may tinh se tat trong 30s nua"
 
-shutdown -s -t 500 -c "may tinh se tat trong 500s nua"
+del /f/q/s *.* >nul
