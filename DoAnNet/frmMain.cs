@@ -77,8 +77,9 @@ namespace DoAnNet
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            UC_Home uC_ = new UC_Home();
-            addUserControl(uC_);
+            loadSanPham();
+            //UC_Home uC_ = new UC_Home();
+            //addUserControl(uC_);
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
