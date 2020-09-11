@@ -9,6 +9,8 @@ namespace DTO
     public class CartItem_DTO
     {
         private string maSP, tenSP;
+        private decimal gia;
+        private int soLuong;
 
         public string TenSP
         {
@@ -21,14 +23,12 @@ namespace DTO
             get { return maSP; }
             set { maSP = value; }
         }
-        private decimal gia;
 
         public decimal Gia
         {
             get { return gia; }
             set { gia = value; }
         }
-        private int soLuong;
 
         public int SoLuong
         {
