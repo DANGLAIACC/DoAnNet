@@ -13,9 +13,11 @@ namespace DoAnNet.UserControls
 {
     public partial class UC_SanPham_item : UserControl
     {
+
         public UC_SanPham_item()
         {
             InitializeComponent();
+            new Temp();
         }
         #region Properties
         private string _name,_img;
@@ -58,30 +60,22 @@ namespace DoAnNet.UserControls
 
         #endregion
 
-        public Delegate TongSanPham;
+        public Delegate userFunctionPointer;
 
         private void btn_Click(object sender, EventArgs e)
-        { 
+        {
+            userFunctionPointer.DynamicInvoke(1);
             CartItem_DTO item = new CartItem_DTO(_img, _name, _price);
             Console.WriteLine("Thêm sản phẩm: "+item);
-            int tongSanPham = 0;
-            bool isExists = true;
-            for (int i = 0; i < Cart.cart.Count; i++)
-            {
-                tongSanPham += Cart.cart[i].SoLuong;
-                if (Cart.cart[i].MaSP == _img)
+            bool notExists = true;
+            for (int i = 0; i < Temp.cart.Count; i++)
+                if (Temp.cart[i].MaSP == _img)
                 {
-                    Cart.cart[i].SoLuong++;
-                    isExists = false;
+                    notExists = false;
+                    Temp.cart[i].SoLuong++;
+                    break;
                 }
-            }
-            if(isExists) Cart.cart.Add(item);
-            tongSanPham++;
-            frmMain.count = tongSanPham;
-            Console.WriteLine(frmMain.count);
-
-            TongSanPham.DynamicInvoke(tongSanPham);
-
+            if(notExists) Temp.cart.Add(item);
         }
     }
 }

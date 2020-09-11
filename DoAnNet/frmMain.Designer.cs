@@ -57,6 +57,7 @@ namespace DoAnNet
             this.btnNotificationCount = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.flpSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,6 +67,7 @@ namespace DoAnNet
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.pnMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -495,11 +497,21 @@ namespace DoAnNet
             // pnMain
             // 
             this.pnMain.BackColor = System.Drawing.Color.Transparent;
+            this.pnMain.Controls.Add(this.flpSanPham);
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(100, 64);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(796, 506);
             this.pnMain.TabIndex = 2;
+            // 
+            // flpSanPham
+            // 
+            this.flpSanPham.AutoScroll = true;
+            this.flpSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpSanPham.Location = new System.Drawing.Point(0, 0);
+            this.flpSanPham.Name = "flpSanPham";
+            this.flpSanPham.Size = new System.Drawing.Size(796, 506);
+            this.flpSanPham.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -524,6 +536,7 @@ namespace DoAnNet
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.pnMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -550,11 +563,12 @@ namespace DoAnNet
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2CircleButton btnMinimize;
-        private Guna.UI2.WinForms.Guna2CircleButton btnCartCount;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2CircleButton btnNotificationCount;
         private Guna.UI2.WinForms.Guna2Button btnThongBao;
         private System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2CircleButton btnCartCount;
+        private System.Windows.Forms.FlowLayoutPanel flpSanPham;
     }
 }
 

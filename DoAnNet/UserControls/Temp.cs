@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
-namespace DTO
+namespace DoAnNet.UserControls
 {
-    public class Cart
+    public class Temp
     {
         public static List<CartItem_DTO> cart = new List<CartItem_DTO>();
     }

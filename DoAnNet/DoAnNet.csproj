@@ -73,12 +73,7 @@
     <Compile Include="UC_Home.designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_SanPham.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_SanPham.Designer.cs">
-      <DependentUpon>UC_SanPham.cs</DependentUpon>
-    </Compile>
+    <Compile Include="UserControls\Temp.cs" />
     <Compile Include="UserControls\UC_SanPham_item.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,9 +96,6 @@
     </Compile>
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_SanPham.resx">
-      <DependentUpon>UC_SanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_SanPham_item.resx">
       <DependentUpon>UC_SanPham_item.cs</DependentUpon>

@@ -10,32 +10,55 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using DoAnNet.UserControls;
 
 namespace DoAnNet
 {
     public partial class frmMain : Form
     {
-        public delegate void x(int i);
-        private event x y;
-        private void loadBtnCartCount(int i)
-        {
-            btnCartCount.Text = i.ToString();
-        }
+        private int count = 0;
 
-        public static int count = 0;
+        public delegate void functioncall(int i);
+        private event functioncall formFunctionPointer;
 
-        private UserControls.UC_SanPham ucSanPham = new UserControls.UC_SanPham();
         public frmMain()
         {
             InitializeComponent();
-            //UC_Home uC_ = new UC_Home();
-            addUserControl(ucSanPham);
-            //btnCartCount.Text = ucSanPham.TongSoLuong.ToString();
 
-            //label1.Text = System.IO.Directory.GetCurrentDirectory();
-            y += new x(loadBtnCartCount);
-            .tongsan
+            btnCartCount.Text = "0";
 
+            formFunctionPointer += new functioncall(increseCart);
+
+            loadSanPham();
+        }
+
+        private void loadSanPham()
+        {
+            List<Products_DTO> lstProduct = Products_BLL
+                .LoadProducts();
+            int count = lstProduct.Count;
+            Console.WriteLine("load xong, count: " + count);
+            if (count > 0)
+            {
+                UC_SanPham_item[] lstItem = new UC_SanPham_item[count];
+                for (int i = 0; i < count; i++)
+                {
+                    lstItem[i] = new UC_SanPham_item();
+                    lstItem[i].Pname = lstProduct[i].Pd_name;
+                    lstItem[i].Price = lstProduct[i].Pd_retail;
+                    lstItem[i].Img = lstProduct[i].Pd_id;
+
+                    lstItem[i].userFunctionPointer = formFunctionPointer;
+
+                    flpSanPham.Controls.Add(lstItem[i]);
+                }
+            }
+        }
+
+        private void increseCart(int i)
+        {
+            count+=i;
+            btnCartCount.Text = count.ToString();
         }
 
         private void addUserControl(UserControl uc)
@@ -44,7 +67,7 @@ namespace DoAnNet
             uc.Dock = DockStyle.Fill;
             uc.BringToFront();
             pnMain.Controls.Add(uc);
-        } 
+        }
 
         private void button_CheckedChanged(object sender, EventArgs e)
         {
@@ -77,7 +100,7 @@ namespace DoAnNet
         {
             WindowState = FormWindowState.Minimized;
         }
-         
+
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
