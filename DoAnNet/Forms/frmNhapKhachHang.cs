@@ -16,5 +16,15 @@ namespace DoAnNet.Forms
         {
             InitializeComponent();
         }
+
+        private void txtSoDienThoai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoDienThoai_Enter(object sender, EventArgs e)
+        {
+            txtSoDienThoai.ShadowDecoration.Enabled = true;
+        }
     }
 }
