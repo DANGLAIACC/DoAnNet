@@ -67,7 +67,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +80,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>crptCart.rpt</DependentUpon>
       <SubType>Component</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Reports\datasetCart.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -124,7 +123,7 @@
     <EmbeddedResource Include="Reports\crptCart.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crptCart.cs</LastGenOutput>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmRptCart2.resx">
       <DependentUpon>frmRptCart2.cs</DependentUpon>

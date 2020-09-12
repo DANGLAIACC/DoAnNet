@@ -106,7 +106,8 @@ namespace DoAnNet
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            
+            frmRptCart2 f = new frmRptCart2();
+            f.Show();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
