@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoAnNet.UserControls;
-using DTO;
+using BLL;
 
 namespace DoAnNet.Reports
 {
@@ -22,12 +22,7 @@ namespace DoAnNet.Reports
         private void frmRptCart2_Load(object sender, EventArgs e)
         {
             new Temp();
-
-            Temp.cart.Add(
-                new CartItem_DTO("000000000000", "Đồng hồ số 1", 250000));
-            Temp.cart.Add(
-                new CartItem_DTO("000000000001", "Đồng hồ số 2", 250000));
-
+            
             crptCart c = new crptCart();
             c.SetDataSource(Temp.cart);
 

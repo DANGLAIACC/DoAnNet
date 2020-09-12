@@ -106,8 +106,15 @@ namespace DoAnNet
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            frmRptCart2 f = new frmRptCart2();
-            f.Show();
+            if (Temp.cart.Count > 0)
+            {
+                frmRptCart2 f = new frmRptCart2();
+                f.Show();
+            }
+            else
+            {
+                MessageBox.Show("Giỏ hàng hiện đang trống.", "In đơn hàng");
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
