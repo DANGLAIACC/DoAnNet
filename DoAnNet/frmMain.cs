@@ -23,6 +23,7 @@ namespace DoAnNet
         public delegate void functioncall(int i);
         private event functioncall formFunctionPointer;
 
+        private List<Products_DTO> lstProduct;
         public frmMain()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace DoAnNet
 
         private void loadSanPham()
         {
-            List<Products_DTO> lstProduct = Products_BLL
+            lstProduct = Products_BLL
                 .LoadProducts();
             int count = lstProduct.Count;
             Console.WriteLine("load xong, count: " + count);
@@ -76,12 +77,6 @@ namespace DoAnNet
             Guna2Button b = (Guna2Button)sender;
             imgSlide.Location = new Point(b.Location.X + 24, b.Location.Y - 25);
             imgSlide.SendToBack();
-        }
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            loadSanPham();
-            //UC_Home uC_ = new UC_Home();
-            //addUserControl(uC_);
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
@@ -127,9 +122,18 @@ namespace DoAnNet
         }
         public void Alert(string msg, frmAlert.enmType type)
         {
-            Console.WriteLine("vào aleert nè");
             frmAlert frm = new frmAlert();
             frm.showAlert(msg, type);
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            flpSanPham.Show();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            flpSanPham.Hide();
         }
     }
 }

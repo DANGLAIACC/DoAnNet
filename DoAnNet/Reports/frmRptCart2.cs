@@ -22,7 +22,6 @@ namespace DoAnNet.Reports
         private void frmRptCart2_Load(object sender, EventArgs e)
         {
             new Temp();
-            
             crptCart c = new crptCart();
             c.SetDataSource(Temp.cart);
 
@@ -40,6 +39,7 @@ namespace DoAnNet.Reports
             c.SetParameterValue("NgayGiao", "22:55:00 22/12/2020");
 
             crystalReportViewer1.ReportSource = c;
+
         }
 
         private void InitializeComponent()

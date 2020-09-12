@@ -162,7 +162,7 @@ namespace DoAnNet
             this.btnSanPham.TabIndex = 0;
             this.btnSanPham.UseTransparentBackground = true;
             this.btnSanPham.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
-            this.btnSanPham.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // btnHoaDon
             // 
@@ -189,6 +189,7 @@ namespace DoAnNet
             this.btnHoaDon.TabIndex = 0;
             this.btnHoaDon.UseTransparentBackground = true;
             this.btnHoaDon.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // btnKhachHang
             // 
