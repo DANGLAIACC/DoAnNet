@@ -287,6 +287,8 @@ namespace DoAnNet.Reports {
             
             private global::System.Data.DataColumn columnSoLuong;
             
+            private global::System.Data.DataColumn columnThanhTien;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public CartItemDataTable() {
@@ -354,6 +356,14 @@ namespace DoAnNet.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ThanhTienColumn {
+                get {
+                    return this.columnThanhTien;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -389,13 +399,14 @@ namespace DoAnNet.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CartItemRow AddCartItemRow(string MaSP, string TenSP, string Gia, string SoLuong) {
+            public CartItemRow AddCartItemRow(string MaSP, string TenSP, string Gia, string SoLuong, string ThanhTien) {
                 CartItemRow rowCartItemRow = ((CartItemRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaSP,
                         TenSP,
                         Gia,
-                        SoLuong};
+                        SoLuong,
+                        ThanhTien};
                 rowCartItemRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCartItemRow);
                 return rowCartItemRow;
@@ -429,6 +440,7 @@ namespace DoAnNet.Reports {
                 this.columnTenSP = base.Columns["TenSP"];
                 this.columnGia = base.Columns["Gia"];
                 this.columnSoLuong = base.Columns["SoLuong"];
+                this.columnThanhTien = base.Columns["ThanhTien"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -442,6 +454,8 @@ namespace DoAnNet.Reports {
                 base.Columns.Add(this.columnGia);
                 this.columnSoLuong = new global::System.Data.DataColumn("SoLuong", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSoLuong);
+                this.columnThanhTien = new global::System.Data.DataColumn("ThanhTien", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnThanhTien);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMaSP}, true));
                 this.columnMaSP.AllowDBNull = false;
@@ -647,6 +661,22 @@ namespace DoAnNet.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ThanhTien {
+                get {
+                    try {
+                        return ((string)(this[this.tableCartItem.ThanhTienColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ThanhTien\' in table \'CartItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCartItem.ThanhTienColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTenSPNull() {
                 return this.IsNull(this.tableCartItem.TenSPColumn);
             }
@@ -679,6 +709,18 @@ namespace DoAnNet.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSoLuongNull() {
                 this[this.tableCartItem.SoLuongColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsThanhTienNull() {
+                return this.IsNull(this.tableCartItem.ThanhTienColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetThanhTienNull() {
+                this[this.tableCartItem.ThanhTienColumn] = global::System.Convert.DBNull;
             }
         }
         
