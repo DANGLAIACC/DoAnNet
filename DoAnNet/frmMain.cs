@@ -12,6 +12,7 @@ using DTO;
 using BLL;
 using DoAnNet.UserControls;
 using DoAnNet.Reports;
+using DoAnNet.Forms;
 
 namespace DoAnNet
 {
@@ -103,7 +104,6 @@ namespace DoAnNet
             WindowState = FormWindowState.Minimized;
         }
 
-
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
             if (Temp.cart.Count > 0)
@@ -113,13 +113,23 @@ namespace DoAnNet
             }
             else
             {
-                MessageBox.Show("Giỏ hàng hiện đang trống.", "In đơn hàng");
+                Alert("Giỏ hàng đang trống.", frmAlert.enmType.Error);
+                //Alert("Success Alert", frmAlert.enmType.Success);
+                //Alert("Warning Alert", frmAlert.enmType.Warning);
+                //Alert("Info Alert", frmAlert.enmType.Info);
+                //MessageBox.Show("Giỏ hàng hiện đang trống.", "In đơn hàng");
             }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
 
+        }
+        public void Alert(string msg, frmAlert.enmType type)
+        {
+            Console.WriteLine("vào aleert nè");
+            frmAlert frm = new frmAlert();
+            frm.showAlert(msg, type);
         }
     }
 }
