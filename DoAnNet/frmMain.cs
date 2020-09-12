@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using DTO;
 using BLL;
 using DoAnNet.UserControls;
+using DoAnNet.Reports;
 
 namespace DoAnNet
 {
@@ -105,7 +106,7 @@ namespace DoAnNet
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void frmMain_Load(object sender, EventArgs e)

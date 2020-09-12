@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DoAnNet.Reports
 {
-    public partial class frmRptCart : Form
+    public partial class frmRptCart2 : Form
     {
-        public frmRptCart()
+        public frmRptCart2()
         {
             InitializeComponent();
+        }
+
+        private void frmRptCart2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
