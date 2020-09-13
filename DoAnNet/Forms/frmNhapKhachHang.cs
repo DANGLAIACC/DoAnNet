@@ -16,21 +16,32 @@ namespace DoAnNet.Forms
         public frmNhapKhachHang()
         {
             InitializeComponent();
+
+            #region Add Event for textbox
+            eventTextbox(txtDT1);
+            eventTextbox(txtTenKH1);
+            eventTextbox(txtDiaChi1);
+            eventTextbox(txtNgayMua);
+            eventTextbox(txtDT2);
+            eventTextbox(txtTenKH2);
+            eventTextbox(txtDiaChi2);
+            eventTextbox(txtNgayNhan);
+            #endregion
+
         }
-        
-        private void textbox_Enter(object o,EventArgs e)
+
+        private void eventTextbox(Guna2TextBox txt)
         {
-            Guna2TextBox txt = (Guna2TextBox) o;
-            txt.BorderThickness = 3;
-            txt.BorderColor = Color.Red;
-            Console.WriteLine("Enter");
-        }
-        private void textbox_Leave(object o, EventArgs e)
-        {
-            Guna2TextBox txt = (Guna2TextBox)o;
-            txt.BorderThickness = 1;
-            txt.BorderColor = Color.FromArgb(117,117,117);
-            Console.WriteLine("Leave");
+            txt.Enter += (o, e) =>
+            {
+                txt.BorderThickness = 3;
+                txt.BorderColor = Color.FromArgb(128, 189, 255);
+            };
+            txt.Leave += (o, e) =>
+            {
+                txt.BorderThickness = 1;
+                txt.BorderColor = Color.FromArgb(117, 117, 117);
+            };
         }
 
         private void frmNhapKhachHang_Load(object sender, EventArgs e)

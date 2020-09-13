@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSoDienThoai = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDT1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenKH1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblSoHoaDon = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDiaChi1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNgayMua = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenKH2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDiaChi2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNgayNhan = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDT2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.SuspendLayout();
             // 
             // label1
@@ -67,44 +68,41 @@
             this.label1.Text = "NHẬP THÔNG TIN HÓA ĐƠN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtSoDienThoai
+            // txtDT1
             // 
-            this.txtSoDienThoai.AutoRoundedCorners = true;
-            this.txtSoDienThoai.BackColor = System.Drawing.Color.Transparent;
-            this.txtSoDienThoai.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
-            this.txtSoDienThoai.BorderRadius = 25;
-            this.txtSoDienThoai.BorderThickness = 2;
-            this.txtSoDienThoai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSoDienThoai.DefaultText = "0123456789";
-            this.txtSoDienThoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSoDienThoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSoDienThoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoDienThoai.DisabledState.Parent = this.txtSoDienThoai;
-            this.txtSoDienThoai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoDienThoai.FocusedState.Parent = this.txtSoDienThoai;
-            this.txtSoDienThoai.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDienThoai.ForeColor = System.Drawing.Color.Black;
-            this.txtSoDienThoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.txtSoDienThoai.HoverState.Parent = this.txtSoDienThoai;
-            this.txtSoDienThoai.Location = new System.Drawing.Point(221, 155);
-            this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.PasswordChar = '\0';
-            this.txtSoDienThoai.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.txtSoDienThoai.PlaceholderText = "Nhập số điện thoại";
-            this.txtSoDienThoai.SelectedText = "";
-            this.txtSoDienThoai.SelectionStart = 10;
-            this.txtSoDienThoai.ShadowDecoration.BorderRadius = 0;
-            this.txtSoDienThoai.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.txtSoDienThoai.ShadowDecoration.Depth = 20;
-            this.txtSoDienThoai.ShadowDecoration.Parent = this.txtSoDienThoai;
-            this.txtSoDienThoai.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.txtSoDienThoai.Size = new System.Drawing.Size(284, 53);
-            this.txtSoDienThoai.TabIndex = 1;
-            this.txtSoDienThoai.TextOffset = new System.Drawing.Point(8, 0);
-            this.txtSoDienThoai.WordWrap = false;
-            this.txtSoDienThoai.Enter += new System.EventHandler(this.textbox_Enter);
-            this.txtSoDienThoai.Leave += new System.EventHandler(this.textbox_Leave);
+            this.txtDT1.AutoRoundedCorners = true;
+            this.txtDT1.BackColor = System.Drawing.Color.Transparent;
+            this.txtDT1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtDT1.BorderRadius = 25;
+            this.txtDT1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDT1.DefaultText = "0123456789";
+            this.txtDT1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDT1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDT1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDT1.DisabledState.Parent = this.txtDT1;
+            this.txtDT1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDT1.FocusedState.Parent = this.txtDT1;
+            this.txtDT1.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDT1.ForeColor = System.Drawing.Color.Black;
+            this.txtDT1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
+            this.txtDT1.HoverState.Parent = this.txtDT1;
+            this.txtDT1.Location = new System.Drawing.Point(221, 155);
+            this.txtDT1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtDT1.Name = "txtDT1";
+            this.txtDT1.PasswordChar = '\0';
+            this.txtDT1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtDT1.PlaceholderText = "Nhập số điện thoại";
+            this.txtDT1.SelectedText = "";
+            this.txtDT1.SelectionStart = 10;
+            this.txtDT1.ShadowDecoration.BorderRadius = 0;
+            this.txtDT1.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.txtDT1.ShadowDecoration.Depth = 20;
+            this.txtDT1.ShadowDecoration.Parent = this.txtDT1;
+            this.txtDT1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.txtDT1.Size = new System.Drawing.Size(284, 53);
+            this.txtDT1.TabIndex = 1;
+            this.txtDT1.TextOffset = new System.Drawing.Point(8, 0);
+            this.txtDT1.WordWrap = false;
             // 
             // label2
             // 
@@ -146,44 +144,41 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Tên khách hàng";
             // 
-            // guna2TextBox1
+            // txtTenKH1
             // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.BorderRadius = 25;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Nguyễn Văn A";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(221, 222);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox1.PlaceholderText = "Nhập Tên khách hàng";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.SelectionStart = 12;
-            this.guna2TextBox1.ShadowDecoration.BorderRadius = 0;
-            this.guna2TextBox1.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.guna2TextBox1.ShadowDecoration.Depth = 20;
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.guna2TextBox1.Size = new System.Drawing.Size(284, 53);
-            this.guna2TextBox1.TabIndex = 1;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(8, 0);
-            this.guna2TextBox1.WordWrap = false;
-            this.guna2TextBox1.Enter += new System.EventHandler(this.textbox_Enter);
-            this.guna2TextBox1.Leave += new System.EventHandler(this.textbox_Leave);
+            this.txtTenKH1.AutoRoundedCorners = true;
+            this.txtTenKH1.BackColor = System.Drawing.Color.Transparent;
+            this.txtTenKH1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtTenKH1.BorderRadius = 25;
+            this.txtTenKH1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenKH1.DefaultText = "Nguyễn Văn A";
+            this.txtTenKH1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenKH1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenKH1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenKH1.DisabledState.Parent = this.txtTenKH1;
+            this.txtTenKH1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenKH1.FocusedState.Parent = this.txtTenKH1;
+            this.txtTenKH1.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKH1.ForeColor = System.Drawing.Color.Black;
+            this.txtTenKH1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
+            this.txtTenKH1.HoverState.Parent = this.txtTenKH1;
+            this.txtTenKH1.Location = new System.Drawing.Point(221, 222);
+            this.txtTenKH1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtTenKH1.Name = "txtTenKH1";
+            this.txtTenKH1.PasswordChar = '\0';
+            this.txtTenKH1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtTenKH1.PlaceholderText = "Nhập Tên khách hàng";
+            this.txtTenKH1.SelectedText = "";
+            this.txtTenKH1.SelectionStart = 12;
+            this.txtTenKH1.ShadowDecoration.BorderRadius = 0;
+            this.txtTenKH1.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.txtTenKH1.ShadowDecoration.Depth = 20;
+            this.txtTenKH1.ShadowDecoration.Parent = this.txtTenKH1;
+            this.txtTenKH1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.txtTenKH1.Size = new System.Drawing.Size(284, 53);
+            this.txtTenKH1.TabIndex = 1;
+            this.txtTenKH1.TextOffset = new System.Drawing.Point(8, 0);
+            this.txtTenKH1.WordWrap = false;
             // 
             // lblTime
             // 
@@ -244,79 +239,77 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Địa chỉ";
             // 
-            // guna2TextBox2
+            // txtDiaChi1
             // 
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.BorderRadius = 25;
-            this.guna2TextBox2.BorderThickness = 2;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "Nguyễn Văn A";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(221, 288);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox2.PlaceholderText = "Nhập Tên khách hàng";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.SelectionStart = 12;
-            this.guna2TextBox2.ShadowDecoration.BorderRadius = 0;
-            this.guna2TextBox2.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.guna2TextBox2.ShadowDecoration.Depth = 20;
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.guna2TextBox2.Size = new System.Drawing.Size(284, 53);
-            this.guna2TextBox2.TabIndex = 8;
-            this.guna2TextBox2.TextOffset = new System.Drawing.Point(8, 0);
-            this.guna2TextBox2.WordWrap = false;
+            this.txtDiaChi1.AutoRoundedCorners = true;
+            this.txtDiaChi1.BackColor = System.Drawing.Color.Transparent;
+            this.txtDiaChi1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtDiaChi1.BorderRadius = 25;
+            this.txtDiaChi1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiaChi1.DefaultText = "Nguyễn Văn A";
+            this.txtDiaChi1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDiaChi1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDiaChi1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiaChi1.DisabledState.Parent = this.txtDiaChi1;
+            this.txtDiaChi1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiaChi1.FocusedState.Parent = this.txtDiaChi1;
+            this.txtDiaChi1.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi1.ForeColor = System.Drawing.Color.Black;
+            this.txtDiaChi1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
+            this.txtDiaChi1.HoverState.Parent = this.txtDiaChi1;
+            this.txtDiaChi1.Location = new System.Drawing.Point(221, 288);
+            this.txtDiaChi1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtDiaChi1.Name = "txtDiaChi1";
+            this.txtDiaChi1.PasswordChar = '\0';
+            this.txtDiaChi1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtDiaChi1.PlaceholderText = "Nhập Tên khách hàng";
+            this.txtDiaChi1.SelectedText = "";
+            this.txtDiaChi1.SelectionStart = 12;
+            this.txtDiaChi1.ShadowDecoration.BorderRadius = 0;
+            this.txtDiaChi1.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.txtDiaChi1.ShadowDecoration.Depth = 20;
+            this.txtDiaChi1.ShadowDecoration.Parent = this.txtDiaChi1;
+            this.txtDiaChi1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.txtDiaChi1.Size = new System.Drawing.Size(284, 53);
+            this.txtDiaChi1.TabIndex = 8;
+            this.txtDiaChi1.TextOffset = new System.Drawing.Point(8, 0);
+            this.txtDiaChi1.WordWrap = false;
             // 
-            // guna2TextBox3
+            // txtNgayMua
             // 
-            this.guna2TextBox3.AutoRoundedCorners = true;
-            this.guna2TextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.BorderRadius = 25;
-            this.guna2TextBox3.BorderThickness = 2;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "23:00:00 23/11/2020";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(221, 355);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox3.PlaceholderText = "Nhập Tên khách hàng";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.SelectionStart = 19;
-            this.guna2TextBox3.ShadowDecoration.BorderRadius = 0;
-            this.guna2TextBox3.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.guna2TextBox3.ShadowDecoration.Depth = 20;
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.guna2TextBox3.Size = new System.Drawing.Size(284, 53);
-            this.guna2TextBox3.TabIndex = 8;
-            this.guna2TextBox3.TextOffset = new System.Drawing.Point(8, 0);
-            this.guna2TextBox3.WordWrap = false;
+            this.txtNgayMua.AutoRoundedCorners = true;
+            this.txtNgayMua.BackColor = System.Drawing.Color.Transparent;
+            this.txtNgayMua.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtNgayMua.BorderRadius = 25;
+            this.txtNgayMua.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNgayMua.DefaultText = "23:00:00 23/11/2020";
+            this.txtNgayMua.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNgayMua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNgayMua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgayMua.DisabledState.Parent = this.txtNgayMua;
+            this.txtNgayMua.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgayMua.FocusedState.Parent = this.txtNgayMua;
+            this.txtNgayMua.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayMua.ForeColor = System.Drawing.Color.Black;
+            this.txtNgayMua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
+            this.txtNgayMua.HoverState.Parent = this.txtNgayMua;
+            this.txtNgayMua.Location = new System.Drawing.Point(221, 355);
+            this.txtNgayMua.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtNgayMua.Name = "txtNgayMua";
+            this.txtNgayMua.PasswordChar = '\0';
+            this.txtNgayMua.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtNgayMua.PlaceholderText = "Nhập Tên khách hàng";
+            this.txtNgayMua.SelectedText = "";
+            this.txtNgayMua.SelectionStart = 19;
+            this.txtNgayMua.ShadowDecoration.BorderRadius = 0;
+            this.txtNgayMua.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.txtNgayMua.ShadowDecoration.Depth = 20;
+            this.txtNgayMua.ShadowDecoration.Parent = this.txtNgayMua;
+            this.txtNgayMua.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.txtNgayMua.Size = new System.Drawing.Size(284, 53);
+            this.txtNgayMua.TabIndex = 8;
+            this.txtNgayMua.TextOffset = new System.Drawing.Point(8, 0);
+            this.txtNgayMua.WordWrap = false;
             // 
             // label8
             // 
@@ -327,44 +320,41 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Ngày mua";
             // 
-            // guna2TextBox4
+            // txtTenKH2
             // 
-            this.guna2TextBox4.AutoRoundedCorners = true;
-            this.guna2TextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.BorderRadius = 25;
-            this.guna2TextBox4.BorderThickness = 2;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "Nguyễn Văn A";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(843, 222);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox4.PlaceholderText = "Nhập Tên khách hàng";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.SelectionStart = 12;
-            this.guna2TextBox4.ShadowDecoration.BorderRadius = 0;
-            this.guna2TextBox4.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.guna2TextBox4.ShadowDecoration.Depth = 20;
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.guna2TextBox4.Size = new System.Drawing.Size(284, 53);
-            this.guna2TextBox4.TabIndex = 1;
-            this.guna2TextBox4.TextOffset = new System.Drawing.Point(8, 0);
-            this.guna2TextBox4.WordWrap = false;
-            this.guna2TextBox4.Enter += new System.EventHandler(this.textbox_Enter);
-            this.guna2TextBox4.Leave += new System.EventHandler(this.textbox_Leave);
+            this.txtTenKH2.AutoRoundedCorners = true;
+            this.txtTenKH2.BackColor = System.Drawing.Color.Transparent;
+            this.txtTenKH2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtTenKH2.BorderRadius = 25;
+            this.txtTenKH2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenKH2.DefaultText = "Nguyễn Văn A";
+            this.txtTenKH2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenKH2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenKH2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenKH2.DisabledState.Parent = this.txtTenKH2;
+            this.txtTenKH2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenKH2.FocusedState.Parent = this.txtTenKH2;
+            this.txtTenKH2.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKH2.ForeColor = System.Drawing.Color.Black;
+            this.txtTenKH2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
+            this.txtTenKH2.HoverState.Parent = this.txtTenKH2;
+            this.txtTenKH2.Location = new System.Drawing.Point(843, 222);
+            this.txtTenKH2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtTenKH2.Name = "txtTenKH2";
+            this.txtTenKH2.PasswordChar = '\0';
+            this.txtTenKH2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtTenKH2.PlaceholderText = "Nhập Tên khách hàng";
+            this.txtTenKH2.SelectedText = "";
+            this.txtTenKH2.SelectionStart = 12;
+            this.txtTenKH2.ShadowDecoration.BorderRadius = 0;
+            this.txtTenKH2.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.txtTenKH2.ShadowDecoration.Depth = 20;
+            this.txtTenKH2.ShadowDecoration.Parent = this.txtTenKH2;
+            this.txtTenKH2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.txtTenKH2.Size = new System.Drawing.Size(284, 53);
+            this.txtTenKH2.TabIndex = 1;
+            this.txtTenKH2.TextOffset = new System.Drawing.Point(8, 0);
+            this.txtTenKH2.WordWrap = false;
             // 
             // label9
             // 
@@ -375,42 +365,41 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Tên người nhận";
             // 
-            // guna2TextBox5
+            // txtDiaChi2
             // 
-            this.guna2TextBox5.AutoRoundedCorners = true;
-            this.guna2TextBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.BorderRadius = 25;
-            this.guna2TextBox5.BorderThickness = 2;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "Nguyễn Văn A";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox5.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Location = new System.Drawing.Point(843, 288);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox5.PlaceholderText = "Nhập Tên khách hàng";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.SelectionStart = 12;
-            this.guna2TextBox5.ShadowDecoration.BorderRadius = 0;
-            this.guna2TextBox5.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.guna2TextBox5.ShadowDecoration.Depth = 20;
-            this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.guna2TextBox5.Size = new System.Drawing.Size(284, 53);
-            this.guna2TextBox5.TabIndex = 8;
-            this.guna2TextBox5.TextOffset = new System.Drawing.Point(8, 0);
-            this.guna2TextBox5.WordWrap = false;
+            this.txtDiaChi2.AutoRoundedCorners = true;
+            this.txtDiaChi2.BackColor = System.Drawing.Color.Transparent;
+            this.txtDiaChi2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtDiaChi2.BorderRadius = 25;
+            this.txtDiaChi2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiaChi2.DefaultText = "Nguyễn Văn A";
+            this.txtDiaChi2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDiaChi2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDiaChi2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiaChi2.DisabledState.Parent = this.txtDiaChi2;
+            this.txtDiaChi2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiaChi2.FocusedState.Parent = this.txtDiaChi2;
+            this.txtDiaChi2.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi2.ForeColor = System.Drawing.Color.Black;
+            this.txtDiaChi2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
+            this.txtDiaChi2.HoverState.Parent = this.txtDiaChi2;
+            this.txtDiaChi2.Location = new System.Drawing.Point(843, 288);
+            this.txtDiaChi2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtDiaChi2.Name = "txtDiaChi2";
+            this.txtDiaChi2.PasswordChar = '\0';
+            this.txtDiaChi2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtDiaChi2.PlaceholderText = "Nhập Tên khách hàng";
+            this.txtDiaChi2.SelectedText = "";
+            this.txtDiaChi2.SelectionStart = 12;
+            this.txtDiaChi2.ShadowDecoration.BorderRadius = 0;
+            this.txtDiaChi2.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.txtDiaChi2.ShadowDecoration.Depth = 20;
+            this.txtDiaChi2.ShadowDecoration.Parent = this.txtDiaChi2;
+            this.txtDiaChi2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.txtDiaChi2.Size = new System.Drawing.Size(284, 53);
+            this.txtDiaChi2.TabIndex = 8;
+            this.txtDiaChi2.TextOffset = new System.Drawing.Point(8, 0);
+            this.txtDiaChi2.WordWrap = false;
             // 
             // label10
             // 
@@ -421,42 +410,41 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Địa chỉ nhận";
             // 
-            // guna2TextBox6
+            // txtNgayNhan
             // 
-            this.guna2TextBox6.AutoRoundedCorners = true;
-            this.guna2TextBox6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.BorderRadius = 25;
-            this.guna2TextBox6.BorderThickness = 2;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "23:00:00 23/11/2020";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox6.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox6.HoverState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Location = new System.Drawing.Point(843, 355);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox6.PlaceholderText = "Nhập Tên khách hàng";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.SelectionStart = 19;
-            this.guna2TextBox6.ShadowDecoration.BorderRadius = 0;
-            this.guna2TextBox6.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.guna2TextBox6.ShadowDecoration.Depth = 20;
-            this.guna2TextBox6.ShadowDecoration.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.guna2TextBox6.Size = new System.Drawing.Size(284, 53);
-            this.guna2TextBox6.TabIndex = 8;
-            this.guna2TextBox6.TextOffset = new System.Drawing.Point(8, 0);
-            this.guna2TextBox6.WordWrap = false;
+            this.txtNgayNhan.AutoRoundedCorners = true;
+            this.txtNgayNhan.BackColor = System.Drawing.Color.Transparent;
+            this.txtNgayNhan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtNgayNhan.BorderRadius = 25;
+            this.txtNgayNhan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNgayNhan.DefaultText = "23:00:00 23/11/2020";
+            this.txtNgayNhan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNgayNhan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNgayNhan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgayNhan.DisabledState.Parent = this.txtNgayNhan;
+            this.txtNgayNhan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNgayNhan.FocusedState.Parent = this.txtNgayNhan;
+            this.txtNgayNhan.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayNhan.ForeColor = System.Drawing.Color.Black;
+            this.txtNgayNhan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
+            this.txtNgayNhan.HoverState.Parent = this.txtNgayNhan;
+            this.txtNgayNhan.Location = new System.Drawing.Point(843, 355);
+            this.txtNgayNhan.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtNgayNhan.Name = "txtNgayNhan";
+            this.txtNgayNhan.PasswordChar = '\0';
+            this.txtNgayNhan.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtNgayNhan.PlaceholderText = "Nhập Tên khách hàng";
+            this.txtNgayNhan.SelectedText = "";
+            this.txtNgayNhan.SelectionStart = 19;
+            this.txtNgayNhan.ShadowDecoration.BorderRadius = 0;
+            this.txtNgayNhan.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.txtNgayNhan.ShadowDecoration.Depth = 20;
+            this.txtNgayNhan.ShadowDecoration.Parent = this.txtNgayNhan;
+            this.txtNgayNhan.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.txtNgayNhan.Size = new System.Drawing.Size(284, 53);
+            this.txtNgayNhan.TabIndex = 8;
+            this.txtNgayNhan.TextOffset = new System.Drawing.Point(8, 0);
+            this.txtNgayNhan.WordWrap = false;
             // 
             // label11
             // 
@@ -467,44 +455,41 @@
             this.label11.TabIndex = 9;
             this.label11.Text = "Ngày giao";
             // 
-            // guna2TextBox7
+            // txtDT2
             // 
-            this.guna2TextBox7.AutoRoundedCorners = true;
-            this.guna2TextBox7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.BorderRadius = 25;
-            this.guna2TextBox7.BorderThickness = 2;
-            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox7.DefaultText = "0123456789";
-            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.DisabledState.Parent = this.guna2TextBox7;
-            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.FocusedState.Parent = this.guna2TextBox7;
-            this.guna2TextBox7.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox7.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox7.HoverState.Parent = this.guna2TextBox7;
-            this.guna2TextBox7.Location = new System.Drawing.Point(843, 155);
-            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.guna2TextBox7.Name = "guna2TextBox7";
-            this.guna2TextBox7.PasswordChar = '\0';
-            this.guna2TextBox7.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.guna2TextBox7.PlaceholderText = "Nhập số điện thoại";
-            this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.SelectionStart = 10;
-            this.guna2TextBox7.ShadowDecoration.BorderRadius = 0;
-            this.guna2TextBox7.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.guna2TextBox7.ShadowDecoration.Depth = 20;
-            this.guna2TextBox7.ShadowDecoration.Parent = this.guna2TextBox7;
-            this.guna2TextBox7.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.guna2TextBox7.Size = new System.Drawing.Size(284, 53);
-            this.guna2TextBox7.TabIndex = 1;
-            this.guna2TextBox7.TextOffset = new System.Drawing.Point(8, 0);
-            this.guna2TextBox7.WordWrap = false;
-            this.guna2TextBox7.Enter += new System.EventHandler(this.textbox_Enter);
-            this.guna2TextBox7.Leave += new System.EventHandler(this.textbox_Leave);
+            this.txtDT2.AutoRoundedCorners = true;
+            this.txtDT2.BackColor = System.Drawing.Color.Transparent;
+            this.txtDT2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtDT2.BorderRadius = 25;
+            this.txtDT2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDT2.DefaultText = "0123456789";
+            this.txtDT2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDT2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDT2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDT2.DisabledState.Parent = this.txtDT2;
+            this.txtDT2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDT2.FocusedState.Parent = this.txtDT2;
+            this.txtDT2.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDT2.ForeColor = System.Drawing.Color.Black;
+            this.txtDT2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
+            this.txtDT2.HoverState.Parent = this.txtDT2;
+            this.txtDT2.Location = new System.Drawing.Point(843, 155);
+            this.txtDT2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtDT2.Name = "txtDT2";
+            this.txtDT2.PasswordChar = '\0';
+            this.txtDT2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.txtDT2.PlaceholderText = "Nhập số điện thoại";
+            this.txtDT2.SelectedText = "";
+            this.txtDT2.SelectionStart = 10;
+            this.txtDT2.ShadowDecoration.BorderRadius = 0;
+            this.txtDT2.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.txtDT2.ShadowDecoration.Depth = 20;
+            this.txtDT2.ShadowDecoration.Parent = this.txtDT2;
+            this.txtDT2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.txtDT2.Size = new System.Drawing.Size(284, 53);
+            this.txtDT2.TabIndex = 1;
+            this.txtDT2.TextOffset = new System.Drawing.Point(8, 0);
+            this.txtDT2.WordWrap = false;
             // 
             // label12
             // 
@@ -515,20 +500,39 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "ĐT người nhận";
             // 
+            // guna2ToggleSwitch1
+            // 
+            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.CheckedState.Parent = this.guna2ToggleSwitch1;
+            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(546, 155);
+            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
+            this.guna2ToggleSwitch1.ShadowDecoration.Parent = this.guna2ToggleSwitch1;
+            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(74, 34);
+            this.guna2ToggleSwitch1.TabIndex = 10;
+            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.UncheckedState.Parent = this.guna2ToggleSwitch1;
+            // 
             // frmNhapKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1148, 504);
+            this.Controls.Add(this.guna2ToggleSwitch1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.guna2TextBox6);
+            this.Controls.Add(this.txtNgayNhan);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.guna2TextBox3);
-            this.Controls.Add(this.guna2TextBox5);
+            this.Controls.Add(this.txtNgayMua);
+            this.Controls.Add(this.txtDiaChi2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.guna2TextBox2);
+            this.Controls.Add(this.txtDiaChi1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblTenNhanVien);
@@ -538,12 +542,12 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2TextBox4);
+            this.Controls.Add(this.txtTenKH2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.guna2TextBox7);
-            this.Controls.Add(this.txtSoDienThoai);
+            this.Controls.Add(this.txtTenKH1);
+            this.Controls.Add(this.txtDT2);
+            this.Controls.Add(this.txtDT1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("SVN-Gilroy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -559,28 +563,29 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txtSoDienThoai;
+        private Guna.UI2.WinForms.Guna2TextBox txtDT1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenKH1;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblSoHoaDon;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblTenNhanVien;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtDiaChi1;
+        private Guna.UI2.WinForms.Guna2TextBox txtNgayMua;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenKH2;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txtDiaChi2;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox txtNgayNhan;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private Guna.UI2.WinForms.Guna2TextBox txtDT2;
         private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
     }
 }
