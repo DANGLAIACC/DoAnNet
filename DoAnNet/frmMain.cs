@@ -103,7 +103,7 @@ namespace DoAnNet
         {
             if (Temp.cart.Count > 0)
             {
-                frmRptCart2 f = new frmRptCart2();
+                frmRptCart f = new frmRptCart();
                 f.Show();
             }
             else

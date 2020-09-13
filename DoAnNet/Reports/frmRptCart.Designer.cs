@@ -1,6 +1,6 @@
 ﻿namespace DoAnNet.Reports
 {
-    partial class frmRptCart2
+    partial class frmRptCart
     {
 
         #region Windows Form Designer generated code

@@ -12,11 +12,40 @@ using BLL;
 
 namespace DoAnNet.Reports
 {
-    public partial class frmRptCart2 : Form
+    public partial class frmRptCart : Form
     {
-        public frmRptCart2()
+        public string StoreAddress { get; set; }
+        public string NgayLap { get; set; }
+        public string SoHoaDon { get; set; }
+        public string TenNhanVien { get; set; }
+        public string TenKH1 { get; set; }
+        public string DiaChi1 { get; set; }
+        public string DienThoai1 { get; set; }
+        public string NgayMua { get; set; }
+        public string TenKH2 { get; set; }
+        public string DiaChi2 { get; set; }
+        public string DienThoai2 { get; set; }
+        public string NgayGiao { get; set; }
+
+        public frmRptCart()
         {
             InitializeComponent();
+        }
+
+        public frmRptCart(string storeAddress, string ngayLap, string soHoaDon, string tenNhanVien, string tenKH1, string diaChi1, string dienThoai1, string ngayMua, string tenKH2, string diaChi2, string dienThoai2, string ngayGiao)
+        {
+            StoreAddress = storeAddress;
+            NgayLap = ngayLap;
+            SoHoaDon = soHoaDon;
+            TenNhanVien = tenNhanVien;
+            TenKH1 = tenKH1;
+            DiaChi1 = diaChi1;
+            DienThoai1 = dienThoai1;
+            NgayMua = ngayMua;
+            TenKH2 = tenKH2;
+            DiaChi2 = diaChi2;
+            DienThoai2 = dienThoai2;
+            NgayGiao = ngayGiao;
         }
 
         private void frmRptCart2_Load(object sender, EventArgs e)
