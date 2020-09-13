@@ -50,6 +50,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +62,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1048, 68);
+            this.label1.Size = new System.Drawing.Size(1148, 68);
             this.label1.TabIndex = 0;
             this.label1.Text = "NHẬP THÔNG TIN HÓA ĐƠN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,7 +86,7 @@
             this.txtSoDienThoai.ForeColor = System.Drawing.Color.Black;
             this.txtSoDienThoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtSoDienThoai.HoverState.Parent = this.txtSoDienThoai;
-            this.txtSoDienThoai.Location = new System.Drawing.Point(221, 141);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(221, 155);
             this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.PasswordChar = '\0';
@@ -107,7 +109,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 151);
+            this.label2.Location = new System.Drawing.Point(13, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 32);
             this.label2.TabIndex = 2;
@@ -121,15 +123,15 @@
             "Chi nhánh 2",
             "Chi nhánh 3",
             "Chi nhánh 4"});
-            this.comboBox1.Location = new System.Drawing.Point(751, 148);
+            this.comboBox1.Location = new System.Drawing.Point(847, 98);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(269, 39);
+            this.comboBox1.Size = new System.Drawing.Size(280, 39);
             this.comboBox1.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(557, 151);
+            this.label3.Location = new System.Drawing.Point(653, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 32);
             this.label3.TabIndex = 4;
@@ -138,7 +140,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 231);
+            this.label4.Location = new System.Drawing.Point(13, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(193, 32);
             this.label4.TabIndex = 2;
@@ -163,13 +165,14 @@
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(221, 221);
+            this.guna2TextBox1.Location = new System.Drawing.Point(221, 222);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox1.PlaceholderText = "Nhập Tên khách hàng";
             this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.SelectionStart = 12;
             this.guna2TextBox1.ShadowDecoration.BorderRadius = 0;
             this.guna2TextBox1.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.guna2TextBox1.ShadowDecoration.Depth = 20;
@@ -185,7 +188,7 @@
             // lblTime
             // 
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblTime.Location = new System.Drawing.Point(816, 74);
+            this.lblTime.Location = new System.Drawing.Point(901, 60);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(226, 32);
             this.lblTime.TabIndex = 4;
@@ -195,7 +198,7 @@
             // lblSoHoaDon
             // 
             this.lblSoHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.lblSoHoaDon.Location = new System.Drawing.Point(474, 74);
+            this.lblSoHoaDon.Location = new System.Drawing.Point(522, 62);
             this.lblSoHoaDon.Name = "lblSoHoaDon";
             this.lblSoHoaDon.Size = new System.Drawing.Size(216, 32);
             this.lblSoHoaDon.TabIndex = 5;
@@ -205,27 +208,29 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(333, 74);
+            this.label6.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(378, 62);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 32);
+            this.label6.Size = new System.Drawing.Size(149, 31);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Số hóa đơn";
+            this.label6.Text = "Số hóa đơn:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(700, 74);
+            this.label7.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(786, 60);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 32);
+            this.label7.Size = new System.Drawing.Size(114, 31);
             this.label7.TabIndex = 7;
             this.label7.Text = "Ngày lập";
             // 
             // lblTenNhanVien
             // 
-            this.lblTenNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.lblTenNhanVien.Location = new System.Drawing.Point(13, 74);
+            this.lblTenNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            this.lblTenNhanVien.Location = new System.Drawing.Point(134, 101);
             this.lblTenNhanVien.Name = "lblTenNhanVien";
-            this.lblTenNhanVien.Size = new System.Drawing.Size(216, 32);
+            this.lblTenNhanVien.Size = new System.Drawing.Size(314, 32);
             this.lblTenNhanVien.TabIndex = 5;
             this.lblTenNhanVien.Text = "lblTenNhanVien";
             this.lblTenNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,7 +238,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 297);
+            this.label5.Location = new System.Drawing.Point(13, 298);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 32);
             this.label5.TabIndex = 9;
@@ -258,13 +263,14 @@
             this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(221, 287);
+            this.guna2TextBox2.Location = new System.Drawing.Point(221, 288);
             this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox2.PlaceholderText = "Nhập Tên khách hàng";
             this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.SelectionStart = 12;
             this.guna2TextBox2.ShadowDecoration.BorderRadius = 0;
             this.guna2TextBox2.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.guna2TextBox2.ShadowDecoration.Depth = 20;
@@ -294,13 +300,14 @@
             this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(221, 354);
+            this.guna2TextBox3.Location = new System.Drawing.Point(221, 355);
             this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox3.PlaceholderText = "Nhập Tên khách hàng";
             this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.SelectionStart = 19;
             this.guna2TextBox3.ShadowDecoration.BorderRadius = 0;
             this.guna2TextBox3.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.guna2TextBox3.ShadowDecoration.Depth = 20;
@@ -314,7 +321,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 364);
+            this.label8.Location = new System.Drawing.Point(13, 365);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 32);
             this.label8.TabIndex = 9;
@@ -339,13 +346,14 @@
             this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(747, 218);
+            this.guna2TextBox4.Location = new System.Drawing.Point(843, 222);
             this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PasswordChar = '\0';
             this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox4.PlaceholderText = "Nhập Tên khách hàng";
             this.guna2TextBox4.SelectedText = "";
+            this.guna2TextBox4.SelectionStart = 12;
             this.guna2TextBox4.ShadowDecoration.BorderRadius = 0;
             this.guna2TextBox4.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.guna2TextBox4.ShadowDecoration.Depth = 20;
@@ -361,7 +369,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(557, 228);
+            this.label9.Location = new System.Drawing.Point(653, 232);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(186, 32);
             this.label9.TabIndex = 2;
@@ -386,13 +394,14 @@
             this.guna2TextBox5.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Location = new System.Drawing.Point(747, 284);
+            this.guna2TextBox5.Location = new System.Drawing.Point(843, 288);
             this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PasswordChar = '\0';
             this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox5.PlaceholderText = "Nhập Tên khách hàng";
             this.guna2TextBox5.SelectedText = "";
+            this.guna2TextBox5.SelectionStart = 12;
             this.guna2TextBox5.ShadowDecoration.BorderRadius = 0;
             this.guna2TextBox5.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.guna2TextBox5.ShadowDecoration.Depth = 20;
@@ -406,7 +415,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(557, 294);
+            this.label10.Location = new System.Drawing.Point(653, 298);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(156, 32);
             this.label10.TabIndex = 9;
@@ -431,13 +440,14 @@
             this.guna2TextBox6.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox6.HoverState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Location = new System.Drawing.Point(747, 351);
+            this.guna2TextBox6.Location = new System.Drawing.Point(843, 355);
             this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.guna2TextBox6.Name = "guna2TextBox6";
             this.guna2TextBox6.PasswordChar = '\0';
             this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.guna2TextBox6.PlaceholderText = "Nhập Tên khách hàng";
             this.guna2TextBox6.SelectedText = "";
+            this.guna2TextBox6.SelectionStart = 19;
             this.guna2TextBox6.ShadowDecoration.BorderRadius = 0;
             this.guna2TextBox6.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.guna2TextBox6.ShadowDecoration.Depth = 20;
@@ -451,18 +461,66 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(557, 361);
+            this.label11.Location = new System.Drawing.Point(653, 365);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 32);
             this.label11.TabIndex = 9;
             this.label11.Text = "Ngày giao";
+            // 
+            // guna2TextBox7
+            // 
+            this.guna2TextBox7.AutoRoundedCorners = true;
+            this.guna2TextBox7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
+            this.guna2TextBox7.BorderRadius = 25;
+            this.guna2TextBox7.BorderThickness = 2;
+            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox7.DefaultText = "0123456789";
+            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7.DisabledState.Parent = this.guna2TextBox7;
+            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7.FocusedState.Parent = this.guna2TextBox7;
+            this.guna2TextBox7.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox7.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.guna2TextBox7.HoverState.Parent = this.guna2TextBox7;
+            this.guna2TextBox7.Location = new System.Drawing.Point(843, 155);
+            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.guna2TextBox7.Name = "guna2TextBox7";
+            this.guna2TextBox7.PasswordChar = '\0';
+            this.guna2TextBox7.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.guna2TextBox7.PlaceholderText = "Nhập số điện thoại";
+            this.guna2TextBox7.SelectedText = "";
+            this.guna2TextBox7.SelectionStart = 10;
+            this.guna2TextBox7.ShadowDecoration.BorderRadius = 0;
+            this.guna2TextBox7.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.guna2TextBox7.ShadowDecoration.Depth = 20;
+            this.guna2TextBox7.ShadowDecoration.Parent = this.guna2TextBox7;
+            this.guna2TextBox7.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.guna2TextBox7.Size = new System.Drawing.Size(284, 53);
+            this.guna2TextBox7.TabIndex = 1;
+            this.guna2TextBox7.TextOffset = new System.Drawing.Point(8, 0);
+            this.guna2TextBox7.WordWrap = false;
+            this.guna2TextBox7.Enter += new System.EventHandler(this.textbox_Enter);
+            this.guna2TextBox7.Leave += new System.EventHandler(this.textbox_Leave);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(653, 165);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(178, 32);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "ĐT người nhận";
             // 
             // frmNhapKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1048, 598);
+            this.ClientSize = new System.Drawing.Size(1148, 504);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.guna2TextBox6);
@@ -481,8 +539,10 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2TextBox4);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.guna2TextBox7);
             this.Controls.Add(this.txtSoDienThoai);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("SVN-Gilroy", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -520,5 +580,7 @@
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
         private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private System.Windows.Forms.Label label12;
     }
 }
