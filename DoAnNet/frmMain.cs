@@ -103,8 +103,10 @@ namespace DoAnNet
         {
             if (Temp.cart.Count > 0)
             {
-                frmRptCart f = new frmRptCart();
-                f.Show();
+                frmNhapKhachHang f = new frmNhapKhachHang(
+                    "012345678912","Đặng Quốc Lai","13:12:00 14/09/2020","123 Nguyễn Hữu Cảnh, Q. Bình Thạnh, TP. Hồ Chí Minh");
+
+                f.ShowDialog();
             }
             else
             {

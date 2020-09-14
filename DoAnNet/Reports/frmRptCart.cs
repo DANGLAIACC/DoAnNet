@@ -32,16 +32,17 @@ namespace DoAnNet.Reports
             InitializeComponent();
         }
 
-        public frmRptCart(string storeAddress, string ngayLap, string soHoaDon, string tenNhanVien, string tenKH1, string diaChi1, string dienThoai1, string ngayMua, string tenKH2, string diaChi2, string dienThoai2, string ngayGiao)
+        public frmRptCart(string storeAddress, string ngayLap, string soHoaDon, string tenNhanVien, string tenKH1, string diaChi1, string dienThoai1 , string tenKH2, string diaChi2, string dienThoai2, string ngayGiao)
         {
+            InitializeComponent();
+
             StoreAddress = storeAddress;
             NgayLap = ngayLap;
             SoHoaDon = soHoaDon;
             TenNhanVien = tenNhanVien;
             TenKH1 = tenKH1;
             DiaChi1 = diaChi1;
-            DienThoai1 = dienThoai1;
-            NgayMua = ngayMua;
+            DienThoai1 = dienThoai1; 
             TenKH2 = tenKH2;
             DiaChi2 = diaChi2;
             DienThoai2 = dienThoai2;
@@ -54,18 +55,18 @@ namespace DoAnNet.Reports
             crptCart c = new crptCart();
             c.SetDataSource(Temp.cart);
 
-            c.SetParameterValue("storeAddress", "606 Quốc lộ 13, P. HBP, Q. Thủ Đức, TP. HCM");
-            c.SetParameterValue("ngayLap", "22:55:00 22/12/2020");
-            c.SetParameterValue("soHoaDon", "012345678912");
-            c.SetParameterValue("tenNhanVien", "Đặng Quốc Lai");
-            c.SetParameterValue("TenKH1", "Huỳnh Thị Thúy Kiều");
-            c.SetParameterValue("DiaChi1", "123 Nguyễn Thị Minh Khai");
-            c.SetParameterValue("DienThoai1", "9876543210");
-            c.SetParameterValue("NgayMua", "22:55:00 22/12/2020");
-            c.SetParameterValue("TenKH2", "Huỳnh Thị Thúy Kiều");
-            c.SetParameterValue("DiaChi2", "228 Võ Văn Tần, Q.3, TP. HCM");
-            c.SetParameterValue("DienThoai2", "8765432109");
-            c.SetParameterValue("NgayGiao", "22:55:00 22/12/2020");
+            c.SetParameterValue("storeAddress", StoreAddress);
+            c.SetParameterValue("ngayLap", NgayLap);
+            c.SetParameterValue("soHoaDon", SoHoaDon);
+            c.SetParameterValue("tenNhanVien", TenNhanVien);
+            c.SetParameterValue("TenKH1", TenKH1);
+            c.SetParameterValue("DiaChi1", DiaChi1);
+            c.SetParameterValue("DienThoai1", DienThoai1);
+            c.SetParameterValue("NgayMua", NgayLap);
+            c.SetParameterValue("TenKH2", TenKH2);
+            c.SetParameterValue("DiaChi2", DiaChi2);
+            c.SetParameterValue("DienThoai2", DienThoai2);
+            c.SetParameterValue("NgayGiao", NgayGiao);
 
             crystalReportViewer1.ReportSource = c;
 

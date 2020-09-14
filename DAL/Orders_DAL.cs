@@ -42,14 +42,16 @@ namespace DAL
         public static Orders2_DTO LoadOrderByOdId(string orderId)
         {
             Orders2_DTO o = new Orders2_DTO();
-            DataTable table = DataProvider.Execute(string.Format(
+            string query = string.Format(
                 "select distinct (s.st_firstName+' '+s.st_lastName) as SName,(c.ct_firstName+' '+c.ct_lastName) as CName,"
                 + " od_dateDelivery,od_dateOrder,ag_address,c.Ct_address,c.ct_phone"
                 + " from orders o1 inner join order_detail o2 on o1.od_id=o2.od_id"
                 + " inner join staffs s on o1.st_id = s.st_id"
                 + " inner join agencies a on o1.ag_id = a.ag_id"
                 + " inner join customers c on o1.ct_id = c.ct_id"
-                + " where o1.od_id = '{0}'", orderId));
+                + " where o1.od_id = '{0}'", orderId);
+
+            DataTable table = DataProvider.Execute(query);
 
             o.Od_id = orderId;
             o.Ag_address = table.Rows[0]["Ag_address"].ToString();
