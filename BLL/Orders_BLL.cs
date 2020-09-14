@@ -14,5 +14,9 @@ namespace BLL
         {
             return Orders_DAL.LoadOrders();
         }
+        public static Orders2_DTO LoadOrderByOdId(string orderId)
+        {
+            return Orders_DAL.LoadOrderByOdId(orderId);
+        }
     }
 }

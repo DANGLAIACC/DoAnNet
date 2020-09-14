@@ -19,8 +19,8 @@ namespace DoAnNet
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmMain());
             //Application.Run(new frmAlert());
-            Application.Run(new frmNhapKhachHang());
-
+            //Application.Run(new frmNhapKhachHang("012345678912","Đặng Quốc Lai","10:30:28 14/09/2020"));
+            Application.Run(new frmNhapKhachHang("000000000000"));
         }
     }
 }

@@ -24,8 +24,8 @@ namespace DAL
                     l = new Orders_DTO();
 
                     l.Od_id = table.Rows[i]["Od_id"].ToString();
-                    l.Od_dateOrder = DateTime.Parse(table.Rows[i]["Od_dateOrder"].ToString());
-                    l.Od_dateDelivery = DateTime.Parse(table.Rows[i]["Od_dateDelivery"].ToString());
+                    l.Od_dateOrder = table.Rows[i]["Od_dateOrder"].ToString();
+                    l.Od_dateDelivery = table.Rows[i]["Od_dateDelivery"].ToString();
                     l.Od_status = Int32.Parse(table.Rows[i]["Od_status"].ToString());
                     l.Od_address = table.Rows[i]["Od_address"].ToString();
                     l.Od_payment = table.Rows[i]["Od_payment"].ToString();
@@ -38,6 +38,29 @@ namespace DAL
                 return lst;
             }
             return null;
+        }
+        public static Orders2_DTO LoadOrderByOdId(string orderId)
+        {
+            Orders2_DTO o = new Orders2_DTO();
+            DataTable table = DataProvider.Execute(string.Format(
+                "select distinct (s.st_firstName+' '+s.st_lastName) as SName,(c.ct_firstName+' '+c.ct_lastName) as CName,"
+                + " od_dateDelivery,od_dateOrder,ag_address,c.Ct_address,c.ct_phone"
+                + " from orders o1 inner join order_detail o2 on o1.od_id=o2.od_id"
+                + " inner join staffs s on o1.st_id = s.st_id"
+                + " inner join agencies a on o1.ag_id = a.ag_id"
+                + " inner join customers c on o1.ct_id = c.ct_id"
+                + " where o1.od_id = '{0}'", orderId));
+
+            o.Od_id = orderId;
+            o.Ag_address = table.Rows[0]["Ag_address"].ToString();
+            o.SName = table.Rows[0]["SName"].ToString();
+            o.AName = table.Rows[0]["ag_address"].ToString();
+            o.NgayMua = table.Rows[0]["od_dateOrder"].ToString();
+            o.NgayNhan = table.Rows[0]["od_dateDelivery"].ToString();
+            o.Ct_address = table.Rows[0]["Ct_address"].ToString();
+            o.Ct_phone = table.Rows[0]["Ct_phone"].ToString();
+            o.CName = table.Rows[0]["CName"].ToString();
+            return o;
         }
     }
 }
