@@ -13,6 +13,7 @@ using BLL;
 using DoAnNet.UserControls;
 using DoAnNet.Reports;
 using DoAnNet.Forms;
+#pragma warning disable 0436
 
 namespace DoAnNet
 {
@@ -24,6 +25,8 @@ namespace DoAnNet
         private event functioncall formFunctionPointer;
 
         private List<Products_DTO> lstProduct;
+        private UC_DanhSachHoaDon ucDanhSachHoaDon;
+
         public frmMain()
         {
             InitializeComponent();
@@ -43,7 +46,6 @@ namespace DoAnNet
             lstProduct = Products_BLL
                 .LoadProducts();
             int count = lstProduct.Count;
-            Console.WriteLine("load xong, count: " + count);
             if (count > 0)
             {
                 UC_SanPham_item[] lstItem = new UC_SanPham_item[count];
@@ -63,7 +65,7 @@ namespace DoAnNet
 
         private void increseCart(int i)
         {
-            count+=i;
+            count += i;
             btnCartCount.Text = count.ToString();
         }
 
@@ -78,7 +80,7 @@ namespace DoAnNet
         private void button_CheckedChanged(object sender, EventArgs e)
         {
             Guna2Button b = (Guna2Button)sender;
-            imgSlide.Location = 
+            imgSlide.Location =
                 new Point(b.Location.X + 24, b.Location.Y - 25);
             imgSlide.SendToBack();
         }
@@ -103,7 +105,7 @@ namespace DoAnNet
             if (Temp.cart.Count > 0)
             {
                 frmNhapKhachHang f = new frmNhapKhachHang(
-                    "012345678912","Đặng Quốc Lai","13:12:00 14/09/2020","123 Nguyễn Hữu Cảnh, Q. Bình Thạnh, TP. Hồ Chí Minh");
+                    "012345678912", "Đặng Quốc Lai", "13:12:00 14/09/2020", "123 Nguyễn Hữu Cảnh, Q. Bình Thạnh, TP. Hồ Chí Minh");
 
                 f.ShowDialog();
             }
@@ -116,7 +118,7 @@ namespace DoAnNet
                 //MessageBox.Show("Giỏ hàng hiện đang trống.", "In đơn hàng");
             }
         }
-         
+
         public void Alert(string msg, frmAlert.enmType type)
         {
             frmAlert frm = new frmAlert();
@@ -132,6 +134,17 @@ namespace DoAnNet
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
+            if (ucDanhSachHoaDon == null)
+            {
+                List<Orders2_DTO> lstHoaDon = Orders_BLL.LoadAllOrder();
+
+                ucDanhSachHoaDon = new UC_DanhSachHoaDon(lstHoaDon);
+                
+                pnHoaDon.Controls.Add(ucDanhSachHoaDon);
+                ucDanhSachHoaDon.Dock = DockStyle.Fill;
+
+            }
+
             lblTitle.Text = "Danh sách hóa đơn";
             flpSanPham.Hide();
             pnHoaDon.Show();

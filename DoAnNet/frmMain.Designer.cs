@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+#pragma warning disable 0436
 
 namespace DoAnNet
 {
@@ -59,7 +60,7 @@ namespace DoAnNet
             this.pnMain = new System.Windows.Forms.Panel();
             this.flpSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.pnHoaDon = new System.Windows.Forms.Panel();
-            this.uC_DanhSachHoaDon1 = new DoAnNet.UserControls.UC_DanhSachHoaDon();
+             
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -518,22 +519,13 @@ namespace DoAnNet
             this.flpSanPham.TabIndex = 0;
             // 
             // pnHoaDon
-            // 
-            this.pnHoaDon.Controls.Add(this.uC_DanhSachHoaDon1);
+            //
             this.pnHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnHoaDon.Location = new System.Drawing.Point(0, 0);
             this.pnHoaDon.Name = "pnHoaDon";
             this.pnHoaDon.Size = new System.Drawing.Size(796, 506);
             this.pnHoaDon.TabIndex = 0;
-            // 
-            // uC_DanhSachHoaDon1
-            // 
-            this.uC_DanhSachHoaDon1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_DanhSachHoaDon1.Location = new System.Drawing.Point(0, 0);
-            this.uC_DanhSachHoaDon1.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
-            this.uC_DanhSachHoaDon1.Name = "uC_DanhSachHoaDon1";
-            this.uC_DanhSachHoaDon1.Size = new System.Drawing.Size(796, 506);
-            this.uC_DanhSachHoaDon1.TabIndex = 0;
+
             // 
             // frmMain
             // 
@@ -591,7 +583,6 @@ namespace DoAnNet
         private System.Windows.Forms.Label lblTitle;
         public Guna.UI2.WinForms.Guna2CircleButton btnCartCount;
         private System.Windows.Forms.FlowLayoutPanel flpSanPham;
-        private UserControls.UC_DanhSachHoaDon uC_DanhSachHoaDon1;
         private System.Windows.Forms.Panel pnHoaDon;
     }
 }

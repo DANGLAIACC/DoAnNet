@@ -65,14 +65,14 @@ namespace DoAnNet.UserControls
         private void btn_Click(object sender, EventArgs e)
         {
             userFunctionPointer.DynamicInvoke(1);
-            CartItem_DTO item = new CartItem_DTO(_img, _name, _price);
-            Console.WriteLine("Thêm sản phẩm: "+item);
+            Order_detail_DTO item = new Order_detail_DTO(_img, _name, _price);
+            //Console.WriteLine("Thêm sản phẩm: "+item);
             bool notExists = true;
             for (int i = 0; i < Temp.cart.Count; i++)
-                if (Temp.cart[i].MaSP == _img)
+                if (Temp.cart[i].Pd_id == _img)
                 {
                     notExists = false;
-                    Temp.cart[i].SoLuong++;
+                    Temp.cart[i].Od_quantity++;
                     break;
                 }
             if(notExists) Temp.cart.Add(item);

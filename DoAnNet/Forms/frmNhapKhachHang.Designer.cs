@@ -1,5 +1,6 @@
 ﻿namespace DoAnNet.Forms
 {
+#pragma warning disable 0436
     partial class frmNhapKhachHang
     {
         /// <summary>
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapKhachHang));
             this.label1 = new System.Windows.Forms.Label();
             this.txtDT1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,6 +59,7 @@
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.btnIn = new Guna.UI2.WinForms.Guna2Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +84,7 @@
             this.txtDT1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtDT1.BorderRadius = 25;
             this.txtDT1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDT1.DefaultText = "0123456789";
+            this.txtDT1.DefaultText = "";
             this.txtDT1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtDT1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtDT1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -99,7 +102,6 @@
             this.txtDT1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtDT1.PlaceholderText = "Nhập số điện thoại";
             this.txtDT1.SelectedText = "";
-            this.txtDT1.SelectionStart = 10;
             this.txtDT1.ShadowDecoration.BorderRadius = 0;
             this.txtDT1.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.txtDT1.ShadowDecoration.Depth = 20;
@@ -116,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 165);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 25);
+            this.label2.Size = new System.Drawing.Size(162, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Số điện thoại";
             // 
@@ -125,7 +127,7 @@
             this.cboChiNhanh.FormattingEnabled = true;
             this.cboChiNhanh.Location = new System.Drawing.Point(847, 98);
             this.cboChiNhanh.Name = "cboChiNhanh";
-            this.cboChiNhanh.Size = new System.Drawing.Size(280, 32);
+            this.cboChiNhanh.Size = new System.Drawing.Size(280, 39);
             this.cboChiNhanh.TabIndex = 3;
             // 
             // label3
@@ -133,7 +135,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(653, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 25);
+            this.label3.Size = new System.Drawing.Size(190, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "Chọn chi nhánh";
             // 
@@ -142,7 +144,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 232);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 25);
+            this.label4.Size = new System.Drawing.Size(193, 32);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tên khách hàng";
             // 
@@ -153,7 +155,7 @@
             this.txtTenKH1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtTenKH1.BorderRadius = 25;
             this.txtTenKH1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenKH1.DefaultText = "Lưu Huyền Đức";
+            this.txtTenKH1.DefaultText = "";
             this.txtTenKH1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenKH1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenKH1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -171,7 +173,6 @@
             this.txtTenKH1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtTenKH1.PlaceholderText = "Nhập Tên khách hàng";
             this.txtTenKH1.SelectedText = "";
-            this.txtTenKH1.SelectionStart = 13;
             this.txtTenKH1.ShadowDecoration.BorderRadius = 0;
             this.txtTenKH1.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.txtTenKH1.ShadowDecoration.Depth = 20;
@@ -186,11 +187,11 @@
             // lblTime
             // 
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblTime.Location = new System.Drawing.Point(928, 57);
+            this.lblTime.Location = new System.Drawing.Point(875, 60);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(199, 32);
+            this.lblTime.Size = new System.Drawing.Size(252, 32);
             this.lblTime.TabIndex = 4;
-            this.lblTime.Text = "23:24:00 14/09/2020";
+            this.lblTime.Text = "05:05:00 15/09/2020";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSoHoaDon
@@ -200,7 +201,6 @@
             this.lblSoHoaDon.Name = "lblSoHoaDon";
             this.lblSoHoaDon.Size = new System.Drawing.Size(216, 32);
             this.lblSoHoaDon.TabIndex = 5;
-            this.lblSoHoaDon.Text = "lblSoHoaDon";
             this.lblSoHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
@@ -209,7 +209,7 @@
             this.label6.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(378, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 25);
+            this.label6.Size = new System.Drawing.Size(149, 31);
             this.label6.TabIndex = 6;
             this.label6.Text = "Số hóa đơn:";
             // 
@@ -217,9 +217,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(829, 61);
+            this.label7.Location = new System.Drawing.Point(764, 61);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 25);
+            this.label7.Size = new System.Drawing.Size(117, 31);
             this.label7.TabIndex = 7;
             this.label7.Text = "Thời gian";
             // 
@@ -230,7 +230,6 @@
             this.lblTenNhanVien.Name = "lblTenNhanVien";
             this.lblTenNhanVien.Size = new System.Drawing.Size(314, 32);
             this.lblTenNhanVien.TabIndex = 5;
-            this.lblTenNhanVien.Text = "lblTenNhanVien";
             this.lblTenNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
@@ -238,7 +237,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 298);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 25);
+            this.label5.Size = new System.Drawing.Size(93, 32);
             this.label5.TabIndex = 9;
             this.label5.Text = "Địa chỉ";
             // 
@@ -249,7 +248,7 @@
             this.txtDiaChi1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtDiaChi1.BorderRadius = 25;
             this.txtDiaChi1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiaChi1.DefaultText = "Địa chỉ mặc định của khách hàng";
+            this.txtDiaChi1.DefaultText = "";
             this.txtDiaChi1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtDiaChi1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtDiaChi1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -267,7 +266,6 @@
             this.txtDiaChi1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtDiaChi1.PlaceholderText = "Địa chỉ khách hàng";
             this.txtDiaChi1.SelectedText = "";
-            this.txtDiaChi1.SelectionStart = 31;
             this.txtDiaChi1.ShadowDecoration.BorderRadius = 0;
             this.txtDiaChi1.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.txtDiaChi1.ShadowDecoration.Depth = 20;
@@ -286,7 +284,7 @@
             this.txtNgayMua.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtNgayMua.BorderRadius = 25;
             this.txtNgayMua.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNgayMua.DefaultText = "23:00:00 23/11/2020";
+            this.txtNgayMua.DefaultText = "";
             this.txtNgayMua.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtNgayMua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtNgayMua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -304,13 +302,12 @@
             this.txtNgayMua.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtNgayMua.PlaceholderText = "Ngày mua";
             this.txtNgayMua.SelectedText = "";
-            this.txtNgayMua.SelectionStart = 19;
             this.txtNgayMua.ShadowDecoration.BorderRadius = 0;
             this.txtNgayMua.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.txtNgayMua.ShadowDecoration.Depth = 20;
             this.txtNgayMua.ShadowDecoration.Parent = this.txtNgayMua;
             this.txtNgayMua.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.txtNgayMua.Size = new System.Drawing.Size(245, 53);
+            this.txtNgayMua.Size = new System.Drawing.Size(248, 53);
             this.txtNgayMua.TabIndex = 4;
             this.txtNgayMua.TextOffset = new System.Drawing.Point(8, 0);
             this.txtNgayMua.WordWrap = false;
@@ -321,7 +318,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(13, 365);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 25);
+            this.label8.Size = new System.Drawing.Size(129, 32);
             this.label8.TabIndex = 9;
             this.label8.Text = "Ngày mua";
             // 
@@ -332,7 +329,7 @@
             this.txtTenKH2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtTenKH2.BorderRadius = 25;
             this.txtTenKH2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenKH2.DefaultText = "Tào Mạnh Đức";
+            this.txtTenKH2.DefaultText = "";
             this.txtTenKH2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenKH2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenKH2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -350,7 +347,6 @@
             this.txtTenKH2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtTenKH2.PlaceholderText = "Tên người nhận";
             this.txtTenKH2.SelectedText = "";
-            this.txtTenKH2.SelectionStart = 12;
             this.txtTenKH2.ShadowDecoration.BorderRadius = 0;
             this.txtTenKH2.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.txtTenKH2.ShadowDecoration.Depth = 20;
@@ -366,7 +362,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(653, 232);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 25);
+            this.label9.Size = new System.Drawing.Size(186, 32);
             this.label9.TabIndex = 2;
             this.label9.Text = "Tên người nhận";
             // 
@@ -377,7 +373,7 @@
             this.txtDiaChi2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtDiaChi2.BorderRadius = 25;
             this.txtDiaChi2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiaChi2.DefaultText = "Địa chỉ nhận hàng";
+            this.txtDiaChi2.DefaultText = "";
             this.txtDiaChi2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtDiaChi2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtDiaChi2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -395,7 +391,6 @@
             this.txtDiaChi2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtDiaChi2.PlaceholderText = "Địa chỉ nhận hàng";
             this.txtDiaChi2.SelectedText = "";
-            this.txtDiaChi2.SelectionStart = 17;
             this.txtDiaChi2.ShadowDecoration.BorderRadius = 0;
             this.txtDiaChi2.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.txtDiaChi2.ShadowDecoration.Depth = 20;
@@ -411,7 +406,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(653, 298);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(124, 25);
+            this.label10.Size = new System.Drawing.Size(156, 32);
             this.label10.TabIndex = 9;
             this.label10.Text = "Địa chỉ nhận";
             // 
@@ -422,7 +417,7 @@
             this.txtNgayNhan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtNgayNhan.BorderRadius = 25;
             this.txtNgayNhan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNgayNhan.DefaultText = "13:59:59 29/11/2020";
+            this.txtNgayNhan.DefaultText = "";
             this.txtNgayNhan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtNgayNhan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtNgayNhan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -440,7 +435,6 @@
             this.txtNgayNhan.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtNgayNhan.PlaceholderText = "Ngày Giao hàng";
             this.txtNgayNhan.SelectedText = "";
-            this.txtNgayNhan.SelectionStart = 19;
             this.txtNgayNhan.ShadowDecoration.BorderRadius = 0;
             this.txtNgayNhan.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.txtNgayNhan.ShadowDecoration.Depth = 20;
@@ -456,7 +450,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(653, 365);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 25);
+            this.label11.Size = new System.Drawing.Size(130, 32);
             this.label11.TabIndex = 9;
             this.label11.Text = "Ngày giao";
             // 
@@ -467,7 +461,7 @@
             this.txtDT2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtDT2.BorderRadius = 25;
             this.txtDT2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDT2.DefaultText = "0123456789";
+            this.txtDT2.DefaultText = "";
             this.txtDT2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtDT2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtDT2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -485,7 +479,6 @@
             this.txtDT2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.txtDT2.PlaceholderText = "Số điện thoại người nhận";
             this.txtDT2.SelectedText = "";
-            this.txtDT2.SelectionStart = 10;
             this.txtDT2.ShadowDecoration.BorderRadius = 0;
             this.txtDT2.ShadowDecoration.Color = System.Drawing.Color.Empty;
             this.txtDT2.ShadowDecoration.Depth = 20;
@@ -501,7 +494,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(653, 165);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 25);
+            this.label12.Size = new System.Drawing.Size(178, 32);
             this.label12.TabIndex = 2;
             this.label12.Text = "ĐT người nhận";
             // 
@@ -571,9 +564,14 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmNhapKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1148, 439);
@@ -609,8 +607,8 @@
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmNhapKhachHang";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmNhapKhachHang";
             this.Load += new System.EventHandler(this.frmNhapKhachHang_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -647,5 +645,6 @@
         private Guna.UI2.WinForms.Guna2Button btnReset;
         private Guna.UI2.WinForms.Guna2Button btnIn;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Timer timer1;
     }
 }

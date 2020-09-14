@@ -13,7 +13,7 @@ namespace DAL
         public static List<Order_detail_DTO> LoadOrderDetail()
         {
             DataTable table = new DataTable();
-            table = DataProvider.Execute("select * from Order_detail");
+            table = DataProvider.Execute("select a.*,pd_name from order_detail a inner join products b on a.pd_id= b.pd_id");
             int count = table.Rows.Count;
             if (table != null && count > 0)
             {
@@ -21,12 +21,17 @@ namespace DAL
                 Order_detail_DTO l;
                 for (int i = 0; i < count; i++)
                 {
-                    l = new Order_detail_DTO();
-                    l.Od_id = table.Rows[i]["Od_id"].ToString();
-                    l.Pd_id = table.Rows[i]["Pd_id"].ToString();
-                    l.Od_quantity = Int32.Parse(table.Rows[i]["Ct_id"].ToString());
-                    l.Od_price= Decimal.Parse(table.Rows[i]["Ct_id"].ToString());
-                    
+                    l = new Order_detail_DTO(
+                        table.Rows[i]["Pd_id"].ToString(),
+                        table.Rows[i]["Pd_name"].ToString(),
+                        Decimal.Parse(
+                            table.Rows[i]["Od_price"].ToString())
+                        );
+
+                    l.Od_id = table.Rows[i]["Od_id"].ToString(); 
+
+                    l.Od_quantity = Int32.Parse(table.Rows[i]["Od_quantity"].ToString());
+
                     lst.Add(l);
                 }
                 return lst;
@@ -34,5 +39,42 @@ namespace DAL
             return null;
 
         }
+
+        public static List<Order_detail_DTO> getOrderDetailById(string orderId)
+        {
+            DataTable table = new DataTable();
+            string query = string.Format(
+                "select a.*, pd_name "
+                + "from order_detail a "
+                + "inner join products b on a.pd_id = b.pd_id "
+                + "inner join orders c on a.od_id = c.od_id "
+                + "where a.od_id = '{0}'", orderId); 
+
+            table = DataProvider.Execute(query);
+            int count = table.Rows.Count;
+            if (table != null && count > 0)
+            {
+                List<Order_detail_DTO> lst = new List<Order_detail_DTO>();
+                Order_detail_DTO l;
+                for (int i = 0; i < count; i++)
+                {
+                    l = new Order_detail_DTO(
+                        table.Rows[i]["Pd_id"].ToString(),
+                        table.Rows[i]["Pd_name"].ToString(),
+                        Decimal.Parse(
+                            table.Rows[i]["Od_price"].ToString())
+                        );
+
+                    l.Od_id = table.Rows[i]["Od_id"].ToString();
+
+                    l.Od_quantity = Int32.Parse(table.Rows[i]["Od_quantity"].ToString());
+
+                    lst.Add(l);
+                }
+                return lst;
+            }
+            return null;
+        }
+
     }
 }

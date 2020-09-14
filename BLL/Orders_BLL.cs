@@ -18,5 +18,9 @@ namespace BLL
         {
             return Orders_DAL.LoadOrderByOdId(orderId);
         }
+        public static List<Orders2_DTO> LoadAllOrder()
+        {
+            return Orders_DAL.LoadAllOrder();
+        }
     }
 }

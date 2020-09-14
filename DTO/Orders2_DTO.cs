@@ -17,5 +17,6 @@ namespace DTO
         public string Ct_address { get; set; }
         public string Ct_phone { get; set; }
         public string CName { get; set; }
+        public string Total { get; set; }
     }
 }

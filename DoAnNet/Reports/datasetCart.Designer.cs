@@ -24,7 +24,7 @@ namespace DoAnNet.Reports {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class datasetCart : global::System.Data.DataSet {
         
-        private CartItemDataTable tableCartItem;
+        private Order_detail_DTODataTable tableOrder_detail_DTO;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace DoAnNet.Reports {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["CartItem"] != null)) {
-                    base.Tables.Add(new CartItemDataTable(ds.Tables["CartItem"]));
+                if ((ds.Tables["Order_detail_DTO"] != null)) {
+                    base.Tables.Add(new Order_detail_DTODataTable(ds.Tables["Order_detail_DTO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DoAnNet.Reports {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CartItemDataTable CartItem {
+        public Order_detail_DTODataTable Order_detail_DTO {
             get {
-                return this.tableCartItem;
+                return this.tableOrder_detail_DTO;
             }
         }
         
@@ -152,8 +152,8 @@ namespace DoAnNet.Reports {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["CartItem"] != null)) {
-                    base.Tables.Add(new CartItemDataTable(ds.Tables["CartItem"]));
+                if ((ds.Tables["Order_detail_DTO"] != null)) {
+                    base.Tables.Add(new Order_detail_DTODataTable(ds.Tables["Order_detail_DTO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DoAnNet.Reports {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableCartItem = ((CartItemDataTable)(base.Tables["CartItem"]));
+            this.tableOrder_detail_DTO = ((Order_detail_DTODataTable)(base.Tables["Order_detail_DTO"]));
             if ((initTable == true)) {
-                if ((this.tableCartItem != null)) {
-                    this.tableCartItem.InitVars();
+                if ((this.tableOrder_detail_DTO != null)) {
+                    this.tableOrder_detail_DTO.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace DoAnNet.Reports {
             this.Namespace = "http://tempuri.org/datasetCart.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCartItem = new CartItemDataTable();
-            base.Tables.Add(this.tableCartItem);
+            this.tableOrder_detail_DTO = new Order_detail_DTODataTable();
+            base.Tables.Add(this.tableOrder_detail_DTO);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeCartItem() {
+        private bool ShouldSerializeOrder_detail_DTO() {
             return false;
         }
         
@@ -270,27 +270,29 @@ namespace DoAnNet.Reports {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void CartItemRowChangeEventHandler(object sender, CartItemRowChangeEvent e);
+        public delegate void Order_detail_DTORowChangeEventHandler(object sender, Order_detail_DTORowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CartItemDataTable : global::System.Data.TypedTableBase<CartItemRow> {
+        public partial class Order_detail_DTODataTable : global::System.Data.TypedTableBase<Order_detail_DTORow> {
             
-            private global::System.Data.DataColumn columnMaSP;
+            private global::System.Data.DataColumn columnPd_name;
             
-            private global::System.Data.DataColumn columnTenSP;
+            private global::System.Data.DataColumn columnOd_id;
             
-            private global::System.Data.DataColumn columnGia;
+            private global::System.Data.DataColumn columnPd_id;
             
-            private global::System.Data.DataColumn columnSoLuong;
+            private global::System.Data.DataColumn columnOd_quantity;
+            
+            private global::System.Data.DataColumn columnOd_price;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CartItemDataTable() {
-                this.TableName = "CartItem";
+            public Order_detail_DTODataTable() {
+                this.TableName = "Order_detail_DTO";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +300,7 @@ namespace DoAnNet.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal CartItemDataTable(global::System.Data.DataTable table) {
+            internal Order_detail_DTODataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,40 +317,48 @@ namespace DoAnNet.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected CartItemDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Order_detail_DTODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MaSPColumn {
+            public global::System.Data.DataColumn Pd_nameColumn {
                 get {
-                    return this.columnMaSP;
+                    return this.columnPd_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TenSPColumn {
+            public global::System.Data.DataColumn Od_idColumn {
                 get {
-                    return this.columnTenSP;
+                    return this.columnOd_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn GiaColumn {
+            public global::System.Data.DataColumn Pd_idColumn {
                 get {
-                    return this.columnGia;
+                    return this.columnPd_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SoLuongColumn {
+            public global::System.Data.DataColumn Od_quantityColumn {
                 get {
-                    return this.columnSoLuong;
+                    return this.columnOd_quantity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Od_priceColumn {
+                get {
+                    return this.columnOd_price;
                 }
             }
             
@@ -363,55 +373,49 @@ namespace DoAnNet.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CartItemRow this[int index] {
+            public Order_detail_DTORow this[int index] {
                 get {
-                    return ((CartItemRow)(this.Rows[index]));
+                    return ((Order_detail_DTORow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event CartItemRowChangeEventHandler CartItemRowChanging;
+            public event Order_detail_DTORowChangeEventHandler Order_detail_DTORowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event CartItemRowChangeEventHandler CartItemRowChanged;
+            public event Order_detail_DTORowChangeEventHandler Order_detail_DTORowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event CartItemRowChangeEventHandler CartItemRowDeleting;
+            public event Order_detail_DTORowChangeEventHandler Order_detail_DTORowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event CartItemRowChangeEventHandler CartItemRowDeleted;
+            public event Order_detail_DTORowChangeEventHandler Order_detail_DTORowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddCartItemRow(CartItemRow row) {
+            public void AddOrder_detail_DTORow(Order_detail_DTORow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CartItemRow AddCartItemRow(string MaSP, string TenSP, decimal Gia, int SoLuong) {
-                CartItemRow rowCartItemRow = ((CartItemRow)(this.NewRow()));
+            public Order_detail_DTORow AddOrder_detail_DTORow(string Pd_name, string Od_id, string Pd_id, int Od_quantity, decimal Od_price) {
+                Order_detail_DTORow rowOrder_detail_DTORow = ((Order_detail_DTORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        MaSP,
-                        TenSP,
-                        Gia,
-                        SoLuong};
-                rowCartItemRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCartItemRow);
-                return rowCartItemRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CartItemRow FindByMaSP(string MaSP) {
-                return ((CartItemRow)(this.Rows.Find(new object[] {
-                            MaSP})));
+                        Pd_name,
+                        Od_id,
+                        Pd_id,
+                        Od_quantity,
+                        Od_price};
+                rowOrder_detail_DTORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowOrder_detail_DTORow);
+                return rowOrder_detail_DTORow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                CartItemDataTable cln = ((CartItemDataTable)(base.Clone()));
+                Order_detail_DTODataTable cln = ((Order_detail_DTODataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,59 +423,58 @@ namespace DoAnNet.Reports {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new CartItemDataTable();
+                return new Order_detail_DTODataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnMaSP = base.Columns["MaSP"];
-                this.columnTenSP = base.Columns["TenSP"];
-                this.columnGia = base.Columns["Gia"];
-                this.columnSoLuong = base.Columns["SoLuong"];
+                this.columnPd_name = base.Columns["Pd_name"];
+                this.columnOd_id = base.Columns["Od_id"];
+                this.columnPd_id = base.Columns["Pd_id"];
+                this.columnOd_quantity = base.Columns["Od_quantity"];
+                this.columnOd_price = base.Columns["Od_price"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnMaSP = new global::System.Data.DataColumn("MaSP", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaSP);
-                this.columnTenSP = new global::System.Data.DataColumn("TenSP", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTenSP);
-                this.columnGia = new global::System.Data.DataColumn("Gia", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGia);
-                this.columnSoLuong = new global::System.Data.DataColumn("SoLuong", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSoLuong);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMaSP}, true));
-                this.columnMaSP.AllowDBNull = false;
-                this.columnMaSP.Unique = true;
+                this.columnPd_name = new global::System.Data.DataColumn("Pd_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPd_name);
+                this.columnOd_id = new global::System.Data.DataColumn("Od_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOd_id);
+                this.columnPd_id = new global::System.Data.DataColumn("Pd_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPd_id);
+                this.columnOd_quantity = new global::System.Data.DataColumn("Od_quantity", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOd_quantity);
+                this.columnOd_price = new global::System.Data.DataColumn("Od_price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOd_price);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CartItemRow NewCartItemRow() {
-                return ((CartItemRow)(this.NewRow()));
+            public Order_detail_DTORow NewOrder_detail_DTORow() {
+                return ((Order_detail_DTORow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CartItemRow(builder);
+                return new Order_detail_DTORow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(CartItemRow);
+                return typeof(Order_detail_DTORow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.CartItemRowChanged != null)) {
-                    this.CartItemRowChanged(this, new CartItemRowChangeEvent(((CartItemRow)(e.Row)), e.Action));
+                if ((this.Order_detail_DTORowChanged != null)) {
+                    this.Order_detail_DTORowChanged(this, new Order_detail_DTORowChangeEvent(((Order_detail_DTORow)(e.Row)), e.Action));
                 }
             }
             
@@ -479,8 +482,8 @@ namespace DoAnNet.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.CartItemRowChanging != null)) {
-                    this.CartItemRowChanging(this, new CartItemRowChangeEvent(((CartItemRow)(e.Row)), e.Action));
+                if ((this.Order_detail_DTORowChanging != null)) {
+                    this.Order_detail_DTORowChanging(this, new Order_detail_DTORowChangeEvent(((Order_detail_DTORow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,8 +491,8 @@ namespace DoAnNet.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.CartItemRowDeleted != null)) {
-                    this.CartItemRowDeleted(this, new CartItemRowChangeEvent(((CartItemRow)(e.Row)), e.Action));
+                if ((this.Order_detail_DTORowDeleted != null)) {
+                    this.Order_detail_DTORowDeleted(this, new Order_detail_DTORowChangeEvent(((Order_detail_DTORow)(e.Row)), e.Action));
                 }
             }
             
@@ -497,14 +500,14 @@ namespace DoAnNet.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.CartItemRowDeleting != null)) {
-                    this.CartItemRowDeleting(this, new CartItemRowChangeEvent(((CartItemRow)(e.Row)), e.Action));
+                if ((this.Order_detail_DTORowDeleting != null)) {
+                    this.Order_detail_DTORowDeleting(this, new Order_detail_DTORowChangeEvent(((Order_detail_DTORow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveCartItemRow(CartItemRow row) {
+            public void RemoveOrder_detail_DTORow(Order_detail_DTORow row) {
                 this.Rows.Remove(row);
             }
             
@@ -531,7 +534,7 @@ namespace DoAnNet.Reports {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CartItemDataTable";
+                attribute2.FixedValue = "Order_detail_DTODataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -575,110 +578,155 @@ namespace DoAnNet.Reports {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class CartItemRow : global::System.Data.DataRow {
+        public partial class Order_detail_DTORow : global::System.Data.DataRow {
             
-            private CartItemDataTable tableCartItem;
+            private Order_detail_DTODataTable tableOrder_detail_DTO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal CartItemRow(global::System.Data.DataRowBuilder rb) : 
+            internal Order_detail_DTORow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCartItem = ((CartItemDataTable)(this.Table));
+                this.tableOrder_detail_DTO = ((Order_detail_DTODataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MaSP {
-                get {
-                    return ((string)(this[this.tableCartItem.MaSPColumn]));
-                }
-                set {
-                    this[this.tableCartItem.MaSPColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TenSP {
+            public string Pd_name {
                 get {
                     try {
-                        return ((string)(this[this.tableCartItem.TenSPColumn]));
+                        return ((string)(this[this.tableOrder_detail_DTO.Pd_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TenSP\' in table \'CartItem\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Pd_name\' in table \'Order_detail_DTO\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCartItem.TenSPColumn] = value;
+                    this[this.tableOrder_detail_DTO.Pd_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Gia {
+            public string Od_id {
                 get {
                     try {
-                        return ((decimal)(this[this.tableCartItem.GiaColumn]));
+                        return ((string)(this[this.tableOrder_detail_DTO.Od_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Gia\' in table \'CartItem\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Od_id\' in table \'Order_detail_DTO\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCartItem.GiaColumn] = value;
+                    this[this.tableOrder_detail_DTO.Od_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int SoLuong {
+            public string Pd_id {
                 get {
                     try {
-                        return ((int)(this[this.tableCartItem.SoLuongColumn]));
+                        return ((string)(this[this.tableOrder_detail_DTO.Pd_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoLuong\' in table \'CartItem\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Pd_id\' in table \'Order_detail_DTO\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCartItem.SoLuongColumn] = value;
+                    this[this.tableOrder_detail_DTO.Pd_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTenSPNull() {
-                return this.IsNull(this.tableCartItem.TenSPColumn);
+            public int Od_quantity {
+                get {
+                    try {
+                        return ((int)(this[this.tableOrder_detail_DTO.Od_quantityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Od_quantity\' in table \'Order_detail_DTO\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrder_detail_DTO.Od_quantityColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTenSPNull() {
-                this[this.tableCartItem.TenSPColumn] = global::System.Convert.DBNull;
+            public decimal Od_price {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableOrder_detail_DTO.Od_priceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Od_price\' in table \'Order_detail_DTO\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrder_detail_DTO.Od_priceColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsGiaNull() {
-                return this.IsNull(this.tableCartItem.GiaColumn);
+            public bool IsPd_nameNull() {
+                return this.IsNull(this.tableOrder_detail_DTO.Pd_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetGiaNull() {
-                this[this.tableCartItem.GiaColumn] = global::System.Convert.DBNull;
+            public void SetPd_nameNull() {
+                this[this.tableOrder_detail_DTO.Pd_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSoLuongNull() {
-                return this.IsNull(this.tableCartItem.SoLuongColumn);
+            public bool IsOd_idNull() {
+                return this.IsNull(this.tableOrder_detail_DTO.Od_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSoLuongNull() {
-                this[this.tableCartItem.SoLuongColumn] = global::System.Convert.DBNull;
+            public void SetOd_idNull() {
+                this[this.tableOrder_detail_DTO.Od_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPd_idNull() {
+                return this.IsNull(this.tableOrder_detail_DTO.Pd_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPd_idNull() {
+                this[this.tableOrder_detail_DTO.Pd_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOd_quantityNull() {
+                return this.IsNull(this.tableOrder_detail_DTO.Od_quantityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOd_quantityNull() {
+                this[this.tableOrder_detail_DTO.Od_quantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOd_priceNull() {
+                return this.IsNull(this.tableOrder_detail_DTO.Od_priceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOd_priceNull() {
+                this[this.tableOrder_detail_DTO.Od_priceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -686,22 +734,22 @@ namespace DoAnNet.Reports {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class CartItemRowChangeEvent : global::System.EventArgs {
+        public class Order_detail_DTORowChangeEvent : global::System.EventArgs {
             
-            private CartItemRow eventRow;
+            private Order_detail_DTORow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CartItemRowChangeEvent(CartItemRow row, global::System.Data.DataRowAction action) {
+            public Order_detail_DTORowChangeEvent(Order_detail_DTORow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CartItemRow Row {
+            public Order_detail_DTORow Row {
                 get {
                     return this.eventRow;
                 }

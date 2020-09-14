@@ -7,6 +7,5 @@
 
         #endregion
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private crptCart crptCart1;
     }
 }

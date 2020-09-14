@@ -11,6 +11,9 @@ using Guna.UI2.WinForms;
 using BLL;
 using DTO;
 using DoAnNet.Reports;
+using DoAnNet.UserControls;
+
+#pragma warning disable 0436
 
 namespace DoAnNet.Forms
 {
@@ -110,11 +113,6 @@ namespace DoAnNet.Forms
             }
         }
 
-        private void txtDT1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtTenKH1.Text = txtDiaChi1.Text = txtDT1.Text = txtNgayMua.Text = txtDT2.Text = txtTenKH2.Text = txtNgayNhan.Text = txtDiaChi2.Text = "";
@@ -149,6 +147,8 @@ namespace DoAnNet.Forms
         private void frmNhapKhachHang_Load(object sender, EventArgs e)
         {
             btnCopyCheckTrue();
+            txtNgayMua.Text = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy");
+            timer1.Start();
         }
 
         private void btnIn_Click(object sender, EventArgs e)
@@ -164,16 +164,12 @@ namespace DoAnNet.Forms
                 txtTenKH2.Text,
                 txtDiaChi2.Text,
                 txtDT2.Text,
-                txtNgayNhan.Text);
+                txtNgayNhan.Text,
+                Temp.cart
+                );
 
             f.ShowDialog();
         }
-
-        private void txtDT1_Leave(object sender, EventArgs e)
-        {
-            
-        }
-
         private void txtDT1_TextChanged(object sender, EventArgs e)
         {
             txtDT2.Text = txtDT1.Text;
@@ -192,6 +188,11 @@ namespace DoAnNet.Forms
                     }
                 }
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy");
         }
     }
 }

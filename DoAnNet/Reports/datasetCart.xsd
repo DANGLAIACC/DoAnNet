@@ -12,21 +12,18 @@
   <xs:element name="datasetCart" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="datasetCart" msprop:Generator_UserDSName="datasetCart">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CartItem" msprop:Generator_TableClassName="CartItemDataTable" msprop:Generator_TableVarName="tableCartItem" msprop:Generator_TablePropName="CartItem" msprop:Generator_RowDeletingName="CartItemRowDeleting" msprop:Generator_RowChangingName="CartItemRowChanging" msprop:Generator_RowEvHandlerName="CartItemRowChangeEventHandler" msprop:Generator_RowDeletedName="CartItemRowDeleted" msprop:Generator_UserTableName="CartItem" msprop:Generator_RowChangedName="CartItemRowChanged" msprop:Generator_RowEvArgName="CartItemRowChangeEvent" msprop:Generator_RowClassName="CartItemRow">
+        <xs:element name="Order_detail_DTO" msprop:Generator_TableClassName="Order_detail_DTODataTable" msprop:Generator_TableVarName="tableOrder_detail_DTO" msprop:Generator_RowChangedName="Order_detail_DTORowChanged" msprop:Generator_TablePropName="Order_detail_DTO" msprop:Generator_RowDeletingName="Order_detail_DTORowDeleting" msprop:Generator_RowChangingName="Order_detail_DTORowChanging" msprop:Generator_RowEvHandlerName="Order_detail_DTORowChangeEventHandler" msprop:Generator_RowDeletedName="Order_detail_DTORowDeleted" msprop:Generator_RowClassName="Order_detail_DTORow" msprop:Generator_UserTableName="Order_detail_DTO" msprop:Generator_RowEvArgName="Order_detail_DTORowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MaSP" msprop:Generator_ColumnVarNameInTable="columnMaSP" msprop:Generator_ColumnPropNameInRow="MaSP" msprop:Generator_ColumnPropNameInTable="MaSPColumn" msprop:Generator_UserColumnName="MaSP" type="xs:string" />
-              <xs:element name="TenSP" msprop:Generator_ColumnVarNameInTable="columnTenSP" msprop:Generator_ColumnPropNameInRow="TenSP" msprop:Generator_ColumnPropNameInTable="TenSPColumn" msprop:Generator_UserColumnName="TenSP" type="xs:string" minOccurs="0" />
-              <xs:element name="Gia" msprop:Generator_ColumnVarNameInTable="columnGia" msprop:Generator_ColumnPropNameInRow="Gia" msprop:Generator_ColumnPropNameInTable="GiaColumn" msprop:Generator_UserColumnName="Gia" type="xs:decimal" minOccurs="0" />
-              <xs:element name="SoLuong" msprop:Generator_ColumnVarNameInTable="columnSoLuong" msprop:Generator_ColumnPropNameInRow="SoLuong" msprop:Generator_ColumnPropNameInTable="SoLuongColumn" msprop:Generator_UserColumnName="SoLuong" type="xs:int" minOccurs="0" />
+              <xs:element name="Pd_name" msprop:Generator_ColumnVarNameInTable="columnPd_name" msprop:Generator_ColumnPropNameInRow="Pd_name" msprop:Generator_ColumnPropNameInTable="Pd_nameColumn" msprop:Generator_UserColumnName="Pd_name" type="xs:string" minOccurs="0" />
+              <xs:element name="Od_id" msprop:Generator_ColumnVarNameInTable="columnOd_id" msprop:Generator_ColumnPropNameInRow="Od_id" msprop:Generator_ColumnPropNameInTable="Od_idColumn" msprop:Generator_UserColumnName="Od_id" type="xs:string" minOccurs="0" />
+              <xs:element name="Pd_id" msprop:Generator_ColumnVarNameInTable="columnPd_id" msprop:Generator_ColumnPropNameInRow="Pd_id" msprop:Generator_ColumnPropNameInTable="Pd_idColumn" msprop:Generator_UserColumnName="Pd_id" type="xs:string" minOccurs="0" />
+              <xs:element name="Od_quantity" msprop:Generator_ColumnVarNameInTable="columnOd_quantity" msprop:Generator_ColumnPropNameInRow="Od_quantity" msprop:Generator_ColumnPropNameInTable="Od_quantityColumn" msprop:Generator_UserColumnName="Od_quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="Od_price" msprop:Generator_ColumnVarNameInTable="columnOd_price" msprop:Generator_ColumnPropNameInRow="Od_price" msprop:Generator_ColumnPropNameInTable="Od_priceColumn" msprop:Generator_UserColumnName="Od_price" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:CartItem" />
-      <xs:field xpath="mstns:MaSP" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoAnNet.UserControls;
-using BLL;
+using DTO;
 
 namespace DoAnNet.Reports
 {
@@ -27,12 +27,14 @@ namespace DoAnNet.Reports
         public string DienThoai2 { get; set; }
         public string NgayGiao { get; set; }
 
+        private crptCart c;
+
         public frmRptCart()
         {
             InitializeComponent();
         }
 
-        public frmRptCart(string storeAddress, string ngayLap, string soHoaDon, string tenNhanVien, string tenKH1, string diaChi1, string dienThoai1 , string tenKH2, string diaChi2, string dienThoai2, string ngayGiao)
+        public frmRptCart(string storeAddress, string ngayLap, string soHoaDon, string tenNhanVien, string tenKH1, string diaChi1, string dienThoai1 , string tenKH2, string diaChi2, string dienThoai2, string ngayGiao, List<Order_detail_DTO> lst)
         {
             InitializeComponent();
 
@@ -47,14 +49,14 @@ namespace DoAnNet.Reports
             DiaChi2 = diaChi2;
             DienThoai2 = dienThoai2;
             NgayGiao = ngayGiao;
+
+            c = new crptCart();
+            c.SetDataSource(lst);
+
         }
 
         private void frmRptCart2_Load(object sender, EventArgs e)
-        {
-            new Temp();
-            crptCart c = new crptCart();
-            c.SetDataSource(Temp.cart);
-
+        { 
             c.SetParameterValue("storeAddress", StoreAddress);
             c.SetParameterValue("ngayLap", NgayLap);
             c.SetParameterValue("soHoaDon", SoHoaDon);
@@ -91,7 +93,7 @@ namespace DoAnNet.Reports
             // 
             // frmRptCart2
             // 
-            this.ClientSize = new System.Drawing.Size(858, 419);
+            this.ClientSize = new System.Drawing.Size(1096, 708);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "frmRptCart2";
             this.Load += new System.EventHandler(this.frmRptCart2_Load);

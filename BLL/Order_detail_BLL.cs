@@ -14,5 +14,9 @@ namespace BLL
         {
             return Order_detail_DAL.LoadOrderDetail();
         }
+        public static List<Order_detail_DTO> getOrderDetailById(string orderId)
+        {
+            return Order_detail_DAL.getOrderDetailById(orderId);
+        }
     }
 }

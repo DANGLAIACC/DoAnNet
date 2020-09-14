@@ -48,8 +48,6 @@
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\..\Desktop\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -93,6 +91,9 @@
       <DependentUpon>crptCart.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\datasetCart.cs">
+      <DependentUpon>datasetCart.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\datasetCart.Designer.cs">
       <AutoGen>True</AutoGen>

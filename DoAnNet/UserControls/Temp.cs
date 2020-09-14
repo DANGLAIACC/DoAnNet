@@ -9,6 +9,6 @@ namespace DoAnNet.UserControls
 {
     public class Temp
     {
-        public static List<CartItem_DTO> cart = new List<CartItem_DTO>();
+        public static List<Order_detail_DTO> cart = new List<Order_detail_DTO>();
     }
 }
