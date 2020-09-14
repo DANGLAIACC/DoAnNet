@@ -33,6 +33,9 @@ namespace DoAnNet
             formFunctionPointer += new functioncall(increseCart);
 
             loadSanPham();
+
+            flpSanPham.Show();
+            pnHoaDon.Hide();
         }
 
         private void loadSanPham()
@@ -75,13 +78,9 @@ namespace DoAnNet
         private void button_CheckedChanged(object sender, EventArgs e)
         {
             Guna2Button b = (Guna2Button)sender;
-            imgSlide.Location = new Point(b.Location.X + 24, b.Location.Y - 25);
+            imgSlide.Location = 
+                new Point(b.Location.X + 24, b.Location.Y - 25);
             imgSlide.SendToBack();
-        }
-
-        private void btnGioHang_Click(object sender, EventArgs e)
-        {
-
         }
 
         //private void loadBtnCartCount()
@@ -117,11 +116,7 @@ namespace DoAnNet
                 //MessageBox.Show("Giỏ hàng hiện đang trống.", "In đơn hàng");
             }
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
+         
         public void Alert(string msg, frmAlert.enmType type)
         {
             frmAlert frm = new frmAlert();
@@ -130,12 +125,16 @@ namespace DoAnNet
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
+            lblTitle.Text = "Danh sách sản phẩm";
             flpSanPham.Show();
+            pnHoaDon.Hide();
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
+            lblTitle.Text = "Danh sách hóa đơn";
             flpSanPham.Hide();
+            pnHoaDon.Show();
         }
     }
 }

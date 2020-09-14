@@ -44,7 +44,7 @@ namespace DoAnNet
             this.imgSlide = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnTop = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.ptbUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -58,6 +58,8 @@ namespace DoAnNet
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
             this.pnMain = new System.Windows.Forms.Panel();
             this.flpSanPham = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnHoaDon = new System.Windows.Forms.Panel();
+            this.uC_DanhSachHoaDon1 = new DoAnNet.UserControls.UC_DanhSachHoaDon();
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,6 +70,7 @@ namespace DoAnNet
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnMain.SuspendLayout();
+            this.pnHoaDon.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -283,7 +286,7 @@ namespace DoAnNet
             // 
             // pnTop
             // 
-            this.pnTop.Controls.Add(this.label1);
+            this.pnTop.Controls.Add(this.lblTitle);
             this.pnTop.Controls.Add(this.ptbUser);
             this.pnTop.Controls.Add(this.flowLayoutPanel1);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -293,16 +296,16 @@ namespace DoAnNet
             this.pnTop.Size = new System.Drawing.Size(796, 64);
             this.pnTop.TabIndex = 1;
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(66, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(456, 52);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Danh sách sản phẩm";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
+            this.lblTitle.Location = new System.Drawing.Point(66, 5);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(456, 52);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "Danh sách sản phẩm";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ptbUser
             // 
@@ -442,7 +445,6 @@ namespace DoAnNet
             this.btnGioHang.Size = new System.Drawing.Size(60, 50);
             this.btnGioHang.TabIndex = 1;
             this.btnGioHang.UseTransparentBackground = true;
-            this.btnGioHang.Click += new System.EventHandler(this.btnGioHang_Click);
             // 
             // panel3
             // 
@@ -498,6 +500,7 @@ namespace DoAnNet
             // pnMain
             // 
             this.pnMain.BackColor = System.Drawing.Color.Transparent;
+            this.pnMain.Controls.Add(this.pnHoaDon);
             this.pnMain.Controls.Add(this.flpSanPham);
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(100, 64);
@@ -514,6 +517,24 @@ namespace DoAnNet
             this.flpSanPham.Size = new System.Drawing.Size(796, 506);
             this.flpSanPham.TabIndex = 0;
             // 
+            // pnHoaDon
+            // 
+            this.pnHoaDon.Controls.Add(this.uC_DanhSachHoaDon1);
+            this.pnHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnHoaDon.Location = new System.Drawing.Point(0, 0);
+            this.pnHoaDon.Name = "pnHoaDon";
+            this.pnHoaDon.Size = new System.Drawing.Size(796, 506);
+            this.pnHoaDon.TabIndex = 0;
+            // 
+            // uC_DanhSachHoaDon1
+            // 
+            this.uC_DanhSachHoaDon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_DanhSachHoaDon1.Location = new System.Drawing.Point(0, 0);
+            this.uC_DanhSachHoaDon1.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
+            this.uC_DanhSachHoaDon1.Name = "uC_DanhSachHoaDon1";
+            this.uC_DanhSachHoaDon1.Size = new System.Drawing.Size(796, 506);
+            this.uC_DanhSachHoaDon1.TabIndex = 0;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -527,7 +548,6 @@ namespace DoAnNet
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -538,6 +558,7 @@ namespace DoAnNet
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnMain.ResumeLayout(false);
+            this.pnHoaDon.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -567,9 +588,11 @@ namespace DoAnNet
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2CircleButton btnNotificationCount;
         private Guna.UI2.WinForms.Guna2Button btnThongBao;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitle;
         public Guna.UI2.WinForms.Guna2CircleButton btnCartCount;
         private System.Windows.Forms.FlowLayoutPanel flpSanPham;
+        private UserControls.UC_DanhSachHoaDon uC_DanhSachHoaDon1;
+        private System.Windows.Forms.Panel pnHoaDon;
     }
 }
 
