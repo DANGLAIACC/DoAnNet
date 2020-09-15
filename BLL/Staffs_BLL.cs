@@ -13,6 +13,10 @@ namespace BLL
         public static List<Staffs_DTO> LoadStaffs()
         {
             return Staffs_DAL.LoadStaffs();
-        } 
+        }
+        public static Staffs_DTO GetStaffByLogin(string username, string password)
+        {
+            return Staffs_DAL.GetStaffByLogin(username, password);
+        }
     }
 }

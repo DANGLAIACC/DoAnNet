@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
-using DoAnNet.UserControls;
-using DoAnNet.Reports;
+using DoAnNet.UserControls; 
 using DoAnNet.Forms;
 #pragma warning disable 0436
 

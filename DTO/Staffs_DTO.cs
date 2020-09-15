@@ -20,5 +20,6 @@ namespace DTO
         public decimal St_salary { get; set; }
         public int St_role { get; set; }
         public string Ag_id { get; set; }
+        public string Ag_address { get; set; }
     }
 }
