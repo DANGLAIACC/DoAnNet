@@ -58,9 +58,8 @@ namespace DoAnNet
             this.btnNotificationCount = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.pnMain2 = new System.Windows.Forms.Panel();
             this.flpSanPham = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnHoaDon = new System.Windows.Forms.Panel();
-             
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,7 +70,6 @@ namespace DoAnNet
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnMain.SuspendLayout();
-            this.pnHoaDon.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -220,6 +218,7 @@ namespace DoAnNet
             this.btnKhachHang.TabIndex = 0;
             this.btnKhachHang.UseTransparentBackground = true;
             this.btnKhachHang.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnNhanVien
             // 
@@ -501,13 +500,21 @@ namespace DoAnNet
             // pnMain
             // 
             this.pnMain.BackColor = System.Drawing.Color.Transparent;
-            this.pnMain.Controls.Add(this.pnHoaDon);
+            this.pnMain.Controls.Add(this.pnMain2);
             this.pnMain.Controls.Add(this.flpSanPham);
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(100, 64);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(796, 506);
             this.pnMain.TabIndex = 2;
+            // 
+            // pnMain2
+            // 
+            this.pnMain2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain2.Location = new System.Drawing.Point(0, 0);
+            this.pnMain2.Name = "pnMain2";
+            this.pnMain2.Size = new System.Drawing.Size(796, 506);
+            this.pnMain2.TabIndex = 0;
             // 
             // flpSanPham
             // 
@@ -517,15 +524,6 @@ namespace DoAnNet
             this.flpSanPham.Name = "flpSanPham";
             this.flpSanPham.Size = new System.Drawing.Size(796, 506);
             this.flpSanPham.TabIndex = 0;
-            // 
-            // pnHoaDon
-            //
-            this.pnHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnHoaDon.Location = new System.Drawing.Point(0, 0);
-            this.pnHoaDon.Name = "pnHoaDon";
-            this.pnHoaDon.Size = new System.Drawing.Size(796, 506);
-            this.pnHoaDon.TabIndex = 0;
-
             // 
             // frmMain
             // 
@@ -550,7 +548,6 @@ namespace DoAnNet
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnMain.ResumeLayout(false);
-            this.pnHoaDon.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -583,7 +580,7 @@ namespace DoAnNet
         private System.Windows.Forms.Label lblTitle;
         public Guna.UI2.WinForms.Guna2CircleButton btnCartCount;
         private System.Windows.Forms.FlowLayoutPanel flpSanPham;
-        private System.Windows.Forms.Panel pnHoaDon;
+        private System.Windows.Forms.Panel pnMain2;
     }
 }
 

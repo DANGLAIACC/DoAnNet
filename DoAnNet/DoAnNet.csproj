@@ -89,6 +89,7 @@
     <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\localVariable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\crptCart.cs">
@@ -119,6 +120,12 @@
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Temp.cs" />
+    <Compile Include="UserControls\UC_DanhSachKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_DanhSachKhachHang.Designer.cs">
+      <DependentUpon>UC_DanhSachKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_DanhSachHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_DanhSachKhachHang.resx">
+      <DependentUpon>UC_DanhSachKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_DanhSachHoaDon.resx">
       <DependentUpon>UC_DanhSachHoaDon.cs</DependentUpon>

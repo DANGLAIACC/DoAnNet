@@ -24,7 +24,6 @@ namespace DoAnNet
         private event functioncall formFunctionPointer;
 
         private List<Products_DTO> lstProduct;
-        private UC_DanhSachHoaDon ucDanhSachHoaDon;
 
         public frmMain()
         {
@@ -37,7 +36,7 @@ namespace DoAnNet
             loadSanPham();
 
             flpSanPham.Show();
-            pnHoaDon.Hide();
+            pnMain2.Hide();
         }
 
         private void loadSanPham()
@@ -128,25 +127,40 @@ namespace DoAnNet
         {
             lblTitle.Text = "Danh sách sản phẩm";
             flpSanPham.Show();
-            pnHoaDon.Hide();
+            pnMain2.Hide();
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-            if (ucDanhSachHoaDon == null)
+            if (localVariable.ucDanhSachHoaDon == null)
             {
                 List<Orders2_DTO> lstHoaDon = Orders_BLL.LoadAllOrder();
-
-                ucDanhSachHoaDon = new UC_DanhSachHoaDon(lstHoaDon);
-                
-                pnHoaDon.Controls.Add(ucDanhSachHoaDon);
-                ucDanhSachHoaDon.Dock = DockStyle.Fill;
-
+                localVariable.ucDanhSachHoaDon = new UC_DanhSachHoaDon(lstHoaDon);
+                pnMain2.Controls.Clear();
+                pnMain2.Controls.Add(localVariable.ucDanhSachHoaDon);
+                localVariable.ucDanhSachHoaDon.Dock = DockStyle.Fill;
             }
 
             lblTitle.Text = "Danh sách hóa đơn";
             flpSanPham.Hide();
-            pnHoaDon.Show();
+            pnMain2.Show();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            if (localVariable.ucDanhSachKhachHang == null)
+            {
+                List<Customers_DTO> lstKhachHang= Customer_BLL.LoadCustomers();
+                localVariable.ucDanhSachKhachHang = new UC_DanhSachKhachHang(lstKhachHang);
+                pnMain2.Controls.Clear();
+                pnMain2.Controls.Add(localVariable.ucDanhSachKhachHang);
+                localVariable.ucDanhSachKhachHang.Dock = DockStyle.Fill;
+            }
+
+            lblTitle.Text = "Danh sách khách hàng";
+            flpSanPham.Hide();
+            pnMain2.Show();
+
         }
     }
 }
