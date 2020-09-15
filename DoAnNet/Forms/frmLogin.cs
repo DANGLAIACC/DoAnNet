@@ -32,7 +32,6 @@ namespace DoAnNet.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmAlert frmAlert = new frmAlert();
             if (txtNotEmpty(txtUsername, "Tên đăng nhập") &
                 txtNotEmpty(txtPassword,"Mật khẩu"))
             {
@@ -43,6 +42,7 @@ namespace DoAnNet.Forms
 
                 if(s == null) // đăng nhập sai
                 {
+            frmAlert frmAlert = new frmAlert();
                     frmAlert.showAlert(
                         "Thông tin sai.",
                         frmAlert.enmType.Error);
@@ -51,15 +51,10 @@ namespace DoAnNet.Forms
                     txtUsername.Focus();
                 }else
                 {
+                    frmAlert frmAlert = new frmAlert();
                     this.Hide();
-
-                    frmAlert.showAlert(
-                        "Xin chào " + s.St_lastName,
-                        frmAlert.enmType.Success);
-
                     frmMain f = new frmMain(s);
                     f.ShowDialog();
-
                     this.Close();
                 }
             }

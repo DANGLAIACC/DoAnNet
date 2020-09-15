@@ -69,9 +69,8 @@ namespace DoAnNet.Forms
                 case enmAction.close:
                     timer1.Interval = 1;
                     Opacity -= 0.1;
-                    Left -= 3;
-                    // Sửa base thành this
-                    if (base.Opacity == 0.0) this.Close();
+                    Left -= 3; 
+                    if (base.Opacity == 0.0) base.Close();
                     break;
             }
         }
@@ -93,9 +92,7 @@ namespace DoAnNet.Forms
                     y = Screen.PrimaryScreen.WorkingArea.Height - Height * i - 5 * i;
                     Location = new Point(x, y);
                     break;
-
                 }
-
             }
             x = Screen.PrimaryScreen.WorkingArea.Width - base.Width - 5;
 
