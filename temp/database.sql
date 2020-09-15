@@ -150,7 +150,7 @@ insert into customers values
 ('0000000',N'Huỳnh Thị Thúy',N'Kiều','0896804466','huynhkieu1606@gmail.com',0,N'Bình Định','1602129732'),
 ('0000001',N'Nguyễn Thị',N'Tiên','0813788390','nguyenthitien1202@gmail.com',0,N'TP. Hồ Chí Minh','1602129732'),
 ('0000002',N'La Hoàng',N'Long','0523769577','hoanglonghumus@gmail.com',1,N'TP. Nha Trang','0316471647'),
-('0000003',N'La Quán',N'Trung','0307906979','trungla1242@gmail.com',0,N'Bình Định','0316471647'),
+('0000003',N'Tennyson',N'Ben','0307906979','bentennyson@gmail.com',0,N'Bình Định','0316471647'),
 ('0000004',N'Lưu Huyền',N'Đức','896713483','huyenduc.thuchan@gmail.com',1,N'TP. Hồ Chí Minh','0316470795'),
 ('0000005',N'Tào Mạnh',N'Đức','0559224778','manhduc123@gmail.com',1,N'TP. Hồ Chí Minh','0316470795'),
 ('0000006',N'Ngô Nhật',N'Huy','0596447968','ngonhathuy@gmail.com',1,N'TP. Nha Trang','0316466580'),

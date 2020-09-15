@@ -57,8 +57,8 @@ namespace DoAnNet
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNotificationCount = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
+            this.panel0 = new System.Windows.Forms.Panel();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.pnMain2 = new System.Windows.Forms.Panel();
             this.flpSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
@@ -69,7 +69,7 @@ namespace DoAnNet
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.pnMain.SuspendLayout();
+            this.panel0.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -320,6 +320,7 @@ namespace DoAnNet
             this.ptbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbUser.TabIndex = 0;
             this.ptbUser.TabStop = false;
+            this.ptbUser.Click += new System.EventHandler(this.ptbUser_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -379,10 +380,13 @@ namespace DoAnNet
             this.btnInHoaDon.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnInHoaDon.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnInHoaDon.CheckedState.Parent = this.btnInHoaDon;
+            this.btnInHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInHoaDon.CustomImages.Parent = this.btnInHoaDon;
             this.btnInHoaDon.FillColor = System.Drawing.Color.Empty;
             this.btnInHoaDon.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnInHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btnInHoaDon.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnInHoaDon.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnInHoaDon.HoverState.Parent = this.btnInHoaDon;
             this.btnInHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.Image")));
             this.btnInHoaDon.ImageSize = new System.Drawing.Size(40, 40);
@@ -431,10 +435,13 @@ namespace DoAnNet
             this.btnGioHang.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnGioHang.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnGioHang.CheckedState.Parent = this.btnGioHang;
+            this.btnGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGioHang.CustomImages.Parent = this.btnGioHang;
             this.btnGioHang.FillColor = System.Drawing.Color.Empty;
             this.btnGioHang.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnGioHang.ForeColor = System.Drawing.Color.White;
+            this.btnGioHang.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnGioHang.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnGioHang.HoverState.Parent = this.btnGioHang;
             this.btnGioHang.Image = ((System.Drawing.Image)(resources.GetObject("btnGioHang.Image")));
             this.btnGioHang.ImageSize = new System.Drawing.Size(40, 40);
@@ -444,7 +451,6 @@ namespace DoAnNet
             this.btnGioHang.ShadowDecoration.Parent = this.btnGioHang;
             this.btnGioHang.Size = new System.Drawing.Size(60, 50);
             this.btnGioHang.TabIndex = 1;
-            this.btnGioHang.UseTransparentBackground = true;
             // 
             // panel3
             // 
@@ -482,11 +488,15 @@ namespace DoAnNet
             this.btnThongBao.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnThongBao.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnThongBao.CheckedState.Parent = this.btnThongBao;
+            this.btnThongBao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongBao.CustomBorderColor = System.Drawing.Color.Transparent;
             this.btnThongBao.CustomImages.Parent = this.btnThongBao;
             this.btnThongBao.FillColor = System.Drawing.Color.Empty;
             this.btnThongBao.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThongBao.ForeColor = System.Drawing.Color.White;
+            this.btnThongBao.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnThongBao.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnThongBao.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnThongBao.HoverState.Parent = this.btnThongBao;
             this.btnThongBao.Image = ((System.Drawing.Image)(resources.GetObject("btnThongBao.Image")));
             this.btnThongBao.ImageSize = new System.Drawing.Size(40, 40);
@@ -497,24 +507,24 @@ namespace DoAnNet
             this.btnThongBao.TabIndex = 1;
             this.btnThongBao.UseTransparentBackground = true;
             // 
+            // panel0
+            // 
+            this.panel0.BackColor = System.Drawing.Color.Transparent;
+            this.panel0.Controls.Add(this.pnMain);
+            this.panel0.Controls.Add(this.flpSanPham);
+            this.panel0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel0.Location = new System.Drawing.Point(100, 64);
+            this.panel0.Name = "panel0";
+            this.panel0.Size = new System.Drawing.Size(796, 506);
+            this.panel0.TabIndex = 2;
+            // 
             // pnMain
             // 
-            this.pnMain.BackColor = System.Drawing.Color.Transparent;
-            this.pnMain.Controls.Add(this.pnMain2);
-            this.pnMain.Controls.Add(this.flpSanPham);
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(100, 64);
+            this.pnMain.Location = new System.Drawing.Point(0, 0);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(796, 506);
-            this.pnMain.TabIndex = 2;
-            // 
-            // pnMain2
-            // 
-            this.pnMain2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain2.Location = new System.Drawing.Point(0, 0);
-            this.pnMain2.Name = "pnMain2";
-            this.pnMain2.Size = new System.Drawing.Size(796, 506);
-            this.pnMain2.TabIndex = 0;
+            this.pnMain.TabIndex = 0;
             // 
             // flpSanPham
             // 
@@ -530,7 +540,7 @@ namespace DoAnNet
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 570);
-            this.Controls.Add(this.pnMain);
+            this.Controls.Add(this.panel0);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -538,6 +548,7 @@ namespace DoAnNet
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -547,7 +558,7 @@ namespace DoAnNet
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.pnMain.ResumeLayout(false);
+            this.panel0.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -564,7 +575,7 @@ namespace DoAnNet
         private Guna.UI2.WinForms.Guna2Button btnNhanVien;
         private Guna.UI2.WinForms.Guna2Button btnKhachHang;
         private Guna.UI2.WinForms.Guna2Button btnHoaDon;
-        private System.Windows.Forms.Panel pnMain;
+        private System.Windows.Forms.Panel panel0;
         private System.Windows.Forms.Panel pnTop;
         private Guna.UI2.WinForms.Guna2Button btnThongKe;
         private Guna.UI2.WinForms.Guna2CirclePictureBox ptbUser;
@@ -580,7 +591,7 @@ namespace DoAnNet
         private System.Windows.Forms.Label lblTitle;
         public Guna.UI2.WinForms.Guna2CircleButton btnCartCount;
         private System.Windows.Forms.FlowLayoutPanel flpSanPham;
-        private System.Windows.Forms.Panel pnMain2;
+        private System.Windows.Forms.Panel pnMain;
     }
 }
 

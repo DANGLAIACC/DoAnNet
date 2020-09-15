@@ -35,7 +35,7 @@ namespace DoAnNet.UserControls
             {
                 if(o.Od_id == id)
                 {
-                    List<Order_detail_DTO> lst = Order_detail_BLL.getOrderDetailById(id);
+                    List<Order_detail_DTO> lst2 = Order_detail_BLL.getOrderDetailById(id);
 
                     frmRptCart f = new frmRptCart(
                         o.Ag_address,
@@ -49,7 +49,7 @@ namespace DoAnNet.UserControls
                         o.Ct_address,
                         o.Ct_phone,
                         o.NgayNhan,
-                        lst
+                        lst2
                         );
 
                     f.ShowDialog();

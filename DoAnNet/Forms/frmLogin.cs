@@ -51,10 +51,16 @@ namespace DoAnNet.Forms
                     txtUsername.Focus();
                 }else
                 {
+                    this.Hide();
+
                     frmAlert.showAlert(
-                        "Xin chào "+s.St_firstName+" "+s.St_lastName, 
+                        "Xin chào " + s.St_lastName,
                         frmAlert.enmType.Success);
 
+                    frmMain f = new frmMain(s);
+                    f.ShowDialog();
+
+                    this.Close();
                 }
             }
 
@@ -71,6 +77,14 @@ namespace DoAnNet.Forms
             {
                 err.SetError(txt, "");
                 return true;
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                btnLogin.PerformClick();
             }
         }
     }

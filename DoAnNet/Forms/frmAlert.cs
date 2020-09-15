@@ -70,7 +70,8 @@ namespace DoAnNet.Forms
                     timer1.Interval = 1;
                     Opacity -= 0.1;
                     Left -= 3;
-                    if (base.Opacity == 0.0) base.Close();
+                    // Sửa base thành this
+                    if (base.Opacity == 0.0) this.Close();
                     break;
             }
         }

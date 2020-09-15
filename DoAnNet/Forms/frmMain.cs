@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
-using DoAnNet.UserControls; 
+using DoAnNet.UserControls;
 using DoAnNet.Forms;
 #pragma warning disable 0436
 
@@ -22,23 +22,20 @@ namespace DoAnNet
 
         public delegate void functioncall(int i);
         private event functioncall formFunctionPointer;
-
+        private Staffs_DTO staff;
         private List<Products_DTO> lstProduct;
 
         public frmMain()
         {
             InitializeComponent();
-
-            btnCartCount.Text = "0";
-
-            formFunctionPointer += new functioncall(increseCart);
-
-            loadSanPham();
-
-            flpSanPham.Show();
-            pnMain2.Hide();
         }
 
+        public frmMain(Staffs_DTO staff)
+        {
+            InitializeComponent();
+
+            this.staff = staff;
+        }
         private void loadSanPham()
         {
             lstProduct = Products_BLL
@@ -69,10 +66,10 @@ namespace DoAnNet
 
         private void addUserControl(UserControl uc)
         {
-            pnMain.Controls.Clear();
+            panel0.Controls.Clear();
             uc.Dock = DockStyle.Fill;
             uc.BringToFront();
-            pnMain.Controls.Add(uc);
+            panel0.Controls.Add(uc);
         }
 
         private void button_CheckedChanged(object sender, EventArgs e)
@@ -127,7 +124,7 @@ namespace DoAnNet
         {
             lblTitle.Text = "Danh sách sản phẩm";
             flpSanPham.Show();
-            pnMain2.Hide();
+            pnMain.Hide();
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
@@ -136,31 +133,51 @@ namespace DoAnNet
             {
                 List<Orders2_DTO> lstHoaDon = Orders_BLL.LoadAllOrder();
                 localVariable.ucDanhSachHoaDon = new UC_DanhSachHoaDon(lstHoaDon);
-                pnMain2.Controls.Clear();
-                pnMain2.Controls.Add(localVariable.ucDanhSachHoaDon);
-                localVariable.ucDanhSachHoaDon.Dock = DockStyle.Fill;
             }
-
-            lblTitle.Text = "Danh sách hóa đơn";
-            flpSanPham.Hide();
-            pnMain2.Show();
+            addToPnMain(localVariable.ucDanhSachHoaDon,
+                "Danh sách khách hàng");
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
             if (localVariable.ucDanhSachKhachHang == null)
             {
-                List<Customers_DTO> lstKhachHang= Customer_BLL.LoadCustomers();
+                List<Customers_DTO> lstKhachHang = Customer_BLL.LoadCustomers();
                 localVariable.ucDanhSachKhachHang = new UC_DanhSachKhachHang(lstKhachHang);
-                pnMain2.Controls.Clear();
-                pnMain2.Controls.Add(localVariable.ucDanhSachKhachHang);
-                localVariable.ucDanhSachKhachHang.Dock = DockStyle.Fill;
             }
 
-            lblTitle.Text = "Danh sách khách hàng";
-            flpSanPham.Hide();
-            pnMain2.Show();
+            addToPnMain(localVariable.ucDanhSachKhachHang,
+                "Danh sách khách hàng");
 
         }
+
+        private void ptbUser_Click(object sender, EventArgs e)
+        {
+            addToPnMain(new UC_NhanVien(staff), "Xem thông tin nhân viên");
+        }
+
+        private void addToPnMain(UserControl uc, string title)
+        {
+            pnMain.Controls.Clear();
+            pnMain.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
+
+            lblTitle.Text = title;
+            flpSanPham.Hide();
+            pnMain.Show();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            btnCartCount.Text = "0";
+            formFunctionPointer += new functioncall(increseCart);
+            loadSanPham();
+            flpSanPham.Show();
+            pnMain.Hide();
+        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    pnMain.Controls.Clear();
+        //}
     }
 }

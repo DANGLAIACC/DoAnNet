@@ -61,6 +61,7 @@
             // 
             // btn
             // 
+            this.btn.BorderRadius = 3;
             this.btn.CheckedState.Parent = this.btn;
             this.btn.CustomImages.Parent = this.btn;
             this.btn.Font = new System.Drawing.Font("Segoe UI", 9F);
