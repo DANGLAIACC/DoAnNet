@@ -335,20 +335,21 @@ go
 
 create proc addOrders (
 	@od_id char(12),
-	@od_dateDelivery datetime,
+	@od_dateDelivery varchar(30), -- CONVERT(datetime, '15:47:39 09/16/2020');
 	@od_status int,
 	@od_address nvarchar(100),
 	@od_payment nvarchar(30),
 	@st_id varchar(10),
 	@ct_id char(7),
 	@ag_id char(3),
-	@pd_id char(8) 
+	@pd_id char(8),
+	@pd_quantity int
 ) as 
 begin
 -- Nếu đơn hàng chưa tồn tại thì tạo mới
 	if not exists (select od_id from orders where od_id=@od_id)
 		insert into orders values
-		(@od_id,GETDATE(),@od_dateDelivery,@od_status,@od_address,@od_payment, @st_id, @ct_id, @ag_id)
+		(@od_id,GETDATE(),CONVERT(datetime, @od_dateDelivery), @od_status,@od_address,@od_payment, @st_id, @ct_id, @ag_id)
 
 	declare @od_price money = (select pd_retail from products where pd_id = @pd_id)
 
@@ -357,7 +358,7 @@ begin
 	-- Nếu chưa tồn tại trong bảng chi tiết đơn hàng
 	if (@od_quantity is null) 
 	begin
-		set @od_quantity = 1
+		set @od_quantity = @pd_quantity
 		insert into order_detail values (@od_id,@pd_id,@od_quantity,@od_price)
 	end
 	-- Trường hợp sản phẩm và đơn hàng đã tồn tại trong bảng chi tiết đơn hàng
@@ -371,8 +372,15 @@ begin
 	where ag_id=@ag_id and pd_id = @pd_id
 end
 
-go
+go 
 
+--SELECT FORMAT(GETDATE() , 'hh:mm:ss dd/MM/yyyy')
+-- select CONVERT(VARCHAR,GETDATE(),120)
+/*
+	SELECT CONVERT(datetime, '2017-08-25');
+
+	SELECT CONVERT(datetime, '15:47:39 09/16/2020');
+*/
 create proc addProducts (
 	@pr_id char(12),
 	@sp_id char(3),
@@ -415,7 +423,7 @@ select * from watches
 declare @tdate datetime = getdate()
 
 exec addOrders @od_id = '000000000002',
-	@od_dateDelivery = @tdate,
+	@od_dateDelivery = '03:45:00 09/16/2020',
 	@od_status = 2,
 	@od_address = N'Địa chỉ test',
 	@od_payment = N'Tiền mặt',
@@ -423,6 +431,9 @@ exec addOrders @od_id = '000000000002',
 	@ct_id = '0000000',
 	@ag_id = '000',
 	@pd_id = '00000000'
+
+	select * from orders
+
 */
 
 /* convert database table to class

@@ -18,5 +18,31 @@ namespace BLL
         {
             return Order_detail_DAL.getOrderDetailById(orderId);
         }
+
+        public static bool addOrder(
+           string od_id,
+           string od_dateDelivery,
+           string od_status,
+           string od_address,
+           string od_payment,
+           string st_id,
+           string ct_id,
+           string ag_id,
+           string pd_id
+           )
+        {
+            return Order_detail_DAL.addOrder(
+                od_id,
+                od_dateDelivery,
+                od_status,
+                od_address,
+                od_payment,
+                st_id,
+                ct_id,
+                ag_id,
+                pd_id,
+                pd_quantity
+                );
+        }
     }
 }

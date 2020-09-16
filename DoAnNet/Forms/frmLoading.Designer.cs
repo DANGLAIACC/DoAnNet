@@ -52,6 +52,7 @@
             this.Controls.Add(this.uC_Loading1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLoading";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLoading";
             this.ResumeLayout(false);
 

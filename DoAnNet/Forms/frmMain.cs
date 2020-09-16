@@ -23,6 +23,7 @@ namespace DoAnNet
         public delegate void functioncall(int i);
         private event functioncall formFunctionPointer;
         private Staffs_DTO staff;
+        private string soHoaDonHienTai;
         private List<Products_DTO> lstProduct;
 
         public frmMain()
@@ -93,18 +94,14 @@ namespace DoAnNet
         {
             if (Temp.cart.Count > 0)
             {
+                
                 frmNhapKhachHang f = new frmNhapKhachHang(
-                    "012345678912", "Đặng Quốc Lai", "13:12:00 14/09/2020", "123 Nguyễn Hữu Cảnh, Q. Bình Thạnh, TP. Hồ Chí Minh");
-
+                    soHoaDonHienTai, staff.St_firstName+" "+staff.St_lastName, DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy"),staff.Ag_address, staff.St_id, staff.Ag_id);
                 f.ShowDialog();
             }
             else
             {
                 Alert("Giỏ hàng đang trống.", frmAlert.enmType.Error);
-                //Alert("Success Alert", frmAlert.enmType.Success);
-                //Alert("Warning Alert", frmAlert.enmType.Warning);
-                //Alert("Info Alert", frmAlert.enmType.Info);
-                //MessageBox.Show("Giỏ hàng hiện đang trống.", "In đơn hàng");
             }
         }
 
@@ -123,11 +120,6 @@ namespace DoAnNet
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-            if (localVariable.ucDanhSachHoaDon == null)
-            {
-                List<Orders2_DTO> lstHoaDon = Orders_BLL.LoadAllOrder();
-                localVariable.ucDanhSachHoaDon = new UC_DanhSachHoaDon(lstHoaDon);
-            }
             addToPnMain(localVariable.ucDanhSachHoaDon,
                 "Danh sách hóa đơn");
         }
@@ -164,7 +156,8 @@ namespace DoAnNet
             lblTitle.Text = title;
             flpSanPham.Hide();
             pnMain.Show();
-        } 
+        }
+        
         private void frmMain_Load(object sender, EventArgs e)
         {
             btnCartCount.Text = "0";
@@ -172,6 +165,18 @@ namespace DoAnNet
             loadSanPham();
             flpSanPham.Show();
             pnMain.Hide();
+
+            List<Orders2_DTO> lstHoaDon = new List<Orders2_DTO>();
+            if (localVariable.ucDanhSachHoaDon == null)
+            {
+                lstHoaDon = Orders_BLL.LoadAllOrder();
+                localVariable.ucDanhSachHoaDon = new UC_DanhSachHoaDon(lstHoaDon);
+            }
+
+            int soHoaDonCuoi = int.Parse(lstHoaDon[lstHoaDon.Count - 1].Od_id);
+            soHoaDonCuoi++;
+            soHoaDonHienTai = string.Format("{0:000000000000}", 
+                soHoaDonCuoi);          
         }
 
         private void btnThongBao_Click(object sender, EventArgs e)

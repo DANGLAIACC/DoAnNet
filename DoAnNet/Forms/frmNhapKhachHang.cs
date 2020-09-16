@@ -21,9 +21,14 @@ namespace DoAnNet.Forms
     {
         private List<Customers_DTO> lstCustomer;
         private List<Agencies_DTO> lstAgencies;
-        public frmNhapKhachHang(string soHoaDon, string tenNhanVien, string ngayLap, string ag_address)
+        private string st_id, ag_id;
+
+        public frmNhapKhachHang(string soHoaDon, string tenNhanVien, string ngayLap, string ag_address, string st_id, string ag_id)
         {
             InitializeComponent();
+            this.st_id = st_id;
+            this.ag_id = ag_id;
+
             lblSoHoaDon.Text = soHoaDon;
             lblTenNhanVien.Text = tenNhanVien;
             lblTime.Text = ngayLap;
@@ -153,6 +158,23 @@ namespace DoAnNet.Forms
 
         private void btnIn_Click(object sender, EventArgs e)
         {
+            // Thêm vào database
+
+            string od_id = lblSoHoaDon.Text,
+            od_dateDelivery = lblTime.Text,
+            od_status = "0",
+            od_address = txtDiaChi2.Text,
+            od_payment = "Tiền mặt",
+            ct_id = "0000000",
+            pd_id = "";
+
+            int cartCount = Temp.cart.Count;
+
+            for (int i = 0; i < cartCount; i++)
+            {
+                Temp.cart[i].
+            }
+
             frmRptCart f = new frmRptCart(
                 cboChiNhanh.Text,
                 txtNgayMua.Text,
@@ -183,16 +205,22 @@ namespace DoAnNet.Forms
                     {
                         txtTenKH1.Text = c.Ct_firstName + " " + c.Ct_lastName;
                         txtDiaChi1.Text = c.Ct_address;
-                        txtNgayMua.Text = lblTime.Text; 
+                        txtNgayMua.Text = lblTime.Text;
                         return;
                     }
                 }
             }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy");
+        }
+
+        private void txtDT1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
         }
     }
 }
