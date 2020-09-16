@@ -120,6 +120,7 @@
             this.btnLuu.Size = new System.Drawing.Size(110, 30);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu thông tin";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // pnTop
             // 
@@ -256,11 +257,11 @@
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnTop);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDoiMatKhau";
+            this.Text = "Đổi mật khẩu";
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.pnBottom.ResumeLayout(false);

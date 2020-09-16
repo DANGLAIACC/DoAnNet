@@ -60,7 +60,7 @@ namespace DoAnNet.Forms
                     this.Hide();
                     frmLoading fLoading = new frmLoading();
                     fLoading.ShowDialog();
-
+                    
                     frmMain f = new frmMain(s);
                     f.ShowDialog();
 

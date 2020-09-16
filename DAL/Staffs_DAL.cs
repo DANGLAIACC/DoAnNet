@@ -73,5 +73,22 @@ namespace DAL
 
             return l;
         }
+
+        public static bool updateStaff(Staffs_DTO s)
+        {
+            string query = string.Format(
+                "update staffs "
+                + "set "
+                    + "st_password = '{1}', "
+	                + "st_firstName = N'{2}', "
+	                + "st_lastName = N'{3}', "
+	                + "st_phone = '{4}', "
+	                + "st_email = '{5}', "
+	                + "st_gender = {6} "
+                + "where st_id='{0}'",
+                s.St_id, s.St_password, s.St_firstName, s.St_lastName, s.St_phone, s.St_email, s.St_gender?1:0
+                );
+            return DataProvider.ExecuteNonQuery(query);
+        }
     }
 }

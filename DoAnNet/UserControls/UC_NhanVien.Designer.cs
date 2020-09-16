@@ -1,4 +1,4 @@
-﻿namespace DoAnNet.UserControls
+﻿namespace DoAnNet
 {
     partial class UC_NhanVien
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btnDoiMatKhau = new Guna.UI2.WinForms.Guna2Button();
@@ -48,37 +47,7 @@
             this.txtSt_id = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.btnClear);
-            this.guna2Panel1.Controls.Add(this.btnLuu);
-            this.guna2Panel1.Controls.Add(this.btnDoiMatKhau);
-            this.guna2Panel1.Controls.Add(this.lblSt_workdays);
-            this.guna2Panel1.Controls.Add(this.label9);
-            this.guna2Panel1.Controls.Add(this.lblGioiTinh);
-            this.guna2Panel1.Controls.Add(this.btnGioiTinh);
-            this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.txtSt_email);
-            this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Controls.Add(this.txtSt_phone);
-            this.guna2Panel1.Controls.Add(this.label5);
-            this.guna2Panel1.Controls.Add(this.txtSt_lastName);
-            this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.txtSt_firstName);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.txtSt_id);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.lblHeader);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Font = new System.Drawing.Font("SVN-Gilroy Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(796, 293);
-            this.guna2Panel1.TabIndex = 0;
             // 
             // btnClear
             // 
@@ -89,11 +58,11 @@
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.HoverState.Parent = this.btnClear;
-            this.btnClear.Location = new System.Drawing.Point(694, 239);
+            this.btnClear.Location = new System.Drawing.Point(713, 238);
             this.btnClear.Name = "btnClear";
             this.btnClear.ShadowDecoration.Parent = this.btnClear;
             this.btnClear.Size = new System.Drawing.Size(70, 30);
-            this.btnClear.TabIndex = 16;
+            this.btnClear.TabIndex = 107;
             this.btnClear.Text = "Clear";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -106,11 +75,11 @@
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.HoverState.Parent = this.btnLuu;
-            this.btnLuu.Location = new System.Drawing.Point(555, 239);
+            this.btnLuu.Location = new System.Drawing.Point(574, 238);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
             this.btnLuu.Size = new System.Drawing.Size(110, 30);
-            this.btnLuu.TabIndex = 16;
+            this.btnLuu.TabIndex = 106;
             this.btnLuu.Text = "Lưu thông tin";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -122,11 +91,11 @@
             this.btnDoiMatKhau.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnDoiMatKhau.ForeColor = System.Drawing.Color.White;
             this.btnDoiMatKhau.HoverState.Parent = this.btnDoiMatKhau;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(409, 239);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(428, 238);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.ShadowDecoration.Parent = this.btnDoiMatKhau;
             this.btnDoiMatKhau.Size = new System.Drawing.Size(110, 30);
-            this.btnDoiMatKhau.TabIndex = 16;
+            this.btnDoiMatKhau.TabIndex = 105;
             this.btnDoiMatKhau.Text = "Đổi mật khẩu";
             this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
@@ -135,28 +104,30 @@
             this.lblSt_workdays.AutoSize = true;
             this.lblSt_workdays.Font = new System.Drawing.Font("SVN-Gilroy Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSt_workdays.ForeColor = System.Drawing.Color.Red;
-            this.lblSt_workdays.Location = new System.Drawing.Point(293, 239);
+            this.lblSt_workdays.Location = new System.Drawing.Point(321, 241);
             this.lblSt_workdays.Name = "lblSt_workdays";
             this.lblSt_workdays.Size = new System.Drawing.Size(30, 21);
-            this.lblSt_workdays.TabIndex = 15;
+            this.lblSt_workdays.TabIndex = 104;
             this.lblSt_workdays.Text = "30";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(36, 239);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(29, 238);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(329, 21);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Số ngày làm việc trong tháng này:        ngày";
+            this.label9.Size = new System.Drawing.Size(368, 25);
+            this.label9.TabIndex = 103;
+            this.label9.Text = "Số ngày làm việc trong tháng này:      ngày";
             // 
             // lblGioiTinh
             // 
             this.lblGioiTinh.AutoSize = true;
-            this.lblGioiTinh.Location = new System.Drawing.Point(620, 176);
+            this.lblGioiTinh.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGioiTinh.Location = new System.Drawing.Point(594, 170);
             this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(45, 21);
-            this.lblGioiTinh.TabIndex = 13;
+            this.lblGioiTinh.Size = new System.Drawing.Size(52, 25);
+            this.lblGioiTinh.TabIndex = 102;
             this.lblGioiTinh.Text = "Nam";
             // 
             // btnGioiTinh
@@ -167,11 +138,11 @@
             this.btnGioiTinh.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnGioiTinh.CheckedState.InnerColor = System.Drawing.Color.White;
             this.btnGioiTinh.CheckedState.Parent = this.btnGioiTinh;
-            this.btnGioiTinh.Location = new System.Drawing.Point(579, 176);
+            this.btnGioiTinh.Location = new System.Drawing.Point(553, 172);
             this.btnGioiTinh.Name = "btnGioiTinh";
             this.btnGioiTinh.ShadowDecoration.Parent = this.btnGioiTinh;
             this.btnGioiTinh.Size = new System.Drawing.Size(35, 20);
-            this.btnGioiTinh.TabIndex = 12;
+            this.btnGioiTinh.TabIndex = 101;
             this.btnGioiTinh.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.btnGioiTinh.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.btnGioiTinh.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
@@ -181,10 +152,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(449, 176);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(423, 170);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 21);
-            this.label7.TabIndex = 11;
+            this.label7.Size = new System.Drawing.Size(84, 25);
+            this.label7.TabIndex = 100;
             this.label7.Text = "Giới tính";
             // 
             // txtSt_email
@@ -201,11 +173,11 @@
             this.txtSt_email.DisabledState.Parent = this.txtSt_email;
             this.txtSt_email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSt_email.FocusedState.Parent = this.txtSt_email;
-            this.txtSt_email.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSt_email.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSt_email.ForeColor = System.Drawing.Color.Black;
             this.txtSt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
             this.txtSt_email.HoverState.Parent = this.txtSt_email;
-            this.txtSt_email.Location = new System.Drawing.Point(579, 119);
+            this.txtSt_email.Location = new System.Drawing.Point(553, 116);
             this.txtSt_email.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtSt_email.Name = "txtSt_email";
             this.txtSt_email.PasswordChar = '\0';
@@ -218,17 +190,18 @@
             this.txtSt_email.ShadowDecoration.Parent = this.txtSt_email;
             this.txtSt_email.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
             this.txtSt_email.Size = new System.Drawing.Size(185, 33);
-            this.txtSt_email.TabIndex = 10;
+            this.txtSt_email.TabIndex = 99;
             this.txtSt_email.TextOffset = new System.Drawing.Point(8, 0);
             this.txtSt_email.WordWrap = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(449, 125);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(423, 122);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 21);
-            this.label6.TabIndex = 9;
+            this.label6.Size = new System.Drawing.Size(58, 25);
+            this.label6.TabIndex = 98;
             this.label6.Text = "Email";
             // 
             // txtSt_phone
@@ -245,11 +218,11 @@
             this.txtSt_phone.DisabledState.Parent = this.txtSt_phone;
             this.txtSt_phone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSt_phone.FocusedState.Parent = this.txtSt_phone;
-            this.txtSt_phone.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSt_phone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSt_phone.ForeColor = System.Drawing.Color.Black;
             this.txtSt_phone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
             this.txtSt_phone.HoverState.Parent = this.txtSt_phone;
-            this.txtSt_phone.Location = new System.Drawing.Point(579, 71);
+            this.txtSt_phone.Location = new System.Drawing.Point(553, 65);
             this.txtSt_phone.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtSt_phone.Name = "txtSt_phone";
             this.txtSt_phone.PasswordChar = '\0';
@@ -262,17 +235,19 @@
             this.txtSt_phone.ShadowDecoration.Parent = this.txtSt_phone;
             this.txtSt_phone.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
             this.txtSt_phone.Size = new System.Drawing.Size(185, 33);
-            this.txtSt_phone.TabIndex = 8;
+            this.txtSt_phone.TabIndex = 97;
             this.txtSt_phone.TextOffset = new System.Drawing.Point(8, 0);
             this.txtSt_phone.WordWrap = false;
+            this.txtSt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSt_phone_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(449, 77);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(423, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 21);
-            this.label5.TabIndex = 7;
+            this.label5.Size = new System.Drawing.Size(123, 25);
+            this.label5.TabIndex = 96;
             this.label5.Text = "Số điện thoại";
             // 
             // txtSt_lastName
@@ -289,11 +264,11 @@
             this.txtSt_lastName.DisabledState.Parent = this.txtSt_lastName;
             this.txtSt_lastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSt_lastName.FocusedState.Parent = this.txtSt_lastName;
-            this.txtSt_lastName.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSt_lastName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSt_lastName.ForeColor = System.Drawing.Color.Black;
             this.txtSt_lastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
             this.txtSt_lastName.HoverState.Parent = this.txtSt_lastName;
-            this.txtSt_lastName.Location = new System.Drawing.Point(162, 170);
+            this.txtSt_lastName.Location = new System.Drawing.Point(165, 166);
             this.txtSt_lastName.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtSt_lastName.Name = "txtSt_lastName";
             this.txtSt_lastName.PasswordChar = '\0';
@@ -306,17 +281,18 @@
             this.txtSt_lastName.ShadowDecoration.Parent = this.txtSt_lastName;
             this.txtSt_lastName.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
             this.txtSt_lastName.Size = new System.Drawing.Size(185, 33);
-            this.txtSt_lastName.TabIndex = 6;
+            this.txtSt_lastName.TabIndex = 95;
             this.txtSt_lastName.TextOffset = new System.Drawing.Point(8, 0);
             this.txtSt_lastName.WordWrap = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 176);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(29, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 21);
-            this.label4.TabIndex = 5;
+            this.label4.Size = new System.Drawing.Size(41, 25);
+            this.label4.TabIndex = 94;
             this.label4.Text = "Tên";
             // 
             // txtSt_firstName
@@ -333,11 +309,11 @@
             this.txtSt_firstName.DisabledState.Parent = this.txtSt_firstName;
             this.txtSt_firstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSt_firstName.FocusedState.Parent = this.txtSt_firstName;
-            this.txtSt_firstName.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSt_firstName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSt_firstName.ForeColor = System.Drawing.Color.Black;
             this.txtSt_firstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(189)))), ((int)(((byte)(255)))));
             this.txtSt_firstName.HoverState.Parent = this.txtSt_firstName;
-            this.txtSt_firstName.Location = new System.Drawing.Point(162, 119);
+            this.txtSt_firstName.Location = new System.Drawing.Point(165, 116);
             this.txtSt_firstName.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtSt_firstName.Name = "txtSt_firstName";
             this.txtSt_firstName.PasswordChar = '\0';
@@ -350,17 +326,18 @@
             this.txtSt_firstName.ShadowDecoration.Parent = this.txtSt_firstName;
             this.txtSt_firstName.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
             this.txtSt_firstName.Size = new System.Drawing.Size(185, 33);
-            this.txtSt_firstName.TabIndex = 4;
+            this.txtSt_firstName.TabIndex = 93;
             this.txtSt_firstName.TextOffset = new System.Drawing.Point(8, 0);
             this.txtSt_firstName.WordWrap = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 125);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 21);
-            this.label3.TabIndex = 3;
+            this.label3.Size = new System.Drawing.Size(36, 25);
+            this.label3.TabIndex = 92;
             this.label3.Text = "Họ";
             // 
             // txtSt_id
@@ -379,10 +356,10 @@
             this.txtSt_id.DisabledState.Parent = this.txtSt_id;
             this.txtSt_id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSt_id.FocusedState.Parent = this.txtSt_id;
-            this.txtSt_id.Font = new System.Drawing.Font("SVN-Gilroy Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSt_id.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSt_id.ForeColor = System.Drawing.Color.Black;
             this.txtSt_id.HoverState.Parent = this.txtSt_id;
-            this.txtSt_id.Location = new System.Drawing.Point(162, 71);
+            this.txtSt_id.Location = new System.Drawing.Point(165, 65);
             this.txtSt_id.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtSt_id.Name = "txtSt_id";
             this.txtSt_id.PasswordChar = '\0';
@@ -396,66 +373,84 @@
             this.txtSt_id.ShadowDecoration.Parent = this.txtSt_id;
             this.txtSt_id.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
             this.txtSt_id.Size = new System.Drawing.Size(185, 33);
-            this.txtSt_id.TabIndex = 2;
+            this.txtSt_id.TabIndex = 91;
             this.txtSt_id.TextOffset = new System.Drawing.Point(8, 0);
             this.txtSt_id.WordWrap = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 77);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(29, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 21);
-            this.label2.TabIndex = 1;
+            this.label2.Size = new System.Drawing.Size(137, 25);
+            this.label2.TabIndex = 90;
             this.label2.Text = "Tên đăng nhập";
             // 
             // lblHeader
             // 
-            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblHeader.Font = new System.Drawing.Font("SVN-Gilroy Light", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblHeader.Location = new System.Drawing.Point(0, 0);
+            this.lblHeader.Location = new System.Drawing.Point(3, 0);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(796, 47);
-            this.lblHeader.TabIndex = 0;
+            this.lblHeader.TabIndex = 89;
             this.lblHeader.Text = "XIN CHÀO";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UC_NhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2Panel1);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnDoiMatKhau);
+            this.Controls.Add(this.lblSt_workdays);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblGioiTinh);
+            this.Controls.Add(this.btnGioiTinh);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtSt_email);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtSt_phone);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtSt_lastName);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtSt_firstName);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtSt_id);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblHeader);
+            this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Name = "UC_NhanVien";
-            this.Size = new System.Drawing.Size(796, 293);
+            this.Size = new System.Drawing.Size(796, 570);
             this.Load += new System.EventHandler(this.UC_NhanVien_Load);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label lblHeader;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtSt_id;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtSt_firstName;
-        private Guna.UI2.WinForms.Guna2TextBox txtSt_lastName;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtSt_phone;
-        private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox txtSt_email;
-        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2Button btnClear;
+        private Guna.UI2.WinForms.Guna2Button btnLuu;
+        private Guna.UI2.WinForms.Guna2Button btnDoiMatKhau;
+        private System.Windows.Forms.Label lblSt_workdays;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblGioiTinh;
         private Guna.UI2.WinForms.Guna2ToggleSwitch btnGioiTinh;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblSt_workdays;
-        private Guna.UI2.WinForms.Guna2Button btnDoiMatKhau;
-        private Guna.UI2.WinForms.Guna2Button btnClear;
-        private Guna.UI2.WinForms.Guna2Button btnLuu;
+        private Guna.UI2.WinForms.Guna2TextBox txtSt_email;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox txtSt_phone;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2TextBox txtSt_lastName;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2TextBox txtSt_firstName;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtSt_id;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblHeader;
+
     }
 }

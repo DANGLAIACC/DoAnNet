@@ -14,20 +14,17 @@ using DoAnNet.UserControls;
 namespace DoAnNet.Forms
 {
     public partial class frmLoading : Form
-    {
+    { 
         public frmLoading()
         {
-            InitializeComponent();
-            ShowInTaskbar = false; 
-        }
+            InitializeComponent(); 
+            ShowInTaskbar = false;
+            backgroundWorker1.RunWorkerAsync();
 
+        }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (localVariable.ucDanhSachKhachHang == null)
-            {
-                List<Customers_DTO> lstKhachHang = Customer_BLL.LoadCustomers();
-                localVariable.ucDanhSachKhachHang = new UC_DanhSachKhachHang(lstKhachHang);
-            }
+            List<Customers_DTO> lstKhachHang = Customer_BLL.LoadCustomers();
         }
     }
 }

@@ -392,6 +392,8 @@ namespace DoAnNet
             this.btnInHoaDon.ImageSize = new System.Drawing.Size(40, 40);
             this.btnInHoaDon.Location = new System.Drawing.Point(155, 3);
             this.btnInHoaDon.Name = "btnInHoaDon";
+            this.btnInHoaDon.PressedColor = System.Drawing.Color.Transparent;
+            this.btnInHoaDon.PressedDepth = 0;
             this.btnInHoaDon.ShadowDecoration.Parent = this.btnInHoaDon;
             this.btnInHoaDon.Size = new System.Drawing.Size(60, 50);
             this.btnInHoaDon.TabIndex = 2;
@@ -447,6 +449,8 @@ namespace DoAnNet
             this.btnGioHang.ImageSize = new System.Drawing.Size(40, 40);
             this.btnGioHang.Location = new System.Drawing.Point(-2, 2);
             this.btnGioHang.Name = "btnGioHang";
+            this.btnGioHang.PressedColor = System.Drawing.Color.Transparent;
+            this.btnGioHang.PressedDepth = 0;
             this.btnGioHang.ShadowDecoration.BorderRadius = 24;
             this.btnGioHang.ShadowDecoration.Parent = this.btnGioHang;
             this.btnGioHang.Size = new System.Drawing.Size(60, 50);
@@ -502,10 +506,12 @@ namespace DoAnNet
             this.btnThongBao.ImageSize = new System.Drawing.Size(40, 40);
             this.btnThongBao.Location = new System.Drawing.Point(3, 0);
             this.btnThongBao.Name = "btnThongBao";
+            this.btnThongBao.PressedColor = System.Drawing.Color.Transparent;
             this.btnThongBao.ShadowDecoration.Parent = this.btnThongBao;
             this.btnThongBao.Size = new System.Drawing.Size(60, 50);
             this.btnThongBao.TabIndex = 1;
             this.btnThongBao.UseTransparentBackground = true;
+            this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
             // 
             // panel0
             // 

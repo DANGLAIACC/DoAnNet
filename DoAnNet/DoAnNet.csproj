@@ -144,17 +144,17 @@
     <Compile Include="UserControls\UC_DanhSachHoaDon.Designer.cs">
       <DependentUpon>UC_DanhSachHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Loading.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_Loading.Designer.cs">
-      <DependentUpon>UC_Loading.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UC_NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UC_NhanVien.Designer.cs">
       <DependentUpon>UC_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Loading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Loading.Designer.cs">
+      <DependentUpon>UC_Loading.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_SanPham_item.cs">
       <SubType>UserControl</SubType>
@@ -208,11 +208,11 @@
     <EmbeddedResource Include="UserControls\UC_DanhSachHoaDon.resx">
       <DependentUpon>UC_DanhSachHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Loading.resx">
-      <DependentUpon>UC_Loading.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_NhanVien.resx">
       <DependentUpon>UC_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Loading.resx">
+      <DependentUpon>UC_Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_SanPham_item.resx">
       <DependentUpon>UC_SanPham_item.cs</DependentUpon>

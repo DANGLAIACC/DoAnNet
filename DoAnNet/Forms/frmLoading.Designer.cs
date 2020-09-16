@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uC_Loading1 = new DoAnNet.UserControls.UC_Loading();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.uC_Loading1 = new DoAnNet.UserControls.UC_Loading();
             this.SuspendLayout();
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // uC_Loading1
             // 
@@ -39,10 +43,6 @@
             this.uC_Loading1.Name = "uC_Loading1";
             this.uC_Loading1.Size = new System.Drawing.Size(344, 316);
             this.uC_Loading1.TabIndex = 0;
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // frmLoading
             // 

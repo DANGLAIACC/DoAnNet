@@ -129,18 +129,18 @@ namespace DoAnNet
                 localVariable.ucDanhSachHoaDon = new UC_DanhSachHoaDon(lstHoaDon);
             }
             addToPnMain(localVariable.ucDanhSachHoaDon,
-                "Danh sách khách hàng");
+                "Danh sách hóa đơn");
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
             // Move to frmLoading
 
-            //if (localVariable.ucDanhSachKhachHang == null)
-            //{
-            //    List<Customers_DTO> lstKhachHang = Customer_BLL.LoadCustomers();
-            //    localVariable.ucDanhSachKhachHang = new UC_DanhSachKhachHang(lstKhachHang);
-            //}
+            if (localVariable.ucDanhSachKhachHang == null)
+            {
+                List<Customers_DTO> lstKhachHang = Customer_BLL.LoadCustomers();
+                localVariable.ucDanhSachKhachHang = new UC_DanhSachKhachHang(lstKhachHang);
+            }
 
             addToPnMain(localVariable.ucDanhSachKhachHang,
                 "Danh sách khách hàng");
@@ -149,7 +149,10 @@ namespace DoAnNet
 
         private void ptbUser_Click(object sender, EventArgs e)
         {
-            addToPnMain(new UC_NhanVien(staff), "Xem thông tin nhân viên");
+            //UC_NhanVien2 n = new UC_NhanVien2(staff);
+            UC_NhanVien n = new UC_NhanVien(staff);
+
+            addToPnMain(n, "Xem chi tiết nhân viên");
         }
 
         private void addToPnMain(UserControl uc, string title)
@@ -161,8 +164,7 @@ namespace DoAnNet
             lblTitle.Text = title;
             flpSanPham.Hide();
             pnMain.Show();
-        }
-
+        } 
         private void frmMain_Load(object sender, EventArgs e)
         {
             btnCartCount.Text = "0";
@@ -170,6 +172,12 @@ namespace DoAnNet
             loadSanPham();
             flpSanPham.Show();
             pnMain.Hide();
+        }
+
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+            frmAlert frm = new frmAlert();
+            frm.showAlert("Đang phát triển.", frmAlert.enmType.Info);
         }
         //private void button1_Click(object sender, EventArgs e)
         //{

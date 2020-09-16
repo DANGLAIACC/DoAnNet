@@ -18,5 +18,9 @@ namespace BLL
         {
             return Staffs_DAL.GetStaffByLogin(username, password);
         }
+        public static bool updateStaff(Staffs_DTO s)
+        {
+            return Staffs_DAL.updateStaff(s);
+        }
     }
 }

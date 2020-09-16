@@ -116,7 +116,7 @@ namespace DoAnNet.Forms
                     break;
             }
             label1.Text = msg;
-
+            TopMost = true;
             Show();
             action = enmAction.start;
             timer1.Interval = 1;
