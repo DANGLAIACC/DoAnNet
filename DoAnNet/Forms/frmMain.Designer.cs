@@ -40,7 +40,7 @@ namespace DoAnNet
             this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btnHoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhachHang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNhanVien = new Guna.UI2.WinForms.Guna2Button();
+            this.btnQLNhanVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnGioiThieu = new Guna.UI2.WinForms.Guna2Button();
             this.imgSlide = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -89,7 +89,7 @@ namespace DoAnNet
             this.pnMenu.Controls.Add(this.btnSanPham);
             this.pnMenu.Controls.Add(this.btnHoaDon);
             this.pnMenu.Controls.Add(this.btnKhachHang);
-            this.pnMenu.Controls.Add(this.btnNhanVien);
+            this.pnMenu.Controls.Add(this.btnQLNhanVien);
             this.pnMenu.Controls.Add(this.btnGioiThieu);
             this.pnMenu.Controls.Add(this.imgSlide);
             this.pnMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
@@ -126,6 +126,7 @@ namespace DoAnNet
             this.btnThongKe.TabIndex = 1;
             this.btnThongKe.UseTransparentBackground = true;
             this.btnThongKe.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // pictureBox2
             // 
@@ -220,30 +221,31 @@ namespace DoAnNet
             this.btnKhachHang.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
-            // btnNhanVien
+            // btnQLNhanVien
             // 
-            this.btnNhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.btnNhanVien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.btnNhanVien.BorderRadius = 24;
-            this.btnNhanVien.BorderThickness = 1;
-            this.btnNhanVien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnNhanVien.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btnNhanVien.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnNhanVien.CheckedState.Parent = this.btnNhanVien;
-            this.btnNhanVien.CustomImages.Parent = this.btnNhanVien;
-            this.btnNhanVien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
-            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btnNhanVien.HoverState.Parent = this.btnNhanVien;
-            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
-            this.btnNhanVien.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnNhanVien.Location = new System.Drawing.Point(23, 340);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.ShadowDecoration.Parent = this.btnNhanVien;
-            this.btnNhanVien.Size = new System.Drawing.Size(60, 50);
-            this.btnNhanVien.TabIndex = 0;
-            this.btnNhanVien.UseTransparentBackground = true;
-            this.btnNhanVien.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
+            this.btnQLNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLNhanVien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnQLNhanVien.BorderRadius = 24;
+            this.btnQLNhanVien.BorderThickness = 1;
+            this.btnQLNhanVien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnQLNhanVien.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnQLNhanVien.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnQLNhanVien.CheckedState.Parent = this.btnQLNhanVien;
+            this.btnQLNhanVien.CustomImages.Parent = this.btnQLNhanVien;
+            this.btnQLNhanVien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
+            this.btnQLNhanVien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnQLNhanVien.ForeColor = System.Drawing.Color.White;
+            this.btnQLNhanVien.HoverState.Parent = this.btnQLNhanVien;
+            this.btnQLNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNhanVien.Image")));
+            this.btnQLNhanVien.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnQLNhanVien.Location = new System.Drawing.Point(23, 340);
+            this.btnQLNhanVien.Name = "btnQLNhanVien";
+            this.btnQLNhanVien.ShadowDecoration.Parent = this.btnQLNhanVien;
+            this.btnQLNhanVien.Size = new System.Drawing.Size(60, 50);
+            this.btnQLNhanVien.TabIndex = 0;
+            this.btnQLNhanVien.UseTransparentBackground = true;
+            this.btnQLNhanVien.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
+            this.btnQLNhanVien.Click += new System.EventHandler(this.btnQLNhanVien_Click);
             // 
             // btnGioiThieu
             // 
@@ -268,6 +270,7 @@ namespace DoAnNet
             this.btnGioiThieu.Size = new System.Drawing.Size(60, 50);
             this.btnGioiThieu.TabIndex = 0;
             this.btnGioiThieu.UseTransparentBackground = true;
+            this.btnGioiThieu.Click += new System.EventHandler(this.btnGioiThieu_Click);
             // 
             // imgSlide
             // 
@@ -578,7 +581,7 @@ namespace DoAnNet
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btnGioiThieu;
-        private Guna.UI2.WinForms.Guna2Button btnNhanVien;
+        private Guna.UI2.WinForms.Guna2Button btnQLNhanVien;
         private Guna.UI2.WinForms.Guna2Button btnKhachHang;
         private Guna.UI2.WinForms.Guna2Button btnHoaDon;
         private System.Windows.Forms.Panel panel0;

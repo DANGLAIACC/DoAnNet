@@ -176,13 +176,36 @@ namespace DoAnNet
             int soHoaDonCuoi = int.Parse(lstHoaDon[lstHoaDon.Count - 1].Od_id);
             soHoaDonCuoi++;
             soHoaDonHienTai = string.Format("{0:000000000000}", 
-                soHoaDonCuoi);          
+                soHoaDonCuoi);
+            if(staff.St_role != 0) // admin
+            {
+                btnQLNhanVien.Visible = false;
+                btnThongKe.Visible = false;
+            }
+
+            btnQLNhanVien.PerformClick();
         }
 
         private void btnThongBao_Click(object sender, EventArgs e)
         {
             frmAlert frm = new frmAlert();
             frm.showAlert("Đang phát triển.", frmAlert.enmType.Info);
+        }
+
+        private void btnQLNhanVien_Click(object sender, EventArgs e)
+        {
+            UC_QLNhanVien u = new UC_QLNhanVien();
+            addToPnMain(u, "Quản lý nhân viên");
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGioiThieu_Click(object sender, EventArgs e)
+        {
+
         }
         //private void button1_Click(object sender, EventArgs e)
         //{

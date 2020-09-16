@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -144,6 +145,12 @@
     <Compile Include="UserControls\UC_DanhSachHoaDon.Designer.cs">
       <DependentUpon>UC_DanhSachHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_QLNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_QLNhanVien.Designer.cs">
+      <DependentUpon>UC_QLNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_DanhSachHoaDon.resx">
       <DependentUpon>UC_DanhSachHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_QLNhanVien.resx">
+      <DependentUpon>UC_QLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_NhanVien.resx">
       <DependentUpon>UC_NhanVien.cs</DependentUpon>

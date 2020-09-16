@@ -85,7 +85,8 @@ namespace DAL
             string st_id,
             string ct_id,
             string ag_id,
-            string pd_id
+            string pd_id,
+            string pd_quantity
             )
         {
             string query = string.Format(

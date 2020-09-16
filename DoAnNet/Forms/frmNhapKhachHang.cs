@@ -170,11 +170,7 @@ namespace DoAnNet.Forms
 
             int cartCount = Temp.cart.Count;
 
-            for (int i = 0; i < cartCount; i++)
-            {
-                Temp.cart[i].
-            }
-
+            // lọc dữ liệu từ bộ nhớ tạm Temp.cart để đẩy vào database
             frmRptCart f = new frmRptCart(
                 cboChiNhanh.Text,
                 txtNgayMua.Text,
