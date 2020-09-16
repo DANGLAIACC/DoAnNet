@@ -333,7 +333,7 @@ insert into order_detail values
 go
 /* Thêm 1 đơn hàng -> số lượng trong bảng agency_product giảm đi nên cần viết hàm*/
 
-create proc addOrders (
+create alter proc addOrders (
 	@od_id char(12),
 	@od_dateDelivery varchar(30), -- CONVERT(datetime, '15:47:39 09/16/2020');
 	@od_status int,
@@ -343,33 +343,25 @@ create proc addOrders (
 	@ct_id char(7),
 	@ag_id char(3),
 	@pd_id char(8),
-	@pd_quantity int
+	@od_quantity int,
+	@od_price money
 ) as 
 begin
 -- Nếu đơn hàng chưa tồn tại thì tạo mới
 	if not exists (select od_id from orders where od_id=@od_id)
 		insert into orders values
-		(@od_id,GETDATE(),CONVERT(datetime, @od_dateDelivery), @od_status,@od_address,@od_payment, @st_id, @ct_id, @ag_id)
+		(@od_id,GETDATE(),CONVERT(datetime, @od_dateDelivery), 
+		@od_status,@od_address,@od_payment, @st_id, @ct_id, @ag_id)
+		
+	-- nếu sản phẩm chưa tồn tại trong bảng chi tiết đơn hàng
+	insert into order_detail values
+	(@od_id,@pd_id,@od_quantity,@od_price)
 
-	declare @od_price money = (select pd_retail from products where pd_id = @pd_id)
-
-	declare @od_quantity int = (select od_quantity from order_detail where (od_id = @od_id) and (pd_id=@pd_id))
-
-	-- Nếu chưa tồn tại trong bảng chi tiết đơn hàng
-	if (@od_quantity is null) 
-	begin
-		set @od_quantity = @pd_quantity
-		insert into order_detail values (@od_id,@pd_id,@od_quantity,@od_price)
-	end
-	-- Trường hợp sản phẩm và đơn hàng đã tồn tại trong bảng chi tiết đơn hàng
-	else 
-		update order_detail
-		set od_quantity = @od_quantity + 1
-		where (od_id = @od_id and pd_id=@pd_id)
-
-	update agency_product
-	set pd_remain = pd_remain-1
-	where ag_id=@ag_id and pd_id = @pd_id
+	if @@ERROR<>0
+		-- trừ bớt lượng hàng trong bảng liên kết cửa hàng và sản phẩm
+		update agency_product
+		set pd_remain = pd_remain-@od_quantity
+		where ag_id=@ag_id and pd_id = @pd_id
 end
 
 go 
@@ -424,13 +416,15 @@ declare @tdate datetime = getdate()
 
 exec addOrders @od_id = '000000000002',
 	@od_dateDelivery = '03:45:00 09/16/2020',
-	@od_status = 2,
+	@od_status = 0,
 	@od_address = N'Địa chỉ test',
 	@od_payment = N'Tiền mặt',
 	@st_id = 'admin',
 	@ct_id = '0000000',
 	@ag_id = '000',
-	@pd_id = '00000000'
+	@pd_id = '00000001',
+	@od_quantity = 18,
+	@od_price = 100000
 
 	select * from orders
 
