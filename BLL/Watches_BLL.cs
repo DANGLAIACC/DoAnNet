@@ -14,5 +14,9 @@ namespace BLL
         {
             return Watches_DAL.LoadWatches();
         }
+        public static int GetTotalProducts()
+        {
+            return Watches_DAL.GetTotalProducts();
+        }
     }
 }

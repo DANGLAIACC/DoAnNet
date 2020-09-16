@@ -78,13 +78,7 @@ namespace DoAnNet
             imgSlide.Location =
                 new Point(b.Location.X + 24, b.Location.Y - 25);
             imgSlide.SendToBack();
-        }
-
-        //private void loadBtnCartCount()
-        //{
-        //    Console.WriteLine("cart.count: " + Cart.cart.Count.ToString());
-        //    btnCartCount.Text = Cart.cart.Count.ToString();
-        //}
+        } 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -140,11 +134,13 @@ namespace DoAnNet
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            if (localVariable.ucDanhSachKhachHang == null)
-            {
-                List<Customers_DTO> lstKhachHang = Customer_BLL.LoadCustomers();
-                localVariable.ucDanhSachKhachHang = new UC_DanhSachKhachHang(lstKhachHang);
-            }
+            // Move to frmLoading
+
+            //if (localVariable.ucDanhSachKhachHang == null)
+            //{
+            //    List<Customers_DTO> lstKhachHang = Customer_BLL.LoadCustomers();
+            //    localVariable.ucDanhSachKhachHang = new UC_DanhSachKhachHang(lstKhachHang);
+            //}
 
             addToPnMain(localVariable.ucDanhSachKhachHang,
                 "Danh sách khách hàng");

@@ -28,34 +28,44 @@ namespace DoAnNet.Forms
         private void btnPassword_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        } 
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtNotEmpty(txtUsername, "Tên đăng nhập") &
-                txtNotEmpty(txtPassword,"Mật khẩu"))
+                txtNotEmpty(txtPassword, "Mật khẩu"))
             {
                 // cả 2 ô nhập vào đều có dữ liệu
                 string username = txtUsername.Text.Trim(),
                     password = txtPassword.Text.Trim();
                 Staffs_DTO s = Staffs_BLL.GetStaffByLogin(username, password);
 
-                if(s == null) // đăng nhập sai
+                if (s == null) // đăng nhập sai
                 {
-            frmAlert frmAlert = new frmAlert();
+                    frmAlert frmAlert = new frmAlert();
                     frmAlert.showAlert(
                         "Thông tin sai.",
                         frmAlert.enmType.Error);
                     txtUsername.Text = "";
                     txtPassword.Text = "";
                     txtUsername.Focus();
-                }else
+                }
+                else
                 {
                     frmAlert frmAlert = new frmAlert();
+                    frmAlert.showAlert(
+                        "Xin chào "+s.St_lastName,
+                        frmAlert.enmType.Success);
+
                     this.Hide();
+                    frmLoading fLoading = new frmLoading();
+                    fLoading.ShowDialog();
+
                     frmMain f = new frmMain(s);
                     f.ShowDialog();
+
                     this.Close();
+
                 }
             }
 
@@ -64,7 +74,7 @@ namespace DoAnNet.Forms
         {
             if (txt.Text.Trim() == "")
             {
-                err.SetError(txt, strError+" không được để trống.");
+                err.SetError(txt, strError + " không được để trống.");
                 txt.Focus();
                 return false;
             }

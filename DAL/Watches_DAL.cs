@@ -36,5 +36,11 @@ namespace DAL
             }
             return null;
         }
+        public static int GetTotalProducts()
+        {
+            DataTable table = DataProvider.Execute("select count(pd_id) total from watches");
+
+            return int.Parse(table.Rows[0]["total"].ToString());
+        }
     }
 }

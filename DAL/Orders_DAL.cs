@@ -81,7 +81,7 @@ namespace DAL
                     o.Ct_phone = table.Rows[i]["Ct_phone"].ToString();
                     o.CName = table.Rows[i]["CName"].ToString();
 
-                    o.Total = table.Rows[i]["Total"].ToString();
+                    o.Total = Decimal.Parse(table.Rows[i]["Total"].ToString()).ToString("#,##0");
 
                     lst.Add(o);
                 }

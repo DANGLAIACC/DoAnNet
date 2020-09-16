@@ -22,7 +22,13 @@ namespace DoAnNet.UserControls
             this.lst = lst;
             foreach (Orders2_DTO o in lst)
             {
-                grvHoaDon.Rows.Add(new string[] { string.Format("{0:000000000000}", o.Od_id), o.CName, o.NgayMua, o.NgayNhan, o.Total});
+                grvHoaDon.Rows.Add(new string[] { string.Format("{0:000000000000}",
+                    o.Od_id), 
+                    o.CName, 
+                    o.NgayMua, 
+                    o.NgayNhan, 
+                    o.Total
+                });
             }
         }
 
