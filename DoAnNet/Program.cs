@@ -35,7 +35,7 @@ namespace DoAnNet
             s.St_firstName = "Đặng Quốc";
             s.St_lastName = "Lai";
             s.St_workdays = 10;
-            s.St_role = 1;
+            s.St_role = 0;
             s.St_email = "admin.sdkj@gmail.com";
             s.St_birthday = DateTime.Parse("12/12/2000");
             s.St_gender = true;

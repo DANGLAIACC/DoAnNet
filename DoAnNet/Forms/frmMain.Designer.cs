@@ -57,9 +57,9 @@ namespace DoAnNet
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNotificationCount = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
-            this.panel0 = new System.Windows.Forms.Panel();
-            this.pnMain = new System.Windows.Forms.Panel();
             this.flpSanPham = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnMain = new System.Windows.Forms.Panel();
+            this.panel0 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,8 +74,10 @@ namespace DoAnNet
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.pnMenu);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(100, 570);
@@ -83,6 +85,8 @@ namespace DoAnNet
             // 
             // pnMenu
             // 
+            this.pnMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pnMenu.BorderRadius = 18;
             this.pnMenu.Controls.Add(this.btnThongKe);
             this.pnMenu.Controls.Add(this.pictureBox2);
@@ -125,6 +129,7 @@ namespace DoAnNet
             this.btnThongKe.Size = new System.Drawing.Size(60, 50);
             this.btnThongKe.TabIndex = 1;
             this.btnThongKe.UseTransparentBackground = true;
+            this.btnThongKe.Visible = false;
             this.btnThongKe.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
@@ -244,6 +249,7 @@ namespace DoAnNet
             this.btnQLNhanVien.Size = new System.Drawing.Size(60, 50);
             this.btnQLNhanVien.TabIndex = 0;
             this.btnQLNhanVien.UseTransparentBackground = true;
+            this.btnQLNhanVien.Visible = false;
             this.btnQLNhanVien.CheckedChanged += new System.EventHandler(this.button_CheckedChanged);
             this.btnQLNhanVien.Click += new System.EventHandler(this.btnQLNhanVien_Click);
             // 
@@ -289,10 +295,12 @@ namespace DoAnNet
             // 
             // pnTop
             // 
+            this.pnTop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnTop.Controls.Add(this.lblTitle);
             this.pnTop.Controls.Add(this.ptbUser);
             this.pnTop.Controls.Add(this.flowLayoutPanel1);
-            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(100, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.Padding = new System.Windows.Forms.Padding(5);
@@ -320,7 +328,7 @@ namespace DoAnNet
             this.ptbUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.ptbUser.ShadowDecoration.Parent = this.ptbUser;
             this.ptbUser.Size = new System.Drawing.Size(54, 54);
-            this.ptbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbUser.TabIndex = 0;
             this.ptbUser.TabStop = false;
             this.ptbUser.Click += new System.EventHandler(this.ptbUser_Click);
@@ -516,33 +524,35 @@ namespace DoAnNet
             this.btnThongBao.UseTransparentBackground = true;
             this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
             // 
-            // panel0
-            // 
-            this.panel0.BackColor = System.Drawing.Color.Transparent;
-            this.panel0.Controls.Add(this.pnMain);
-            this.panel0.Controls.Add(this.flpSanPham);
-            this.panel0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel0.Location = new System.Drawing.Point(100, 64);
-            this.panel0.Name = "panel0";
-            this.panel0.Size = new System.Drawing.Size(796, 506);
-            this.panel0.TabIndex = 2;
-            // 
-            // pnMain
-            // 
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(0, 0);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(796, 506);
-            this.pnMain.TabIndex = 0;
-            // 
             // flpSanPham
             // 
             this.flpSanPham.AutoScroll = true;
             this.flpSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpSanPham.Location = new System.Drawing.Point(0, 0);
             this.flpSanPham.Name = "flpSanPham";
-            this.flpSanPham.Size = new System.Drawing.Size(796, 506);
+            this.flpSanPham.Size = new System.Drawing.Size(786, 492);
             this.flpSanPham.TabIndex = 0;
+            // 
+            // pnMain
+            // 
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(0, 0);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(786, 492);
+            this.pnMain.TabIndex = 0;
+            // 
+            // panel0
+            // 
+            this.panel0.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel0.BackColor = System.Drawing.Color.Transparent;
+            this.panel0.Controls.Add(this.pnMain);
+            this.panel0.Controls.Add(this.flpSanPham);
+            this.panel0.Location = new System.Drawing.Point(105, 66);
+            this.panel0.Name = "panel0";
+            this.panel0.Size = new System.Drawing.Size(786, 492);
+            this.panel0.TabIndex = 2;
             // 
             // frmMain
             // 
@@ -584,7 +594,6 @@ namespace DoAnNet
         private Guna.UI2.WinForms.Guna2Button btnQLNhanVien;
         private Guna.UI2.WinForms.Guna2Button btnKhachHang;
         private Guna.UI2.WinForms.Guna2Button btnHoaDon;
-        private System.Windows.Forms.Panel panel0;
         private System.Windows.Forms.Panel pnTop;
         private Guna.UI2.WinForms.Guna2Button btnThongKe;
         private Guna.UI2.WinForms.Guna2CirclePictureBox ptbUser;
@@ -599,8 +608,9 @@ namespace DoAnNet
         private Guna.UI2.WinForms.Guna2Button btnThongBao;
         private System.Windows.Forms.Label lblTitle;
         public Guna.UI2.WinForms.Guna2CircleButton btnCartCount;
-        private System.Windows.Forms.FlowLayoutPanel flpSanPham;
+        private System.Windows.Forms.Panel panel0;
         private System.Windows.Forms.Panel pnMain;
+        private System.Windows.Forms.FlowLayoutPanel flpSanPham;
     }
 }
 

@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
-using BLL;
-using DoAnNet.Reports;
 
 namespace DoAnNet.UserControls
 {
@@ -29,13 +27,7 @@ namespace DoAnNet.UserControls
                     c.Ct_phone,
                     c.Ct_address
                 });
-                //grvHoaDon.Rows.Add(new string[] { string.Format("{0:000000000000}", o.Od_id), o.CName, o.NgayMua, o.NgayNhan, o.Total});
             }
-        }
-
-        private void guna2DataGridView1_DoubleClick(object sender, EventArgs e)
-        {
-
         }
     }
 }

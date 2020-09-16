@@ -31,8 +31,8 @@ namespace DoAnNet.UserControls
                 });
             }
         }
-
-        private void guna2DataGridView1_DoubleClick(object sender, EventArgs e)
+        
+        private void grvHoaDon_DoubleClick(object sender, EventArgs e)
         {
             string id = grvHoaDon.SelectedRows[0].Cells["od_id"].Value.ToString();
             Console.WriteLine("selected od_id: " + id);

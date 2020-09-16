@@ -75,6 +75,7 @@ namespace DoAnNet.Forms
             lstAgencies = Agencies_BLL.LoadAgencies();
             cboChiNhanh.DataSource = lstAgencies;
             cboChiNhanh.DisplayMember = "Ag_address";
+            cboChiNhanh.ValueMember = "Ag_id";
 
             for (int i = 0; i < lstAgencies.Count; i++)
             {
@@ -166,7 +167,8 @@ namespace DoAnNet.Forms
             od_address = txtDiaChi2.Text,
             od_payment = "Tiền mặt",
             ct_id = "0000000",
-            ag_id = "000";
+            ag_id = cboChiNhanh.SelectedValue.ToString();
+
             int cartCount = Temp.cart.Count;
 
             // lọc dữ liệu từ bộ nhớ tạm Temp.cart để đẩy vào database

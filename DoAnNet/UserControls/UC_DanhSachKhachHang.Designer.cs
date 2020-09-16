@@ -84,6 +84,7 @@
             this.grvKhachHang.RowTemplate.ReadOnly = true;
             this.grvKhachHang.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.grvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grvKhachHang.ShowRowErrors = false;
             this.grvKhachHang.Size = new System.Drawing.Size(1057, 491);
             this.grvKhachHang.TabIndex = 0;
             this.grvKhachHang.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Emerald;

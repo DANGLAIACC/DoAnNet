@@ -177,10 +177,11 @@ namespace DoAnNet
             soHoaDonCuoi++;
             soHoaDonHienTai = string.Format("{0:000000000000}", 
                 soHoaDonCuoi);
-            if(staff.St_role != 0) // admin
+            if(staff.St_role == 0) // admin
             {
-                btnQLNhanVien.Visible = false;
-                btnThongKe.Visible = false;
+                btnQLNhanVien.Visible 
+                    = btnThongKe.Visible = true;
+                this.Size = new Size(1020, 590);
             }
 
             btnQLNhanVien.PerformClick();
@@ -194,8 +195,14 @@ namespace DoAnNet
 
         private void btnQLNhanVien_Click(object sender, EventArgs e)
         {
-            UC_QLNhanVien u = new UC_QLNhanVien();
-            addToPnMain(u, "Quản lý nhân viên");
+            if (localVariable.ucQLNhanVien == null)
+            {
+                List<Staffs_DTO> lstNhanVien = Staffs_BLL.LoadStaffs();
+                localVariable.ucQLNhanVien = new UC_QLNhanVien(lstNhanVien);
+            }
+
+            addToPnMain(localVariable.ucQLNhanVien,
+                "Quản lý nhân viên");
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)

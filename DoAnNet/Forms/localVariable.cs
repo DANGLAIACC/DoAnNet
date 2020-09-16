@@ -11,5 +11,6 @@ namespace DoAnNet.Forms
     {
         public static UC_DanhSachHoaDon ucDanhSachHoaDon;
         public static UC_DanhSachKhachHang ucDanhSachKhachHang;
+        public static UC_QLNhanVien ucQLNhanVien;
     }
 }
