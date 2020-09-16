@@ -86,19 +86,11 @@ namespace DAL
             string ct_id,
             string ag_id,
             string pd_id,
-            string pd_quantity
+            string od_quantity,
+            string od_price
             )
         {
-            string query = string.Format(
-                "exec addOrders @od_id = '{0}',"
-                + " @od_dateDelivery = '{1}',"
-                + " @od_status = {2},"
-                + " @od_address = N'{3}',"
-                + " @od_payment = N'{4}',"
-                + " @st_id = '{5}',"
-                + " @ct_id = '{6}',"
-                + " @ag_id = '{7}',"
-                + " @pd_id = '{8}'",
+            return DataProvider.addOrder(
                 od_id,
                 od_dateDelivery,
                 od_status,
@@ -107,10 +99,10 @@ namespace DAL
                 st_id,
                 ct_id,
                 ag_id,
-                pd_id
-                );
-
-            return DataProvider.ExecuteNonQuery(query); 
+                pd_id,
+                od_quantity,
+                od_price
+                ); 
         }
 
     }

@@ -333,7 +333,7 @@ insert into order_detail values
 go
 /* Thêm 1 đơn hàng -> số lượng trong bảng agency_product giảm đi nên cần viết hàm*/
 
-create alter proc addOrders (
+create proc addOrders (
 	@od_id char(12),
 	@od_dateDelivery varchar(30), -- CONVERT(datetime, '15:47:39 09/16/2020');
 	@od_status int,

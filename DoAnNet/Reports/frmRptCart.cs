@@ -32,6 +32,7 @@ namespace DoAnNet.Reports
         public frmRptCart()
         {
             InitializeComponent();
+            ShowInTaskbar = false;
         }
 
         public frmRptCart(string storeAddress, string ngayLap, string soHoaDon, string tenNhanVien, string tenKH1, string diaChi1, string dienThoai1 , string tenKH2, string diaChi2, string dienThoai2, string ngayGiao, List<Order_detail_DTO> lst)

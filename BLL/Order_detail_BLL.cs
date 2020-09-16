@@ -20,17 +20,18 @@ namespace BLL
         }
 
         public static bool addOrder(
-           string od_id,
-           string od_dateDelivery,
-           string od_status,
-           string od_address,
-           string od_payment,
-           string st_id,
-           string ct_id,
-           string ag_id,
-           string pd_id,
-           string pd_quantity
-           )
+            string od_id,
+            string od_dateDelivery,
+            string od_status,
+            string od_address,
+            string od_payment,
+            string st_id,
+            string ct_id,
+            string ag_id,
+            string pd_id,
+            string od_quantity,
+            string od_price
+            )
         {
             return Order_detail_DAL.addOrder(
                 od_id,
@@ -42,7 +43,8 @@ namespace BLL
                 ct_id,
                 ag_id,
                 pd_id,
-                pd_quantity
+                od_quantity,
+                od_price
                 );
         }
     }

@@ -166,11 +166,29 @@ namespace DoAnNet.Forms
             od_address = txtDiaChi2.Text,
             od_payment = "Tiền mặt",
             ct_id = "0000000",
-            pd_id = "";
-
+            ag_id = "000";
             int cartCount = Temp.cart.Count;
 
             // lọc dữ liệu từ bộ nhớ tạm Temp.cart để đẩy vào database
+            for(int i = 0; i < cartCount; i++)
+            {
+                string price = Temp.cart[i].Od_price.ToString();
+                price = price.Substring(0,price.IndexOf(".")+1);
+                Order_detail_BLL.addOrder(
+                    od_id,
+                    od_dateDelivery,
+                    od_status,
+                    od_address,
+                    od_payment,
+                    st_id,
+                    ct_id,
+                    ag_id,
+                    Temp.cart[i].Pd_id,
+                    Temp.cart[i].Od_quantity.ToString(),
+                    price
+                );
+            }
+
             frmRptCart f = new frmRptCart(
                 cboChiNhanh.Text,
                 txtNgayMua.Text,
