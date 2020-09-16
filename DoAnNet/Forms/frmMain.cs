@@ -197,8 +197,8 @@ namespace DoAnNet
         {
             if (localVariable.ucQLNhanVien == null)
             {
-                List<Staffs_DTO> lstNhanVien = Staffs_BLL.LoadStaffs();
-                localVariable.ucQLNhanVien = new UC_QLNhanVien(lstNhanVien);
+                localVariable.lstStaff = Staffs_BLL.LoadStaffs();
+                localVariable.ucQLNhanVien = new UC_QLNhanVien();
             }
 
             addToPnMain(localVariable.ucQLNhanVien,

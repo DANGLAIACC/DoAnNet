@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using DoAnNet.Forms;
+using BLL;
 
 namespace DoAnNet
 {
@@ -76,6 +77,11 @@ namespace DoAnNet
         private void txtSt_phone_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+        }
+
+        private void btnGioiTinh_CheckedChanged(object sender, EventArgs e)
+        {
+            lblGioiTinh.Text = btnGioiTinh.Checked ? "Nam" : "Nữ";
         }
     }
 }

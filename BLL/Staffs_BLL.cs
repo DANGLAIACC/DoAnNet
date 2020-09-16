@@ -22,5 +22,9 @@ namespace BLL
         {
             return Staffs_DAL.updateStaff(s);
         }
+        public static bool addStaff(Staffs_DTO s)
+        {
+            return Staffs_DAL.addStaff(s);
+        } 
     }
 }

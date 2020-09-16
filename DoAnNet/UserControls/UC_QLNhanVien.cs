@@ -8,21 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
+using DoAnNet.Forms;
 
 namespace DoAnNet
 {
     public partial class UC_QLNhanVien : UserControl
     {
-        private List<Staffs_DTO> lst;
-        public UC_QLNhanVien(List<Staffs_DTO> lst)
+        public UC_QLNhanVien()
         {
-            this.lst = lst;
             InitializeComponent();
         }
 
         private void UC_QLNhanVien_Load(object sender, EventArgs e)
         {
-            foreach (Staffs_DTO s in lst)
+            loadGridView();
+        }
+        private void loadGridView()
+        { 
+            grvNhanVien.Rows.Clear();
+            foreach (Staffs_DTO s in localVariable.lstStaff)
             {
                 grvNhanVien.Rows.Add(new string[]
                 {
@@ -44,12 +48,19 @@ namespace DoAnNet
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            frmThemNhanVien f = new frmThemNhanVien();
+            f.ShowDialog();
 
+            Console.WriteLine("Chưa vào form closed");
+
+            f.FormClosed +=  (o, er) =>
+            {
+                loadGridView();
+            };
         }
 
         private void btnSua_Click(object sender, EventArgs e)

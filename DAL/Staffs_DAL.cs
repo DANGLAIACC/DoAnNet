@@ -80,13 +80,35 @@ namespace DAL
                 "update staffs "
                 + "set "
                     + "st_password = '{1}', "
-	                + "st_firstName = N'{2}', "
-	                + "st_lastName = N'{3}', "
-	                + "st_phone = '{4}', "
-	                + "st_email = '{5}', "
-	                + "st_gender = {6} "
+                    + "st_firstName = N'{2}', "
+                    + "st_lastName = N'{3}', "
+                    + "st_phone = '{4}', "
+                    + "st_email = '{5}', "
+                    + "st_gender = {6} "
                 + "where st_id='{0}'",
-                s.St_id, s.St_password, s.St_firstName, s.St_lastName, s.St_phone, s.St_email, s.St_gender?1:0
+                s.St_id, s.St_password, s.St_firstName, s.St_lastName, s.St_phone, s.St_email, s.St_gender ? 1 : 0
+                );
+            return DataProvider.ExecuteNonQuery(query);
+        }
+        public static bool addStaff(Staffs_DTO s)
+        {
+            string query = string.Format(
+                " insert into staffs values"
+                + " ("
+                + " '{0}',"
+                + " '{0}',"
+                + " N'{1}',"
+                + " N'{2}',"
+                + " '{3}',"
+                + " '{4}',"
+                + " {5},"
+                + " 0,"
+                + " '12/22/2000',"
+                + " 100000,"
+                + " 1,"
+                + " '000'"
+                + " )",
+                s.St_id, s.St_firstName, s.St_lastName, s.St_phone, s.St_email, s.St_gender ? 1 : 0
                 );
             return DataProvider.ExecuteNonQuery(query);
         }
