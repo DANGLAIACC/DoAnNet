@@ -32,7 +32,7 @@ namespace DoAnNet.Forms
                 this.Text = "Xác nhận danh tính";
                 pnMain.Visible = false;
                 lblCurrentPassword.Text = "Nhập mật khẩu";
-                this.Height = 150;
+                this.Height = 180;
                 txtCurrentPassword.KeyPress += (o, e) =>
                 {
                     if (e.KeyChar == (char)13)

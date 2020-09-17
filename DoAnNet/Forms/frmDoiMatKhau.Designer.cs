@@ -49,7 +49,7 @@
             this.lblCurrentPassword.AutoSize = true;
             this.lblCurrentPassword.Location = new System.Drawing.Point(18, 21);
             this.lblCurrentPassword.Name = "lblCurrentPassword";
-            this.lblCurrentPassword.Size = new System.Drawing.Size(91, 18);
+            this.lblCurrentPassword.Size = new System.Drawing.Size(117, 23);
             this.lblCurrentPassword.TabIndex = 0;
             this.lblCurrentPassword.Text = "Mật khẩu cũ";
             // 
@@ -97,10 +97,10 @@
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.HoverState.Parent = this.btnThoat;
-            this.btnThoat.Location = new System.Drawing.Point(327, 3);
+            this.btnThoat.Location = new System.Drawing.Point(317, 3);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.ShadowDecoration.Parent = this.btnThoat;
-            this.btnThoat.Size = new System.Drawing.Size(70, 30);
+            this.btnThoat.Size = new System.Drawing.Size(80, 42);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -114,10 +114,10 @@
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.HoverState.Parent = this.btnLuu;
-            this.btnLuu.Location = new System.Drawing.Point(211, 3);
+            this.btnLuu.Location = new System.Drawing.Point(182, 3);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
-            this.btnLuu.Size = new System.Drawing.Size(110, 30);
+            this.btnLuu.Size = new System.Drawing.Size(129, 42);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu thông tin";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -137,10 +137,10 @@
             this.pnBottom.Controls.Add(this.btnThoat);
             this.pnBottom.Controls.Add(this.btnLuu);
             this.pnBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBottom.Location = new System.Drawing.Point(0, 158);
+            this.pnBottom.Location = new System.Drawing.Point(0, 175);
             this.pnBottom.Name = "pnBottom";
             this.pnBottom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.pnBottom.Size = new System.Drawing.Size(400, 42);
+            this.pnBottom.Size = new System.Drawing.Size(400, 57);
             this.pnBottom.TabIndex = 21;
             // 
             // txtNewPassword2
@@ -185,16 +185,16 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(18, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 18);
+            this.label3.Size = new System.Drawing.Size(166, 23);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Nhập lại mật khẩu mới";
+            this.label3.Text = "Nhập lại mật khẩu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 18);
+            this.label2.Size = new System.Drawing.Size(130, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu mới";
             // 
@@ -244,15 +244,15 @@
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(0, 57);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(400, 143);
+            this.pnMain.Size = new System.Drawing.Size(400, 175);
             this.pnMain.TabIndex = 20;
             // 
             // frmDoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(400, 200);
+            this.ClientSize = new System.Drawing.Size(400, 232);
             this.Controls.Add(this.pnBottom);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnTop);

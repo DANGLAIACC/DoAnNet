@@ -65,14 +65,6 @@ namespace DoAnNet
             btnCartCount.Text = count.ToString();
         }
 
-        private void addUserControl(UserControl uc)
-        {
-            panel0.Controls.Clear();
-            uc.Dock = DockStyle.Fill;
-            uc.BringToFront();
-            panel0.Controls.Add(uc);
-        }
-
         private void button_CheckedChanged(object sender, EventArgs e)
         {
             Guna2Button b = (Guna2Button)sender;
@@ -133,18 +125,13 @@ namespace DoAnNet
                 List<Customers_DTO> lstKhachHang = Customer_BLL.LoadCustomers();
                 localVariable.ucDanhSachKhachHang = new UC_DanhSachKhachHang(lstKhachHang);
             }
-
             addToPnMain(localVariable.ucDanhSachKhachHang,
                 "Danh sách khách hàng");
-
         }
 
         private void ptbUser_Click(object sender, EventArgs e)
         {
-            //UC_NhanVien2 n = new UC_NhanVien2(staff);
-            UC_NhanVien n = new UC_NhanVien(staff);
-
-            addToPnMain(n, "Xem chi tiết nhân viên");
+            addToPnMain(new UC_NhanVien(staff), "Xem chi tiết nhân viên");
         }
 
         private void addToPnMain(UserControl uc, string title)
@@ -183,8 +170,6 @@ namespace DoAnNet
                     = btnThongKe.Visible = true;
                 this.Size = new Size(1020, 590);
             }
-
-            btnQLNhanVien.PerformClick();
         }
 
         private void btnThongBao_Click(object sender, EventArgs e)
@@ -214,9 +199,5 @@ namespace DoAnNet
         {
 
         }
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    pnMain.Controls.Clear();
-        //}
     }
 }
