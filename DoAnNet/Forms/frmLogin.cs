@@ -25,11 +25,6 @@ namespace DoAnNet.Forms
             txtUsername.Focus();
         }
 
-        private void btnPassword_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtNotEmpty(txtUsername, "Tên đăng nhập") &
@@ -91,6 +86,11 @@ namespace DoAnNet.Forms
             {
                 btnLogin.PerformClick();
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
