@@ -54,9 +54,9 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 32);
+            this.panel1.Size = new System.Drawing.Size(360, 39);
             this.panel1.TabIndex = 0;
             // 
             // btnClose
@@ -67,11 +67,11 @@
             this.btnClose.HoverState.IconColor = System.Drawing.Color.White;
             this.btnClose.HoverState.Parent = this.btnClose;
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(184)))), ((int)(((byte)(247)))));
-            this.btnClose.Location = new System.Drawing.Point(236, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(315, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(34, 32);
+            this.btnClose.Size = new System.Drawing.Size(45, 39);
             this.btnClose.TabIndex = 4;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -79,10 +79,10 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 290);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 356);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 76);
+            this.pictureBox1.Size = new System.Drawing.Size(360, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -92,7 +92,7 @@
             this.txtUsername.AutoRoundedCorners = true;
             this.txtUsername.BackColor = System.Drawing.Color.Transparent;
             this.txtUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.txtUsername.BorderRadius = 19;
+            this.txtUsername.BorderRadius = 24;
             this.txtUsername.BorderThickness = 0;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
@@ -109,8 +109,8 @@
             this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(8, 0);
             this.txtUsername.IconLeftSize = new System.Drawing.Size(32, 32);
-            this.txtUsername.Location = new System.Drawing.Point(25, 120);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Location = new System.Drawing.Point(33, 148);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Red;
@@ -121,7 +121,7 @@
             this.txtUsername.ShadowDecoration.Depth = 20;
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
             this.txtUsername.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.txtUsername.Size = new System.Drawing.Size(213, 41);
+            this.txtUsername.Size = new System.Drawing.Size(284, 50);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TextOffset = new System.Drawing.Point(8, 0);
             this.txtUsername.WordWrap = false;
@@ -131,7 +131,7 @@
             this.txtPassword.AutoRoundedCorners = true;
             this.txtPassword.BackColor = System.Drawing.Color.Transparent;
             this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.txtPassword.BorderRadius = 19;
+            this.txtPassword.BorderRadius = 24;
             this.txtPassword.BorderThickness = 0;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
@@ -148,8 +148,8 @@
             this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(8, 0);
             this.txtPassword.IconLeftSize = new System.Drawing.Size(32, 32);
-            this.txtPassword.Location = new System.Drawing.Point(25, 180);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(33, 222);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
@@ -161,7 +161,7 @@
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
             this.txtPassword.ShortcutsEnabled = false;
-            this.txtPassword.Size = new System.Drawing.Size(213, 41);
+            this.txtPassword.Size = new System.Drawing.Size(284, 50);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextOffset = new System.Drawing.Point(8, 0);
             this.txtPassword.WordWrap = false;
@@ -177,11 +177,11 @@
             this.btnLogin.HoverState.Parent = this.btnLogin;
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnLogin.Location = new System.Drawing.Point(113, 239);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Location = new System.Drawing.Point(151, 294);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
-            this.btnLogin.Size = new System.Drawing.Size(135, 37);
+            this.btnLogin.Size = new System.Drawing.Size(180, 46);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -190,10 +190,9 @@
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(0, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 37);
+            this.label1.Size = new System.Drawing.Size(360, 46);
             this.label1.TabIndex = 6;
             this.label1.Text = "Welcome!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,10 +201,9 @@
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(0, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(0, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 19);
+            this.label2.Size = new System.Drawing.Size(360, 23);
             this.label2.TabIndex = 7;
             this.label2.Text = "Đăng nhập để tiếp tục";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -217,10 +215,10 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(270, 366);
+            this.ClientSize = new System.Drawing.Size(360, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
@@ -229,7 +227,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";

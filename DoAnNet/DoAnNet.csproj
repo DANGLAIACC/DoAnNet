@@ -132,12 +132,6 @@
     <Compile Include="Reports\frmRptCart.Designer.cs">
       <DependentUpon>frmRptCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Home.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Home.designer.cs">
-      <DependentUpon>UC_Home.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\Temp.cs" />
     <Compile Include="UserControls\UC_DanhSachKhachHang.cs">
       <SubType>UserControl</SubType>
@@ -214,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmRptCart.resx">
       <DependentUpon>frmRptCart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Home.resx">
-      <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_DanhSachKhachHang.resx">
       <DependentUpon>UC_DanhSachKhachHang.cs</DependentUpon>
