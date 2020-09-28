@@ -1,4 +1,6 @@
-# Đồ án Chuyên đề .NET - Đặng Quốc Lai - 1811545103 - 18DTH1A
+# Hướng dẫn
+
+### Đồ án Chuyên đề .NET - Đặng Quốc Lai - 1811545103 - 18DTH1A
 
 ## Hướng dẫn tải project về máy
 <p>Tạo thư mục bất kỳ</p>
