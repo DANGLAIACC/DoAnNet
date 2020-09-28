@@ -13,3 +13,8 @@
 
 ## Trường hợp chạy project lần 2, máy báo lỗi: "DoAnNet is use by another process"
 <p>Vào thư mục DoAnNet, xóa folder obj, rồi chạy lại lần nữa</p>
+
+## File cài đặt phần mềm
+<p>File cài đặt nằm ở thư mục "setup1/debug"</p>
+<p>Chương trình chỉ dùng được trên window 64bit</p>
+<p>Chỉnh sửa nội dung kết nối trong file DataProvider để kết nối được đến cơ sở dữ liệu.</p>
