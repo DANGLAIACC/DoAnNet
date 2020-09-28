@@ -22,9 +22,9 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 
-# ![Bb]in/
-# [Bb]in/*
-# ![Bb]in/Debug/*.dll
+![Bb]in/
+[Bb]in/*
+![Bb]in/Debug/*.dll
 
 [Oo]bj/
 [Ll]og/
