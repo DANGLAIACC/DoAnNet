@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DoAnNet.UserControls;
-using DTO;
-
+using DTO; 
 namespace DoAnNet.Reports
 {
     public partial class frmRptCart : Form
